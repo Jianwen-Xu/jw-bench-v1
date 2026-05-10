@@ -8,7 +8,7 @@
     "full": "npx ts-node benchmark/run.ts --phase full",
     "judge-cal": "npx ts-node benchmark/run.ts --phase judge-calibration",
     "validate-manifests": "npx ts-node scripts/validate-manifests.ts",
-    "report": "npx ts-node benchmark/report.ts"
+    "report": "echo 'Report auto-generated in runs/<date>/pilot-report.md after each run' && exit 0"
   },
   "dependencies": {
     "@babel/parser": "^7.24.0",

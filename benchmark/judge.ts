@@ -53,10 +53,111 @@ Output ONLY valid JSON — no explanation text before or after:
 "missing" = interactive elements in Reference but absent in Candidate.
 "extra"   = interactive elements in Candidate but absent in Reference.`;
 
+// Chinese → English tag mapping for format normalization
+const TAG_MAP: Record<string, string> = {
+  '列': 'Column', '排': 'Row', '卡': 'Card', '域': 'Form',
+  '文': 'Text', '图': 'Image', '按': 'Button', '入': 'Input',
+  '选': 'Select', '选框': 'Checkbox', '切': 'Toggle', '链': 'Link',
+  '栏': 'NavBar', '标': 'Badge', '提': 'Toast', '头像': 'Avatar',
+};
+const ENGLISH_TAGS = new Set(Object.values(TAG_MAP));
+
 function toAbstractDump(wire: string): string {
-  let s = wire.replace(/<\/?([A-Z][a-zA-Z]*)[^>]*>/g, (_m, tag) => `[${tag}]`);
-  s = s.replace(/[\[\]"{}]/g, ' ').replace(/,/g, ' ');
-  return s.replace(/\s+/g, ' ').trim();
+  // Step 1: detect format by inspecting the wire content
+  const hasJSXTags = /<\/?[A-Z][a-zA-Z]*[^>]*>/.test(wire);
+  const hasChineseTags = /["']?[列排卡域文图按入选链栏标提]/m.test(wire);
+  const hasIndentedLines = /^[　 ]+[一-龥]/m.test(wire);
+
+  if (hasJSXTags) return toDumpFromJSX(wire);
+  if (hasIndentedLines) return toDumpFromXuD(wire);
+  if (hasChineseTags) return toDumpFromJSON(wire, true);
+  return toDumpFromJSON(wire, false);
+}
+
+function toDumpFromJSX(wire: string): string {
+  // Extract tag names and interactive props via regex
+  const lines: string[] = [];
+  const tagRe = /<(\/?)([A-Z][a-zA-Z]*)([^>]*)(\/?)>/g;
+  let depth = 0;
+  let match: RegExpExecArray | null;
+  while ((match = tagRe.exec(wire)) !== null) {
+    const isClosing = match[1] === '/';
+    const tag = match[2];
+    const attrs = match[3];
+    const selfClose = match[4] === '/';
+    if (isClosing) { depth = Math.max(0, depth - 1); continue; }
+    const props = extractInteractiveProps(attrs);
+    lines.push('  '.repeat(depth) + `[${tag}]` + (props ? ` ${props}` : ''));
+    if (!selfClose) depth++;
+  }
+  return lines.join('\n');
+}
+
+function toDumpFromXuD(wire: string): string {
+  const lines: string[] = [];
+  for (const line of wire.split('\n')) {
+    const trimmed = line.trim();
+    if (!trimmed) continue;
+    const indent = line.search(/\S/);
+    const parts = trimmed.split(/[\s　]+/).filter(Boolean);
+    if (parts.length === 0) continue;
+    const rawTag = parts[0];
+    const tag = TAG_MAP[rawTag] ?? rawTag;
+    const rest = parts.slice(1).filter(p => !/^[值触空]/.test(p) && p !== '必' && p !== '禁').join(' ');
+    lines.push('  '.repeat(Math.floor(indent / 2)) + `[${tag}]` + (rest ? ` ${rest}` : ''));
+  }
+  return lines.join('\n');
+}
+
+function toDumpFromJSON(wire: string, chinese: boolean): string {
+  let arr: any;
+  try { arr = JSON.parse(wire); } catch { return wire; }
+  const lines: string[] = [];
+  function walk(node: any, depth: number) {
+    if (!Array.isArray(node)) return;
+    const rawTag = String(node[0] ?? '');
+    const tag = chinese ? (TAG_MAP[rawTag] ?? rawTag) : (ENGLISH_TAGS.has(rawTag) ? rawTag : (Object.keys(TAG_MAP).find(k => TAG_MAP[k] === rawTag) ?? rawTag));
+    const props = typeof node[1] === 'object' && !Array.isArray(node[1]) ? node[1] : {};
+    const propStrs: string[] = [];
+    for (const [k, v] of Object.entries(props)) {
+      if (typeof v === 'string' && v.length > 0 && v !== 'true' && v !== 'false') {
+        propStrs.push(`${k}=${v}`);
+      }
+    }
+    const children: string[] = [];
+    const startIdx = typeof node[1] === 'object' && !Array.isArray(node[1]) ? 2 : 1;
+    for (let i = startIdx; i < node.length; i++) {
+      if (typeof node[i] === 'string') continue;
+      const childLines: string[] = [];
+      walk(node[i], 0);
+    }
+    lines.push('  '.repeat(depth) + `[${tag}]` + (propStrs.length > 0 ? ` ${propStrs.join(' ')}` : ''));
+    for (let i = startIdx; i < node.length; i++) {
+      if (Array.isArray(node[i])) walk(node[i], depth + 1);
+    }
+  }
+  walk(arr, 0);
+  return lines.join('\n');
+}
+
+function extractInteractiveProps(attrs: string): string {
+  const parts: string[] = [];
+  // action bindings
+  const onTap = attrs.match(/onTap\s*=\s*["']([^"']+)["']/);
+  if (onTap) parts.push(`onTap=${onTap[1]}`);
+  // state bindings
+  const bind = attrs.match(/bind\s*=\s*["']([^"']+)["']/);
+  if (bind) parts.push(`bind=${bind[1]}`);
+  // required / disabled (no value)
+  if (/required/.test(attrs)) parts.push('required');
+  if (/disabled/.test(attrs)) parts.push('disabled');
+  // onSubmit
+  const submit = attrs.match(/onSubmit\s*=\s*["']([^"']+)["']/);
+  if (submit) parts.push(`onSubmit=${submit[1]}`);
+  // onBack
+  const back = attrs.match(/onBack\s*=\s*["']([^"']+)["']/);
+  if (back) parts.push(`onBack=${back[1]}`);
+  return parts.join(' ');
 }
 
 // ──────────────────────────────────────────────

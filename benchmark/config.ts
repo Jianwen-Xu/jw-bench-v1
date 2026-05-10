@@ -48,6 +48,8 @@ export const MODELS: Record<string, ModelConfig> = {
     judgeModelKey: 'claude-sonnet-4-6',
     enabled: true,
   },
+  // TODO: verify DeepSeek V4 Pro / V4 Flash API model IDs before running Full phase.
+  // Current DeepSeek API uses 'deepseek-chat' for V4; Flash naming may differ.
   'deepseek-v4-pro': {
     id: 'deepseek-chat',
     apiFamily: 'deepseek',
@@ -56,7 +58,7 @@ export const MODELS: Record<string, ModelConfig> = {
     inputPricePer1kTokens: 0.002,
     outputPricePer1kTokens: 0.008,
     judgeModelKey: 'claude-sonnet-4-6',
-    enabled: false,   // opt-in: requires --deepseek flag
+    enabled: false,
   },
   'deepseek-v4-flash': {
     id: 'deepseek-chat',
@@ -66,7 +68,7 @@ export const MODELS: Record<string, ModelConfig> = {
     inputPricePer1kTokens: 0.00027,
     outputPricePer1kTokens: 0.0011,
     judgeModelKey: 'claude-sonnet-4-6',
-    enabled: false,   // opt-in: requires --deepseek flag
+    enabled: false,
   },
 };
 

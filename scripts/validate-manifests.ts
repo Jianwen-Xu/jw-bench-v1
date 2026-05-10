@@ -23,7 +23,7 @@ const JSX_VARIANT_MAP: Record<string, string[]> = {
 
 const XU_VARIANT_MAP: Record<string, string[]> = {
   '按': ['主', '次', '轻'],
-  '文': ['标题', '正文', '价格', '节标题', '说明'],
+  '文': ['标题', '主标题', '正文', '价格', '节标题', '说明'],
   '标': ['信息', '成功', '警告', '危险'],
   '提': ['信息', '成功', '警告', '错误'],
   '图': ['小', '中', '大'],
@@ -37,6 +37,7 @@ const EXPECTED_MAPPINGS: Array<[string, string]> = [
   ['信息', 'info'], ['错误', 'error'],
   ['小', 's'], ['中', 'm'], ['大', 'l'],
   ['默认', 'default'], ['淡', 'subtle'],
+  ['标题', 'title'], ['主标题', 'heading'],
 ];
 
 let errors = 0;
@@ -45,6 +46,18 @@ const xuManifest = loadJSON(path.join(ROOT, 'manifests/xu-c/components.json'));
 
 for (const [char, comp] of Object.entries(xuManifest) as any[]) {
   for (const [propKey, propDef] of Object.entries(comp.props) as any[]) {
+    // Check for duplicate enum values
+    if (propDef.type === 'enum' && propDef.values) {
+      const vals = propDef.values as string[];
+      const seen = new Set<string>();
+      for (const v of vals) {
+        if (seen.has(v)) {
+          console.error(`❌  ${char}.${propKey}: duplicate enum value '${v}'`);
+          errors++;
+        }
+        seen.add(v);
+      }
+    }
     if (propDef.type === 'enum' && propDef.enum_map) {
       for (const [cn, en] of Object.entries(propDef.enum_map) as any[]) {
         const expected = EXPECTED_MAPPINGS.find(([c]) => c === cn);

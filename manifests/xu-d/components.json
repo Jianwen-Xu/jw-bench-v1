@@ -23,8 +23,8 @@
     "name": "Text", "alias_en": "Text", "kind": "display",
     "props_order": ["式", "值"],
     "props": {
-      "式": {"type": "enum", "values": ["标题","标题","正文","价格","节标题","说明"], "alias_en": "variant",
-             "enum_map": {"标题":"title","标题":"heading","正文":"body","价格":"price","节标题":"sec-title","说明":"caption"}},
+      "式": {"type": "enum", "values": ["标题","主标题","正文","价格","节标题","说明"], "alias_en": "variant",
+             "enum_map": {"标题":"title","主标题":"heading","正文":"body","价格":"price","节标题":"sec-title","说明":"caption"}},
       "值": {"type": "stateRef", "alias_en": "bind"}
     }
   },

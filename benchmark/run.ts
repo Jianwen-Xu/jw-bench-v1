@@ -427,6 +427,7 @@ async function runFull(models: string[], n: number) {
   // For full phase we enumerate all task IDs found in tasks/
   const taskIds = fs.readdirSync(path.join(ROOT, 'tasks'))
     .filter(d => d.startsWith('task-'))
+    .sort()
     .slice(0, n);
 
   const total =

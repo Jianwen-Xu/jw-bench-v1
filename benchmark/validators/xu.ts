@@ -150,7 +150,7 @@ function parseLine(content: string): XuNode {
         propIdx++;
         continue;
       }
-      if (propDef?.type === 'bool' && (token === '真' || token === '禁')) {
+      if (propDef?.type === 'bool' && (token === '真' || token === '禁' || token === '必')) {
         props[propKey] = 'true';
         propIdx++;
         continue;
