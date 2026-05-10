@@ -1,0 +1,7 @@
+{
+  "id": "tp-030",
+  "reference": "排\n　按 次 cancel 取消\n　按 主 del 删除",
+  "candidate": "排\n　按 主 del 删除\n　按 次 cancel 取消",
+  "ground_truth": true,
+  "short_description": "确认框取消和删除按钮互换，action 不变（顺序差异可接受）"
+}

@@ -1,0 +1,7 @@
+{
+  "id": "tp-009",
+  "reference": "按 次 cancel 取消",
+  "candidate": "按 次 cancel 返回",
+  "ground_truth": true,
+  "short_description": "取消按钮 label 从'取消'改为'返回'，action cancel 不变"
+}

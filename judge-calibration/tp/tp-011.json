@@ -1,0 +1,7 @@
+{
+  "id": "tp-011",
+  "reference": "标 信息 值role",
+  "candidate": "标 信息 值role",
+  "ground_truth": true,
+  "short_description": "badge 文字不同但 variant 和 bind 相同"
+}

@@ -1,0 +1,7 @@
+{
+  "id": "tp-025",
+  "reference": "列\n　文 标题 张伟\n　标 信息 管理员",
+  "candidate": "列\n　标 信息 管理员\n　文 标题 张伟",
+  "ground_truth": true,
+  "short_description": "badge 在文字前后，无语义差异"
+}

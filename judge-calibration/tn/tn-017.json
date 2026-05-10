@@ -1,0 +1,7 @@
+{
+  "id": "tn-017",
+  "reference": "按 主 save_profile 保存",
+  "candidate": "按 主 save 保存",
+  "ground_truth": false,
+  "short_description": "保存个人资料 action 从 save_profile 改为 save"
+}

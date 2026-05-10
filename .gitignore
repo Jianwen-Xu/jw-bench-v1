@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment (contains DEEPSEEK_API_KEY)
+.env
+
+# Benchmark run outputs (JSON results + reports per run)
+runs/
+
+# macOS artifacts
+.DS_Store
+
+# Editor temporary files
+*.swp
+*.swo
+*~
+
+# Debug files
+run_clean.ts
+run_head.ts
+judge_clean.ts

@@ -1,0 +1,18 @@
+["Col",
+  ["Card",
+    ["Text", {"v":"sec-title"}, "个人资料"],
+    ["Avatar", {"size":"m"}],
+    ["Input", {"bind":"name","ph":"请输入姓名"}],
+    ["Btn", {"v":"p","t":"save_profile"}, "保存"]
+  ],
+  ["Card",
+    ["Text", {"v":"sec-title"}, "通知偏好"],
+    ["Row", ["Text", {}, "邮件通知"], ["Toggle", {"bind":"email_notif"}]],
+    ["Row", ["Text", {}, "短信通知"], ["Toggle", {"bind":"sms_notif"}]],
+    ["Row", ["Text", {}, "推送通知"], ["Toggle", {"bind":"push_notif"}]]
+  ],
+  ["Card",
+    ["Text", {"v":"sec-title"}, "账户操作"],
+    ["Btn", {"v":"s","t":"deactivate"}, "注销账户"]
+  ]
+]

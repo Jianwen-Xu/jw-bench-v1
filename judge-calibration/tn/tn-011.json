@@ -1,0 +1,7 @@
+{
+  "id": "tn-011",
+  "reference": "列\n　卡\n　　文 节标题 个人资料\n　卡\n　　文 节标题 账户操作\n　　按 次 deactivate 注销账户",
+  "candidate": "列\n　卡\n　　文 节标题 个人资料\n　卡\n　　文 节标题 账户操作\n　　按 次 deactivate 注销账户\n　卡\n　　文 节标题 帮助中心\n　　链 help 联系支持",
+  "ground_truth": false,
+  "short_description": "设置页多出一个不在规格里的 section"
+}

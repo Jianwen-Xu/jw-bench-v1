@@ -1,0 +1,7 @@
+{
+  "id": "tp-006",
+  "reference": "排\n　按 主 submit 登录\n　按 次 cancel 取消",
+  "candidate": "卡\n　排\n　　按 主 submit 登录\n　　按 次 cancel 取消",
+  "ground_truth": true,
+  "short_description": "在按钮前加一个无关容器层（卡包排），不改语义"
+}

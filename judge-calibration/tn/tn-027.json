@@ -1,0 +1,7 @@
+{
+  "id": "tn-027",
+  "reference": "切 值email_notif",
+  "candidate": "切 值notif",
+  "ground_truth": false,
+  "short_description": "状态绑定从 email_notif 改为 notif（bind 名不同）"
+}

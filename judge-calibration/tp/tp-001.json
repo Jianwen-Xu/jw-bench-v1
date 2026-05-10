@@ -1,0 +1,7 @@
+{
+  "id": "tp-001",
+  "reference": "卡\n　按 主 submit 登录",
+  "candidate": "卡\n　按 轻 submit 登录",
+  "ground_truth": true,
+  "short_description": "改按钮 variant(primary→ghost)，功能不变"
+}

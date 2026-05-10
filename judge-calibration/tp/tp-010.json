@@ -1,0 +1,7 @@
+{
+  "id": "tp-010",
+  "reference": "文 标题 值title",
+  "candidate": "文 标题 值title",
+  "ground_truth": true,
+  "short_description": "商品标题文字内容不同但绑定相同 state"
+}

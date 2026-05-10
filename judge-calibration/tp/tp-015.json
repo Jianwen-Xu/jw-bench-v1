@@ -1,0 +1,7 @@
+{
+  "id": "tp-015",
+  "reference": "排\n　头像 中 圆\n　文 标题 张伟",
+  "candidate": "列\n　头像 中 圆\n　文 标题 张伟",
+  "ground_truth": true,
+  "short_description": "头像和文字从排改为列，但都存在"
+}

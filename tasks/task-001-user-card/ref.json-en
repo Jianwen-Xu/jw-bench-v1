@@ -1,0 +1,9 @@
+["Card",
+  ["Row",
+    ["Avatar", {"size":"m","shape":"circle","src":"avatar"}],
+    ["Col",
+      ["Text", {"v":"title"}, "张伟"],
+      ["Badge", {"v":"info"}, "管理员"]
+    ]
+  ]
+]

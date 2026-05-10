@@ -1,0 +1,7 @@
+{
+  "id": "tp-029",
+  "reference": "卡\n　文 节标题 账户操作\n　按 次 deactivate 注销账户",
+  "candidate": "卡\n　按 次 deactivate 注销账户\n　文 节标题 账户操作",
+  "ground_truth": true,
+  "short_description": "卡片内标题和内容互换（标题仍存在）"
+}

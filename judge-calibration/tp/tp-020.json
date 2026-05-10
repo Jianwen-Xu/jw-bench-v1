@@ -1,0 +1,7 @@
+{
+  "id": "tp-020",
+  "reference": "[\"Form\", [\"Input\", {\"type\":\"email\",\"req\":true}], [\"Input\", {\"type\":\"password\",\"req\":true}], [\"Btn\", {\"v\":\"p\",\"t\":\"submit\"}, \"登录\"]]",
+  "candidate": "[\"域\", [\"入\", {\"类\":\"邮箱\",\"必\":true}], [\"入\", {\"类\":\"密码\",\"必\":true}], [\"按\", {\"式\":\"主\",\"触\":\"submit\"}, \"登录\"]]",
+  "ground_truth": true,
+  "short_description": "JSON-EN 和 XU-C 同一个登录表单"
+}

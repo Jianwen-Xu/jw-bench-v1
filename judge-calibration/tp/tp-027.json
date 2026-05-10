@@ -1,0 +1,7 @@
+{
+  "id": "tp-027",
+  "reference": "列\n　文 标题 值title\n　文 价格 值price\n　按 主 add_cart 加入购物车",
+  "candidate": "列\n　文 价格 值price\n　文 标题 值title\n　按 主 add_cart 加入购物车",
+  "ground_truth": true,
+  "short_description": "商品页价格和标题互换顺序，都存在"
+}

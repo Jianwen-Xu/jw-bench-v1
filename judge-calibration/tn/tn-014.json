@@ -1,0 +1,7 @@
+{
+  "id": "tn-014",
+  "reference": "按 主 del 删除",
+  "candidate": "按 主 remove 删除",
+  "ground_truth": false,
+  "short_description": "删除 action 从 del 改为 remove"
+}

@@ -1,0 +1,12 @@
+[
+  "存在 3 个 section 卡片",
+  "Section 1：存在头像",
+  "Section 1：存在姓名输入框，绑定 name 状态",
+  "Section 1：存在'保存'按钮，触发 save_profile action",
+  "Section 2：存在邮件通知 toggle，绑定 email_notif",
+  "Section 2：存在短信通知 toggle，绑定 sms_notif",
+  "Section 2：存在推送通知 toggle，绑定 push_notif",
+  "Section 3：存在'注销账户'按钮，触发 deactivate action",
+  "整体布局为纵向列",
+  "注销按钮为次要或危险样式（非主要）"
+]

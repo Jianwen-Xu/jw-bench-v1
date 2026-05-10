@@ -1,0 +1,7 @@
+{
+  "id": "tn-015",
+  "reference": "链 forgot 忘记密码？",
+  "candidate": "链 reset_password 忘记密码？",
+  "ground_truth": false,
+  "short_description": "忘记密码 action 从 forgot 改为 reset_password"
+}

@@ -1,0 +1,7 @@
+["Form",
+  ["Input", {"type":"email","req":true,"ph":"请输入邮箱","bind":"email"}],
+  ["Input", {"type":"password","req":true,"ph":"请输入密码","bind":"password"}],
+  ["Checkbox", {"bind":"rememberMe"}, "记住我"],
+  ["Btn", {"v":"p","t":"submit"}, "登录"],
+  ["Link", {"t":"forgot"}, "忘记密码？"]
+]

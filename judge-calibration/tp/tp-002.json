@@ -1,0 +1,7 @@
+{
+  "id": "tp-002",
+  "reference": "排\n　头像 大 圆\n　文 标题 张伟",
+  "candidate": "排\n　头像 中 圆\n　文 标题 张伟",
+  "ground_truth": true,
+  "short_description": "改头像尺寸(大→中)，功能不变"
+}

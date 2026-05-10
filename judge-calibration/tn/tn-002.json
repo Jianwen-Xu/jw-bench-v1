@@ -1,0 +1,7 @@
+{
+  "id": "tn-002",
+  "reference": "域\n　入 邮箱 必\n　入 密码 必\n　按 主 submit 登录",
+  "candidate": "域\n　入 邮箱 必\n　入 密码 必",
+  "ground_truth": false,
+  "short_description": "删除登录按钮"
+}

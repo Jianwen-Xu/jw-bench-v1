@@ -1,0 +1,7 @@
+{
+  "id": "tn-005",
+  "reference": "卡\n　排\n　　文 邮件通知\n　　切 值email_notif\n　排\n　　文 短信通知\n　　切 值sms_notif\n　排\n　　文 推送通知\n　　切 值push_notif",
+  "candidate": "卡\n　排\n　　文 邮件通知\n　　切 值email_notif\n　排\n　　文 推送通知\n　　切 值push_notif",
+  "ground_truth": false,
+  "short_description": "设置页删除一个 toggle"
+}

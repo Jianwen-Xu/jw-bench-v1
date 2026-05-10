@@ -1,0 +1,7 @@
+{
+  "id": "tn-013",
+  "reference": "按 主 submit 登录",
+  "candidate": "按 主 login 登录",
+  "ground_truth": false,
+  "short_description": "登录 action 从 submit 改为 login"
+}

@@ -1,0 +1,7 @@
+{
+  "id": "tn-030",
+  "reference": "文 标题 值title",
+  "candidate": "文 标题 值name",
+  "ground_truth": false,
+  "short_description": "标题文字 bind 从 title 改为 name（state ref 不同）"
+}

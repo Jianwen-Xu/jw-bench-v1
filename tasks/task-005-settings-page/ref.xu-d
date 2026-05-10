@@ -1,0 +1,20 @@
+列
+　卡
+　　文 节标题 个人资料
+　　头像 中
+　　入 值name 空请输入姓名
+　　按 主 save_profile 保存
+　卡
+　　文 节标题 通知偏好
+　　排
+　　　文 邮件通知
+　　　切 值email_notif
+　　排
+　　　文 短信通知
+　　　切 值sms_notif
+　　排
+　　　文 推送通知
+　　　切 值push_notif
+　卡
+　　文 节标题 账户操作
+　　按 次 deactivate 注销账户

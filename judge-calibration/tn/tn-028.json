@@ -1,0 +1,7 @@
+{
+  "id": "tn-028",
+  "reference": "选框 值rememberMe 记住我",
+  "candidate": "选框 值remember 记住我",
+  "ground_truth": false,
+  "short_description": "记住我 checkbox bind 从 rememberMe 改为 remember"
+}

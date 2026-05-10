@@ -1,0 +1,7 @@
+{
+  "id": "tp-008",
+  "reference": "入 密码 必 空请输入密码 值密码",
+  "candidate": "入 密码 必 空密码 值密码",
+  "ground_truth": true,
+  "short_description": "密码框 placeholder 从'请输入密码'改为'密码'，结构不变"
+}

@@ -1,0 +1,7 @@
+{
+  "id": "tp-021",
+  "reference": "<Card><Column><Text variant=\"title\">确认删除？</Text><Row><Button variant=\"secondary\" onTap=\"cancel\">取消</Button><Button variant=\"primary\" onTap=\"del\">删除</Button></Row></Column></Card>",
+  "candidate": "[\"Card\", [\"Col\", [\"Text\", {\"v\":\"title\"}, \"确认删除？\"], [\"Row\", [\"Btn\", {\"v\":\"s\",\"t\":\"cancel\"}, \"取消\"], [\"Btn\", {\"v\":\"p\",\"t\":\"del\"}, \"删除\"]]]]",
+  "ground_truth": true,
+  "short_description": "JSX 和 JSON-EN 同一个确认对话框"
+}

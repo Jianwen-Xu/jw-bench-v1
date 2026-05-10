@@ -1,0 +1,7 @@
+{
+  "id": "tp-028",
+  "reference": "域\n　入 邮箱 必\n　入 密码 必\n　选框 值记住 记住我\n　按 主 submit 登录\n　链 forgot 忘记密码？",
+  "candidate": "域\n　入 邮箱 必\n　入 密码 必\n　按 主 submit 登录\n　选框 值记住 记住我\n　链 forgot 忘记密码？",
+  "ground_truth": true,
+  "short_description": "登录表单的说明文字和记住我互换顺序，action 不变"
+}

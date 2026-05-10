@@ -1,0 +1,7 @@
+{
+  "id": "tn-018",
+  "reference": "按 主 add_cart 加入购物车",
+  "candidate": "按 主 buy_now 加入购物车",
+  "ground_truth": false,
+  "short_description": "加入购物车 action 从 add_cart 改为 buy_now"
+}

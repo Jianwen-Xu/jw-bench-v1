@@ -1,0 +1,7 @@
+{
+  "id": "tp-017",
+  "reference": "域\n　入 邮箱 必\n　入 密码 必\n　按 主 submit 登录",
+  "candidate": "域\n　列\n　　入 邮箱 必\n　　入 密码 必\n　　按 主 submit 登录",
+  "ground_truth": true,
+  "short_description": "表单域直接放组件 vs 套一层列，语义相同"
+}

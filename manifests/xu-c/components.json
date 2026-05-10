@@ -1,0 +1,137 @@
+{
+  "列": {
+    "name": "Column", "alias_en": "Col", "kind": "container",
+    "props_order": [],
+    "props": {}
+  },
+  "排": {
+    "name": "Row", "alias_en": "Row", "kind": "container",
+    "props_order": [],
+    "props": {}
+  },
+  "卡": {
+    "name": "Card", "alias_en": "Card", "kind": "container",
+    "props_order": [],
+    "props": {}
+  },
+  "域": {
+    "name": "Form", "alias_en": "Form", "kind": "container",
+    "props_order": ["触"],
+    "props": { "触": {"type": "actionId", "alias_en": "onSubmit"} }
+  },
+  "文": {
+    "name": "Text", "alias_en": "Text", "kind": "display",
+    "props_order": ["式", "值"],
+    "props": {
+      "式": {"type": "enum", "values": ["标题","标题","正文","价格","节标题","说明"], "alias_en": "variant",
+             "enum_map": {"标题":"title","标题":"heading","正文":"body","价格":"price","节标题":"sec-title","说明":"caption"}},
+      "值": {"type": "stateRef", "alias_en": "bind"}
+    }
+  },
+  "图": {
+    "name": "Image", "alias_en": "Img", "kind": "display",
+    "props_order": ["大", "源", "形"],
+    "props": {
+      "大": {"type": "enum", "values": ["小","中","大"], "alias_en": "size",
+             "enum_map": {"小":"s","中":"m","大":"l"}},
+      "源": {"type": "string", "alias_en": "src"},
+      "形": {"type": "enum", "values": ["方","圆"], "alias_en": "shape",
+             "enum_map": {"方":"square","圆":"circle"}}
+    }
+  },
+  "按": {
+    "name": "Button", "alias_en": "Btn", "kind": "interactive",
+    "props_order": ["式", "触", "禁"],
+    "props": {
+      "式": {"type": "enum", "values": ["主","次","轻"], "alias_en": "variant",
+             "enum_map": {"主":"primary","次":"secondary","轻":"ghost"}},
+      "触": {"type": "actionId", "alias_en": "onTap"},
+      "禁": {"type": "bool", "alias_en": "disabled"}
+    }
+  },
+  "入": {
+    "name": "Input", "alias_en": "Input", "kind": "interactive",
+    "props_order": ["类", "值", "必", "空", "禁"],
+    "props": {
+      "类": {"type": "enum", "values": ["文","邮箱","密码","数字"], "alias_en": "type",
+             "enum_map": {"文":"text","邮箱":"email","密码":"password","数字":"number"}},
+      "值": {"type": "stateRef", "alias_en": "bind"},
+      "必": {"type": "bool", "alias_en": "required"},
+      "空": {"type": "string", "alias_en": "placeholder"},
+      "禁": {"type": "bool", "alias_en": "disabled"}
+    }
+  },
+  "选": {
+    "name": "Select", "alias_en": "Select", "kind": "interactive",
+    "props_order": ["值", "选项", "必", "禁"],
+    "props": {
+      "值": {"type": "stateRef", "alias_en": "bind"},
+      "选项": {"type": "stateRef", "alias_en": "options"},
+      "必": {"type": "bool", "alias_en": "required"},
+      "禁": {"type": "bool", "alias_en": "disabled"}
+    }
+  },
+  "选框": {
+    "name": "Checkbox", "alias_en": "Checkbox", "kind": "interactive",
+    "props_order": ["值", "禁"],
+    "props": {
+      "值": {"type": "stateRef", "alias_en": "bind"},
+      "禁": {"type": "bool", "alias_en": "disabled"}
+    }
+  },
+  "切": {
+    "name": "Toggle", "alias_en": "Toggle", "kind": "interactive",
+    "props_order": ["值", "禁"],
+    "props": {
+      "值": {"type": "stateRef", "alias_en": "bind"},
+      "禁": {"type": "bool", "alias_en": "disabled"}
+    }
+  },
+  "链": {
+    "name": "Link", "alias_en": "Link", "kind": "interactive",
+    "props_order": ["触", "式"],
+    "props": {
+      "触": {"type": "actionId", "alias_en": "onTap"},
+      "式": {"type": "enum", "values": ["默认","淡"], "alias_en": "variant",
+             "enum_map": {"默认":"default","淡":"subtle"}}
+    }
+  },
+  "栏": {
+    "name": "NavBar", "alias_en": "NavBar", "kind": "navigation",
+    "props_order": ["题", "返"],
+    "props": {
+      "题": {"type": "string", "alias_en": "title"},
+      "返": {"type": "actionId", "alias_en": "onBack"}
+    }
+  },
+  "标": {
+    "name": "Badge", "alias_en": "Badge", "kind": "decorative",
+    "props_order": ["式", "值"],
+    "props": {
+      "式": {"type": "enum", "values": ["信息","成功","警告","危险"], "alias_en": "variant",
+             "enum_map": {"信息":"info","成功":"success","警告":"warning","危险":"danger"}},
+      "值": {"type": "stateRef", "alias_en": "bind"}
+    }
+  },
+  "提": {
+    "name": "Toast", "alias_en": "Toast", "kind": "feedback",
+    "props_order": ["式", "值", "时"],
+    "props": {
+      "式": {"type": "enum", "values": ["信息","成功","警告","错误"], "alias_en": "variant",
+             "enum_map": {"信息":"info","成功":"success","警告":"warning","错误":"error"}},
+      "值": {"type": "stateRef", "alias_en": "bind"},
+      "时": {"type": "number", "alias_en": "duration"}
+    }
+  },
+  "头像": {
+    "name": "Avatar", "alias_en": "Avatar", "kind": "display",
+    "props_order": ["大", "形", "源"],
+    "props": {
+      "大": {"type": "enum", "values": ["小","中","大"], "alias_en": "size",
+             "enum_map": {"小":"s","中":"m","大":"l"}},
+      "形": {"type": "enum", "values": ["圆","方"], "alias_en": "shape",
+             "enum_map": {"圆":"circle","方":"square"}},
+      "源": {"type": "string", "alias_en": "src"}
+    }
+  }
+}

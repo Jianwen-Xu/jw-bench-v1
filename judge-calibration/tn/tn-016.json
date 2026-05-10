@@ -1,0 +1,7 @@
+{
+  "id": "tn-016",
+  "reference": "按 次 cancel 取消",
+  "candidate": "按 次 close 取消",
+  "ground_truth": false,
+  "short_description": "取消 action 从 cancel 改为 close"
+}

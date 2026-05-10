@@ -1,0 +1,7 @@
+{
+  "id": "tn-023",
+  "reference": "排\n　文 邮件通知\n　切 值email_notif",
+  "candidate": "文 邮件通知\n切 值email_notif",
+  "ground_truth": false,
+  "short_description": "toggle 从排中独立出来，label 脱离"
+}

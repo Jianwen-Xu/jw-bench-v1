@@ -1,0 +1,7 @@
+{
+  "id": "tp-024",
+  "reference": "[\"选框\", {\"值\":\"rememberMe\"}, \"记住我\"]",
+  "candidate": "选框 值rememberMe 记住我",
+  "ground_truth": true,
+  "short_description": "选框 bind 有无引号，等价"
+}

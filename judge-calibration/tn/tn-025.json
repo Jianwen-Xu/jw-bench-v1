@@ -1,0 +1,7 @@
+{
+  "id": "tn-025",
+  "reference": "入 邮箱 必 空请输入邮箱",
+  "candidate": "入 邮箱 空请输入邮箱",
+  "ground_truth": false,
+  "short_description": "邮箱输入框 required 被去掉"
+}

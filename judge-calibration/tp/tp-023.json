@@ -1,0 +1,7 @@
+{
+  "id": "tp-023",
+  "reference": "[\"Input\", {\"type\":\"email\",\"req\":true,\"ph\":\"请输入邮箱\"}]",
+  "candidate": "<Input type=\"email\" required placeholder=\"请输入邮箱\" />",
+  "ground_truth": true,
+  "short_description": "必填 Input：req:true vs required 关键字，语义等价"
+}

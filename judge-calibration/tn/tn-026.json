@@ -1,0 +1,7 @@
+{
+  "id": "tn-026",
+  "reference": "入 密码 必 空请输入密码",
+  "candidate": "入 文 必 空请输入密码",
+  "ground_truth": false,
+  "short_description": "密码框 type 从 password 改为 text（隐藏功能丢失）"
+}

@@ -1,0 +1,7 @@
+{
+  "id": "tn-029",
+  "reference": "标 成功 值stock",
+  "candidate": "标 成功 值inventory",
+  "ground_truth": false,
+  "short_description": "库存 badge bind 从 stock 改为 inventory"
+}

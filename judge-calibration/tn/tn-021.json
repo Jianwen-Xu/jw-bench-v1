@@ -1,0 +1,7 @@
+{
+  "id": "tn-021",
+  "reference": "卡\n　文 标题 确认删除？\n　排\n　　按 次 cancel 取消\n　　按 主 del 删除",
+  "candidate": "卡\n　文 标题 确认删除？\n　列\n　　按 次 cancel 取消\n　　按 主 del 删除",
+  "ground_truth": false,
+  "short_description": "确认框两个按钮从排变为列（水平→纵向）"
+}

@@ -1,0 +1,7 @@
+{
+  "id": "tp-003",
+  "reference": "标 信息 管理员",
+  "candidate": "标 成功 管理员",
+  "ground_truth": true,
+  "short_description": "改 badge variant(info→success)，功能不变"
+}

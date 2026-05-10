@@ -1,0 +1,7 @@
+{
+  "id": "tp-014",
+  "reference": "卡\n　文 标题 确认删除？\n　排\n　　按 次 cancel 取消\n　　按 主 del 删除",
+  "candidate": "列\n　卡\n　　文 标题 确认删除？\n　　排\n　　　按 次 cancel 取消\n　　　按 主 del 删除",
+  "ground_truth": true,
+  "short_description": "卡外套列，内部结构不变"
+}

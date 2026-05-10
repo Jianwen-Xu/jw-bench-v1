@@ -1,0 +1,7 @@
+{
+  "id": "tp-004",
+  "reference": "文 正文 此操作不可撤销",
+  "candidate": "文 说明 此操作不可撤销",
+  "ground_truth": true,
+  "short_description": "改文字 variant(body→caption)，功能不变"
+}

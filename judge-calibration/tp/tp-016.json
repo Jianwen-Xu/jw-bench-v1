@@ -1,0 +1,7 @@
+{
+  "id": "tp-016",
+  "reference": "排\n　文 邮件通知\n　切 值email_notif",
+  "candidate": "列\n　文 邮件通知\n　切 值email_notif",
+  "ground_truth": true,
+  "short_description": "toggle 和 label 从排改为列，bind 不变"
+}

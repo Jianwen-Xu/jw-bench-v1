@@ -1,0 +1,127 @@
+{
+  "Col": {
+    "name": "Column", "kind": "container",
+    "props_order": [],
+    "props": {}
+  },
+  "Row": {
+    "name": "Row", "kind": "container",
+    "props_order": [],
+    "props": {}
+  },
+  "Card": {
+    "name": "Card", "kind": "container",
+    "props_order": [],
+    "props": {}
+  },
+  "Form": {
+    "name": "Form", "kind": "container",
+    "props_order": ["onSubmit"],
+    "props": { "onSubmit": {"type": "actionId"} }
+  },
+  "Text": {
+    "name": "Text", "kind": "display",
+    "props_order": ["v", "bind"],
+    "props": {
+      "v": {"type": "enum", "values": ["title","heading","body","price","sec-title","caption"]},
+      "bind": {"type": "stateRef"}
+    }
+  },
+  "Img": {
+    "name": "Image", "kind": "display",
+    "props_order": ["size", "src", "shape"],
+    "props": {
+      "size": {"type": "enum", "values": ["s","m","l"]},
+      "src": {"type": "string"},
+      "shape": {"type": "enum", "values": ["square","circle"]}
+    }
+  },
+  "Btn": {
+    "name": "Button", "kind": "interactive",
+    "props_order": ["v", "t", "d"],
+    "props": {
+      "v": {"type": "enum", "values": ["p","s","g"]},
+      "t": {"type": "actionId"},
+      "d": {"type": "bool"}
+    }
+  },
+  "Input": {
+    "name": "Input", "kind": "interactive",
+    "props_order": ["type", "bind", "req", "ph", "d"],
+    "props": {
+      "type": {"type": "enum", "values": ["text","email","password","number"]},
+      "bind": {"type": "stateRef"},
+      "req": {"type": "bool"},
+      "ph": {"type": "string"},
+      "d": {"type": "bool"}
+    }
+  },
+  "Select": {
+    "name": "Select", "kind": "interactive",
+    "props_order": ["bind", "opts", "req", "d"],
+    "props": {
+      "bind": {"type": "stateRef"},
+      "opts": {"type": "stateRef"},
+      "req": {"type": "bool"},
+      "d": {"type": "bool"}
+    }
+  },
+  "Checkbox": {
+    "name": "Checkbox", "kind": "interactive",
+    "props_order": ["bind", "d"],
+    "props": {
+      "bind": {"type": "stateRef"},
+      "d": {"type": "bool"}
+    }
+  },
+  "Toggle": {
+    "name": "Toggle", "kind": "interactive",
+    "props_order": ["bind", "d"],
+    "props": {
+      "bind": {"type": "stateRef"},
+      "d": {"type": "bool"}
+    }
+  },
+  "Link": {
+    "name": "Link", "kind": "interactive",
+    "props_order": ["t", "v"],
+    "props": {
+      "t": {"type": "actionId"},
+      "v": {"type": "enum", "values": ["default","subtle"]}
+    }
+  },
+  "NavBar": {
+    "name": "NavBar", "kind": "navigation",
+    "props_order": ["title", "back"],
+    "props": {
+      "title": {"type": "string"},
+      "back": {"type": "actionId"}
+    }
+  },
+  "Badge": {
+    "name": "Badge", "kind": "decorative",
+    "props_order": ["v", "bind"],
+    "props": {
+      "v": {"type": "enum", "values": ["info","success","warning","danger"]},
+      "bind": {"type": "stateRef"}
+    }
+  },
+  "Toast": {
+    "name": "Toast", "kind": "feedback",
+    "props_order": ["v", "bind", "dur"],
+    "props": {
+      "v": {"type": "enum", "values": ["info","success","warning","error"]},
+      "bind": {"type": "stateRef"},
+      "dur": {"type": "number"}
+    }
+  },
+  "Avatar": {
+    "name": "Avatar", "kind": "display",
+    "props_order": ["size", "shape", "src"],
+    "props": {
+      "size": {"type": "enum", "values": ["s","m","l"]},
+      "shape": {"type": "enum", "values": ["circle","square"]},
+      "src": {"type": "string"}
+    }
+  }
+}

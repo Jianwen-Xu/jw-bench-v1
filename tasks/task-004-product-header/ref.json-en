@@ -1,0 +1,9 @@
+["Row",
+  ["Img", {"size":"l","src":"product"}],
+  ["Col",
+    ["Text", {"v":"heading","bind":"title"}],
+    ["Text", {"v":"price","bind":"price"}],
+    ["Badge", {"v":"success","bind":"stock"}],
+    ["Btn", {"v":"p","t":"add_cart"}, "加入购物车"]
+  ]
+]

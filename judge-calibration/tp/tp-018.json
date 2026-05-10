@@ -1,0 +1,7 @@
+{
+  "id": "tp-018",
+  "reference": "排\n　图 大 product\n　列\n　　文 标题 值title\n　　按 主 add_cart 加入购物车",
+  "candidate": "排\n　列\n　　文 标题 值title\n　　按 主 add_cart 加入购物车\n　图 大 product",
+  "ground_truth": true,
+  "short_description": "图片和信息列从排换顺序(图在右)，都存在"
+}

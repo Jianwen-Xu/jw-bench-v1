@@ -1,0 +1,7 @@
+{
+  "id": "tn-009",
+  "reference": "排\n　图 大 product\n　列\n　　文 标题 值title\n　　文 价格 值price\n　　按 主 add_cart 加入购物车",
+  "candidate": "排\n　图 大 product\n　列\n　　文 标题 值title\n　　入 值price\n　　文 价格 值price\n　　按 主 add_cart 加入购物车",
+  "ground_truth": false,
+  "short_description": "商品头部多出价格输入框（不应有输入）"
+}
