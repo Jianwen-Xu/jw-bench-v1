@@ -82,52 +82,48 @@ function estimateTokens(text: string): number {
 }
 
 // ──────────────────────────────────────────────
-// callModel — claude CLI subprocess path
+// callModel — opencode CLI subprocess path
 // ──────────────────────────────────────────────
-async function callClaudeCLI(
+async function callOpenCodeCLI(
   modelId: string,
   systemPrompt: string,
   userPrompt: string,
 ): Promise<CallResult> {
   const t0 = Date.now();
 
-  // Write system prompt to a temp file — avoids shell-escaping issues with long/multi-line prompts
-  const tmpSys = path.join(os.tmpdir(), `jw-bench-sys-${process.pid}-${Date.now()}.txt`);
-  fs.writeFileSync(tmpSys, systemPrompt, 'utf-8');
+  // opencode run has no --system-prompt-file; prepend system content to user message
+  const fullPrompt = `${systemPrompt}\n\n${userPrompt}\n\n不要使用任何工具，只输出最终结果，不要解释。`;
 
-  let stdout = '';
-  try {
-    const result = await execFileAsync('claude', [
-      '-p', userPrompt,
-      '--model', modelId,
-      '--system-prompt-file', tmpSys,
-      '--output-format', 'json',  // structured output: {result, cost_usd, ...}
-    ], {
-      maxBuffer: 10 * 1024 * 1024,  // 10 MB
-      timeout:   120_000,            // 2 min per call
-    });
-    stdout = result.stdout;
-  } finally {
-    try { fs.unlinkSync(tmpSys); } catch { /* ignore */ }
-  }
+  const result = await execFileAsync('opencode', [
+    'run', fullPrompt,
+    '-m', modelId,
+    '--format', 'json',
+    '--pure',
+  ], {
+    maxBuffer: 10 * 1024 * 1024,
+    timeout: 180_000,
+  });
 
-  // Parse JSON output — falls back to raw text if claude returns plain text
+  const stdout = result.stdout;
+
+  // Parse NDJSON: collect all text + last step_finish tokens
   let outputText = '';
   let inputTokens = 0;
   let outputTokens = 0;
-  try {
-    const parsed = JSON.parse(stdout) as Record<string, unknown>;
-    outputText   = (parsed['result'] as string) ?? stdout.trim();
-    // claude --output-format json may include usage in future; check both shapes
-    const usage  = (parsed['usage'] ?? parsed['inputUsage']) as Record<string, number> | undefined;
-    inputTokens  = usage?.['input_tokens']  ?? 0;
-    outputTokens = usage?.['output_tokens'] ?? 0;
-  } catch {
-    outputText = stdout.trim();
+  for (const line of stdout.split('\n').filter(Boolean)) {
+    try {
+      const ev = JSON.parse(line);
+      if (ev.type === 'text' && ev.part?.type === 'text') {
+        outputText += ev.part.text;
+      }
+      if (ev.type === 'step_finish' && ev.part?.tokens) {
+        inputTokens = ev.part.tokens.input ?? 0;
+        outputTokens = (ev.part.tokens.output ?? 0) + (ev.part.tokens.reasoning ?? 0);
+      }
+    } catch { /* skip malformed lines */ }
   }
 
-  // CLI does not currently expose token counts — always fall back to estimator
-  if (inputTokens === 0)  inputTokens  = estimateTokens(systemPrompt + '\n' + userPrompt);
+  if (inputTokens === 0)  inputTokens  = estimateTokens(fullPrompt);
   if (outputTokens === 0) outputTokens = estimateTokens(outputText);
 
   return { text: outputText, inputTokens, outputTokens, latencyMs: Date.now() - t0 };
@@ -172,8 +168,8 @@ async function callModel(
   userPrompt: string,
 ): Promise<CallResult> {
   const cfg = MODELS[modelKey];
-  if (cfg.apiFamily === 'claude-code') {
-    return callClaudeCLI(cfg.id, systemPrompt, userPrompt);
+  if (cfg.apiFamily === 'opencode') {
+    return callOpenCodeCLI(cfg.id, systemPrompt, userPrompt);
   }
   return callDeepSeek(cfg.id, systemPrompt, userPrompt);
 }
@@ -236,22 +232,29 @@ function saveRecord(record: RunRecord, runsDir: string) {
 // ──────────────────────────────────────────────
 // Judge calibration phase
 // ──────────────────────────────────────────────
-async function runJudgeCalibrationPhase() {
-  console.log('🔬  Running judge calibration (60 pairs) via Claude Code…\n');
+async function runJudgeCalibrationPhase(parallel = false) {
+  const concurrency = parallel ? 10 : 1;
+  console.log(`🔬  Running judge calibration (60 pairs) via opencode (concurrency=${concurrency})…\n`);
   const calDir = path.join(ROOT, 'judge-calibration');
   const manifest = JSON.parse(
     fs.readFileSync(path.join(calDir, 'manifest.json'), 'utf-8'),
   );
-  const pairs: Array<{ reference: string; candidate: string; ground_truth: boolean }> = [];
+  const pairs: Array<{
+    id: string; reference: string; candidate: string;
+    ground_truth: boolean; short_description?: string;
+  }> = [];
   for (const id of [...manifest.tp, ...manifest.tn]) {
     const folder = id.startsWith('tp') ? 'tp' : 'tn';
     const p = JSON.parse(
       fs.readFileSync(path.join(calDir, folder, `${id}.json`), 'utf-8'),
     );
-    pairs.push({ reference: p.reference, candidate: p.candidate, ground_truth: p.ground_truth });
+    pairs.push({
+      id, reference: p.reference, candidate: p.candidate,
+      ground_truth: p.ground_truth, short_description: p.short_description,
+    });
   }
 
-  const result: CalibrationResult = await runJudgeCalibration(pairs, 'claude-sonnet-4-6');
+  const result = await runJudgeCalibration(pairs, 'opencode-deepseek-v4-flash', concurrency);
 
   console.log('Results:');
   console.log(`  Total: ${result.total}   Correct: ${result.correct}`);
@@ -521,6 +524,7 @@ program
   .option('--phase <phase>', 'pilot | full | judge-calibration', 'pilot')
   .option('--n <n>', 'tasks per cell for full phase', '80')
   .option('--deepseek', 'include DeepSeek models (requires DEEPSEEK_API_KEY in .env)', false)
+  .option('--parallel', 'run judge calibration in parallel (concurrency=10)', false)
   .parse();
 
 const opts = program.opts();
@@ -531,16 +535,22 @@ if (includeDeepSeek && !DEEPSEEK_API_KEY) {
   process.exit(1);
 }
 
+// No --deepseek means opencode models only (default)
+
 const activeModels = getActiveModels(includeDeepSeek);
 
 (async () => {
   if (opts.phase === 'judge-calibration') {
-    await runJudgeCalibrationPhase();
+    await runJudgeCalibrationPhase(!!opts.parallel);
   } else if (opts.phase === 'pilot') {
     await runPilot(activeModels);
   } else if (opts.phase === 'full') {
     await runFull(activeModels, parseInt(opts.n, 10));
   } else {
-    console.log('Unknown phase. Use: pilot | full | judge-calibration');
+    console.log('Unknown phase: ' + opts.phase + '. Use pilot, full, or judge-calibration.');
+    process.exit(1);
   }
-})().catch((e: Error) => { console.error(e); process.exit(1); });
+})().catch((e: Error) => {
+  console.error(e);
+  process.exit(1);
+});

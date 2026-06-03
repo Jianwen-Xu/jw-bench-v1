@@ -6,50 +6,27 @@ export type Scenario = 'A' | 'B';
 export type Phase = 'pilot' | 'full' | 'judge-calibration';
 
 export interface ModelConfig {
-  /** API model string passed to --model flag / DeepSeek API */
   id: string;
-  /**
-   * claude-code = local logged-in claude CLI (@anthropic-ai/claude-code SDK query())
-   * deepseek    = OpenAI-compat REST API (requires DEEPSEEK_API_KEY)
-   */
-  apiFamily: 'claude-code' | 'deepseek';
+  apiFamily: 'opencode' | 'deepseek';
   chineseAffinity: 'claude' | 'deepseek';
   size: 'heavy' | 'light';
-  inputPricePer1kTokens: number;   // USD, for cost estimation
+  inputPricePer1kTokens: number;
   outputPricePer1kTokens: number;
-  /** Key in MODELS that acts as judge for this model */
   judgeModelKey: string;
-  /**
-   * Whether this model is enabled by default.
-   * DeepSeek models default to false — enable with --deepseek flag.
-   * Claude models default to true.
-   */
   enabled: boolean;
 }
 
 export const MODELS: Record<string, ModelConfig> = {
-  'claude-sonnet-4-6': {
-    id: 'claude-sonnet-4-6',
-    apiFamily: 'claude-code',
-    chineseAffinity: 'claude',
-    size: 'light',
-    inputPricePer1kTokens: 0.003,
-    outputPricePer1kTokens: 0.015,
-    judgeModelKey: 'claude-opus-4-7',
-    enabled: true,
-  },
-  'claude-opus-4-7': {
-    id: 'claude-opus-4-7',
-    apiFamily: 'claude-code',
+  'opencode-big-pickle': {
+    id: 'opencode/big-pickle',
+    apiFamily: 'opencode',
     chineseAffinity: 'claude',
     size: 'heavy',
-    inputPricePer1kTokens: 0.015,
-    outputPricePer1kTokens: 0.075,
-    judgeModelKey: 'claude-sonnet-4-6',
+    inputPricePer1kTokens: 0,
+    outputPricePer1kTokens: 0,
+    judgeModelKey: 'opencode-big-pickle',
     enabled: true,
   },
-  // TODO: verify DeepSeek V4 Pro / V4 Flash API model IDs before running Full phase.
-  // Current DeepSeek API uses 'deepseek-chat' for V4; Flash naming may differ.
   'deepseek-v4-pro': {
     id: 'deepseek-chat',
     apiFamily: 'deepseek',
@@ -57,7 +34,7 @@ export const MODELS: Record<string, ModelConfig> = {
     size: 'heavy',
     inputPricePer1kTokens: 0.002,
     outputPricePer1kTokens: 0.008,
-    judgeModelKey: 'claude-sonnet-4-6',
+    judgeModelKey: 'opencode-big-pickle',
     enabled: false,
   },
   'deepseek-v4-flash': {
@@ -67,12 +44,21 @@ export const MODELS: Record<string, ModelConfig> = {
     size: 'light',
     inputPricePer1kTokens: 0.00027,
     outputPricePer1kTokens: 0.0011,
-    judgeModelKey: 'claude-sonnet-4-6',
+    judgeModelKey: 'opencode-big-pickle',
     enabled: false,
+  },
+  'opencode-deepseek-v4-flash': {
+    id: 'opencode/deepseek-v4-flash-free',
+    apiFamily: 'opencode',
+    chineseAffinity: 'deepseek',
+    size: 'light',
+    inputPricePer1kTokens: 0,
+    outputPricePer1kTokens: 0,
+    judgeModelKey: 'opencode-deepseek-v4-flash',
+    enabled: true,
   },
 };
 
-/** Returns model keys to run. DeepSeek included only when includeDeepSeek=true. */
 export function getActiveModels(includeDeepSeek = false): string[] {
   return Object.entries(MODELS)
     .filter(([, cfg]) => cfg.enabled || (includeDeepSeek && cfg.apiFamily === 'deepseek'))
@@ -80,8 +66,7 @@ export function getActiveModels(includeDeepSeek = false): string[] {
 }
 
 export const PILOT_CONFIG = {
-  // default model list; runner overrides with getActiveModels() after parsing flags
-  models: ['claude-sonnet-4-6'],
+  models: ['opencode-big-pickle'],
   formats: ['jsx', 'json-en', 'xu-c', 'xu-d'] as Format[],
   scenarios: ['A'] as Scenario[],
   taskIds: ['task-001', 'task-002', 'task-003', 'task-004', 'task-005'],
@@ -90,15 +75,13 @@ export const PILOT_CONFIG = {
 };
 
 export const FULL_CONFIG = {
-  // default to enabled-only models; runner overrides with getActiveModels() after parsing flags
   models: Object.keys(MODELS).filter(k => MODELS[k].enabled),
   formats: ['jsx', 'json-en', 'xu-c', 'xu-d'] as Format[],
   scenarios: ['A', 'B'] as Scenario[],
   repetitions: 3,
   temperature: 0,
-  // n (tasks per cell) determined after Pilot by Cohen's h
 };
 
-// Claude models use local Claude Code auth — no API key needed
+// Claude models use local Claude Code auth -- no API key needed
 // DeepSeek still requires an explicit API key
 export const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY ?? '';

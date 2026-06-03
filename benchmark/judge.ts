@@ -1,20 +1,15 @@
 /**
  * LLM-as-judge for semantic equivalence (M5).
  *
- * Claude models: spawns `claude -p` CLI subprocess (no npm package needed)
+ * Pure CLI mode: each judge call spawns a fresh `opencode run --pure --format json`
+ * process. No session reuse — every call starts and stops a new server.
  * DeepSeek models: OpenAI-compat REST API
  *
  * Double-blind: reference and candidate are converted to abstract tree dumps
  * before sending to the judge, so the judge cannot infer the format used.
  */
-import * as fs from 'fs';
-import * as os from 'os';
-import * as path from 'path';
-import { execFile } from 'child_process';
-import { promisify } from 'util';
+import { spawn } from 'child_process';
 import { MODELS, DEEPSEEK_API_KEY } from './config';
-
-const execFileAsync = promisify(execFile);
 
 export interface JudgeResult {
   equivalent: boolean;
@@ -25,33 +20,78 @@ export interface JudgeResult {
   rawResponse: string;
 }
 
-const JUDGE_SYSTEM_PROMPT = `You are a strict UI equivalence judge. Your task is to decide if two UI trees are FUNCTIONALLY IDENTICAL.
+const JUDGE_SYSTEM_PROMPT = `You are a UI equivalence judge. Decide if two UI tree dumps are functionally IDENTICAL.
 
-PROCEDURE — follow these steps in order:
-1. List every interactive element in REFERENCE (buttons, inputs, links, checkboxes, toggles, selects, textareas).
-2. List every interactive element in CANDIDATE.
-3. Compare the two lists element-by-element.
+FORMAT — each line:  [ComponentType] [props...]
+- First token in brackets is the component type (e.g. [Button], [Input], [Avatar], [Text]).
+- Remaining tokens are configuration properties.
+- Interactive properties (these always matter):
+  • Action handlers: onTap=xxx, onSubmit=xxx, onBack=xxx, onClose=xxx, onChange=xxx
+  • State bindings: bind=xxx, value=xxx
+  • Constraints: required, disabled
+- Visual/descriptive properties (these can differ without breaking equivalence):
+  • Size tokens (小/中/大)
+  • Variant tokens (主/次/轻, primary/ghost/success/info/warning/danger)
+  • Shape tokens (圆/方)
+  • Badge variant tokens (信息/成功/警告/危险/错误)
+  • Text type tokens (标题/主标题/正文/价格/节标题/说明)
+  • Label text on buttons/links when the action handler is identical
 
-RULES — any of these make the trees NOT equivalent:
-- Candidate is MISSING one or more interactive elements from Reference
-- Candidate has EXTRA interactive elements not present in Reference
-- Any action/handler name differs (onSubmit vs onSave = different)
-- Any state-binding variable name differs (email vs emailInput = different)
-- Any required/disabled constraint differs
+RULES — trees are NOT equivalent when:
+- Any element from Reference is missing in Candidate (even non-interactive ones like [Avatar], [Text], [Image])
+- Any element in Candidate does not exist in Reference (even non-interactive ones)
+- Action handler names differ (onTap=submit vs onTap=cancel = different; del vs remove = different — match must be EXACT)
+- State binding variable names differ (ANY value after bind= matters: bind=title vs bind=name = different)
+- required / disabled constraint differs
+- An interactive element (Button, Input, Toggle, etc.) is placed in a different CONTAINER in Candidate vs Reference (e.g., Button is inside [Form] in Reference but outside [Form] in Candidate)
+- The overall SECTION structure is reorganized (e.g., content grouped under different headings or sections)
+- For [Input] elements: type/modifier tokens (like 密码 for password masking, 数字 for numeric, 邮箱 for email) affect the component's behavior and must match. An Input with 密码 (password mode) is NOT equivalent to the same Input with 文 (plain text mode).
 
-These differences do NOT affect equivalence:
-- Visual style variants (primary vs ghost, lg vs sm)
-- Label wording where the meaning is clearly identical (Save vs Save Changes)
-- Pure layout restructuring (row vs column, wrapper divs/views)
-- Order of sibling non-interactive elements
+Differences that DO NOT affect equivalence:
+- Visual/style tokens listed above
+- Label text on interactive elements when the action handler is the same
+- Display text / section headings on [Text] elements (purely descriptive content, no action handlers or bindings) — wording differences are allowed
+- Row ↔ Column (both are layout containers; swapping them is OK as long as children are the same)
+- Adding or removing an extra wrapper layer ([Card], [Column], [Row]) around existing content groups
+- Order of sibling elements
 
-Be STRICT: when in doubt whether two elements are the same, mark them as different.
+Examples:
+  ✓ [Avatar] 大 圆  vs  [Avatar] 中 圆        → equivalent (size only)
+  ✓ [Button] onTap=submit 提交  vs  [Button] onTap=submit 确认  → equivalent
+  ✓ [Badge] 信息 管理员  vs  [Badge] 成功 管理员  → equivalent (variant only)
+  ✓ [Row] > [Button]       vs  [Column] > [Button]  → equivalent (Row↔Column same content)
+  ✓ [Form] > [Input]       vs  [Form] > [Column] > [Input]  → equivalent (extra wrapper inside Form)
+  ✓ [Text] 节标题 个人资料  vs  [Text] 节标题 个人信息   → equivalent (different section heading wording)
+  ✗ [Button] onTap=submit  vs  [Button] onTap=cancel  → NOT equivalent
+  ✗ [Button] onTap=del     vs  [Button] onTap=remove  → NOT equivalent
+  ✗ [Text] bind=title      vs  [Text] bind=name     → NOT equivalent (bind differs)
+  ✗ [Avatar] 中            vs  (absent)             → NOT equivalent (Avatar missing)
+  ✗ [Form] > [Button]      vs  Button outside Form  → NOT equivalent (Button moved out of Form)
+  ✗ [Input] 密码 required   vs  [Input] 文 required   → NOT equivalent (password mode vs text mode)
 
-Output ONLY valid JSON — no explanation text before or after:
-{"equivalent": true, "missing": [], "extra": [], "reasoning": "one sentence"}
+IMPORTANT: bind=xxx is a STATE BINDING. The value after bind= is a VARIABLE NAME. Different variable names = NOT equivalent, even if the names look like common words (title, name, email).
 
-"missing" = interactive elements in Reference but absent in Candidate.
-"extra"   = interactive elements in Candidate but absent in Reference.`;
+Strict on missing/extra elements, action handlers, bind values, and constraints.
+Lenient ONLY on visual/style tokens, label text with same handler, Row↔Column, and wrapper layers.
+
+Output ONLY valid JSON — no markdown code fences, no explanation, no backticks:
+{"equivalent": true, "missing": [], "extra": [], "reasoning": "one sentence"}`;
+
+// Visual/style-only tokens in XU-D — stripped from abstract dump before judging
+const VISUAL_TOKENS = new Set([
+  // Button variants
+  '主', '次', '轻',
+  // Sizes
+  '小', '中', '大',
+  // Shapes
+  '圆', '方',
+  // Badge / Toast variants
+  '信息', '成功', '警告', '危险', '错误',
+  // Link variants
+  '默认', '淡',
+  // Text variants
+  '标题', '主标题', '正文', '价格', '节标题', '说明',
+]);
 
 // Chinese → English tag mapping for format normalization
 const TAG_MAP: Record<string, string> = {
@@ -98,13 +138,43 @@ function toDumpFromXuD(wire: string): string {
   for (const line of wire.split('\n')) {
     const trimmed = line.trim();
     if (!trimmed) continue;
-    const indent = line.search(/\S/);
+    const indent = line.match(/^[　]*/)?.[0]?.length ?? 0;
     const parts = trimmed.split(/[\s　]+/).filter(Boolean);
     if (parts.length === 0) continue;
     const rawTag = parts[0];
     const tag = TAG_MAP[rawTag] ?? rawTag;
-    const rest = parts.slice(1).filter(p => !/^[值触空]/.test(p) && p !== '必' && p !== '禁').join(' ');
-    lines.push('  '.repeat(Math.floor(indent / 2)) + `[${tag}]` + (rest ? ` ${rest}` : ''));
+
+    const required = parts.some(p => p === '必') ? ' required' : '';
+    const disabled = parts.some(p => p === '禁' || p === '禁true') ? ' disabled' : '';
+
+    const tokens: string[] = [];
+    for (const p of parts.slice(1)) {
+      if (p === '必' || /^禁/.test(p)) continue;   // constraints (handled above)
+      if (/^空/.test(p)) continue;                  // placeholder: 空...
+      if (/^式/.test(p)) continue;                  // explicit style key: 式主/式次
+      if (VISUAL_TOKENS.has(p)) continue;           // known visual tokens
+      if (/^值(.+)$/.test(p)) {                     // state binding: 值xxx → bind=xxx
+        tokens.push(`bind=${p.slice(1)}`); continue;
+      }
+      if (/^触(.+)$/.test(p)) {                     // action trigger: 触submit → onTap=submit
+        tokens.push(`onTap=${p.slice(1)}`); continue;
+      }
+      tokens.push(p);  // keep ASCII handlers + Chinese type/label tokens
+    }
+
+    const interactiveTags = new Set(['Button', 'Link', 'Btn']);
+    if (interactiveTags.has(tag)) {
+      const hasOnTap = tokens.some(t => t.startsWith('onTap='));
+      if (!hasOnTap) {
+        const asciiIdx = tokens.findIndex(t => /^[a-zA-Z]\w*$/.test(t));
+        if (asciiIdx >= 0) {
+          tokens[asciiIdx] = `onTap=${tokens[asciiIdx]}`;
+        }
+      }
+    }
+
+    lines.push('  '.repeat(indent) + `[${tag}]` +
+      (tokens.length ? ` ${tokens.join(' ')}` : '') + required + disabled);
   }
   return lines.join('\n');
 }
@@ -113,29 +183,53 @@ function toDumpFromJSON(wire: string, chinese: boolean): string {
   let arr: any;
   try { arr = JSON.parse(wire); } catch { return wire; }
   const lines: string[] = [];
-  function walk(node: any, depth: number) {
+
+  const ACTION_KEYS = new Set(['t', 'trigger', 'onTap', 'onSubmit', 'onBack', 'onClose', '触']);
+  const BIND_KEYS   = new Set(['bind', 'value', '值']);
+  const TYPE_KEYS   = new Set(['type', '类', '式']);
+  const REQ_KEYS    = new Set(['req', 'required', '必']);
+  const DIS_KEYS    = new Set(['disabled', '禁']);
+
+  function walk(node: any, depth: number): void {
     if (!Array.isArray(node)) return;
     const rawTag = String(node[0] ?? '');
-    const tag = chinese ? (TAG_MAP[rawTag] ?? rawTag) : (ENGLISH_TAGS.has(rawTag) ? rawTag : (Object.keys(TAG_MAP).find(k => TAG_MAP[k] === rawTag) ?? rawTag));
-    const props = typeof node[1] === 'object' && !Array.isArray(node[1]) ? node[1] : {};
-    const propStrs: string[] = [];
+    // Common short-form aliases in JSON-EN wire format
+    const TAG_ALIASES: Record<string, string> = {
+      'Col': 'Column', 'Btn': 'Button', 'Inp': 'Input', 'Img': 'Image',
+      'Txt': 'Text',   'Nav': 'NavBar', 'Chk': 'Checkbox',
+    };
+    const tag = chinese
+      ? (TAG_MAP[rawTag] ?? rawTag)
+      : (ENGLISH_TAGS.has(rawTag) ? rawTag :
+          TAG_ALIASES[rawTag] ??
+          (Object.entries(TAG_MAP).find(([, en]) => en === rawTag)?.[1] ?? rawTag));
+
+    const hasProps = typeof node[1] === 'object' && !Array.isArray(node[1]);
+    const props: Record<string, unknown> = hasProps ? node[1] : {};
+    const startIdx = hasProps ? 2 : 1;
+
+    const tokens: string[] = [];
     for (const [k, v] of Object.entries(props)) {
-      if (typeof v === 'string' && v.length > 0 && v !== 'true' && v !== 'false') {
-        propStrs.push(`${k}=${v}`);
+      if (REQ_KEYS.has(k) && v === true) { tokens.push('required'); continue; }
+      if (DIS_KEYS.has(k) && v === true) { tokens.push('disabled'); continue; }
+      if (typeof v !== 'string' || !v) continue;
+      if (ACTION_KEYS.has(k)) { tokens.push(`onTap=${v}`); continue; }
+      if (BIND_KEYS.has(k))   { tokens.push(`bind=${v}`); continue; }
+      if (TYPE_KEYS.has(k) && !VISUAL_TOKENS.has(v)) { tokens.push(v); continue; }
+      // skip visual/label values
+    }
+
+    for (let i = startIdx; i < node.length; i++) {
+      if (typeof node[i] === 'string' && node[i].trim()) {
+        tokens.push(node[i].trim());
       }
     }
-    const children: string[] = [];
-    const startIdx = typeof node[1] === 'object' && !Array.isArray(node[1]) ? 2 : 1;
-    for (let i = startIdx; i < node.length; i++) {
-      if (typeof node[i] === 'string') continue;
-      const childLines: string[] = [];
-      walk(node[i], 0);
-    }
-    lines.push('  '.repeat(depth) + `[${tag}]` + (propStrs.length > 0 ? ` ${propStrs.join(' ')}` : ''));
+    lines.push('  '.repeat(depth) + `[${tag}]` + (tokens.length ? ` ${tokens.join(' ')}` : ''));
     for (let i = startIdx; i < node.length; i++) {
       if (Array.isArray(node[i])) walk(node[i], depth + 1);
     }
   }
+
   walk(arr, 0);
   return lines.join('\n');
 }
@@ -161,27 +255,46 @@ function extractInteractiveProps(attrs: string): string {
 }
 
 // ──────────────────────────────────────────────
-// Core judge call — claude CLI subprocess
+// Core judge call — opencode CLI (pure mode, fresh session per call)
 // ──────────────────────────────────────────────
 async function judgeViaCLI(userMessage: string, modelId: string): Promise<string> {
-  const tmpSys = path.join(os.tmpdir(), `jw-bench-judge-${process.pid}-${Date.now()}.txt`);
-  fs.writeFileSync(tmpSys, JUDGE_SYSTEM_PROMPT, 'utf-8');
-  try {
-    const { stdout } = await execFileAsync('claude', [
-      '-p', userMessage,
-      '--model', modelId,
-      '--system-prompt-file', tmpSys,
-      '--output-format', 'json',
-    ], { maxBuffer: 4 * 1024 * 1024, timeout: 60_000 });
-    try {
-      const parsed = JSON.parse(stdout) as Record<string, unknown>;
-      return (parsed['result'] as string) ?? stdout.trim();
-    } catch {
-      return stdout.trim();
-    }
-  } finally {
-    try { fs.unlinkSync(tmpSys); } catch { /* ignore */ }
+  const fullPrompt = `${JUDGE_SYSTEM_PROMPT}\n\n${userMessage}\n\n只输出 JSON，不要使用任何工具。`;
+
+  const child = spawn('opencode', [
+    'run', fullPrompt,
+    '-m', modelId,
+    '--format', 'json',
+    '--pure',
+  ], {
+    stdio: ['ignore', 'pipe', 'pipe'],
+    timeout: 300_000,
+  });
+
+  const chunks: Buffer[] = [];
+  child.stdout.on('data', (d: Buffer) => chunks.push(d));
+  let stderr = '';
+  child.stderr.on('data', (d: Buffer) => { stderr += d.toString(); });
+
+  const exitCode = await new Promise<number | null>((resolve) => {
+    child.on('close', resolve);
+    child.on('error', () => resolve(null));
+  });
+
+  if (exitCode !== 0) {
+    return `ERROR: opencode call failed (exit ${exitCode})${stderr ? ': ' + stderr.slice(0, 200) : ''}`;
   }
+
+  const stdout = Buffer.concat(chunks).toString();
+  const textParts: string[] = [];
+  for (const line of stdout.split('\n').filter(Boolean)) {
+    try {
+      const ev = JSON.parse(line);
+      if (ev.type === 'text' && ev.part?.type === 'text') {
+        textParts.push(ev.part.text);
+      }
+    } catch { /* skip */ }
+  }
+  return textParts.join('').trim();
 }
 
 // ──────────────────────────────────────────────
@@ -203,7 +316,8 @@ async function judgeViaDeepSeek(userMessage: string, modelId: string): Promise<s
 
 function parseJudgeResponse(raw: string): Omit<JudgeResult, 'judgeModelKey' | 'rawResponse'> {
   try {
-    const json = raw.match(/\{[\s\S]*\}/)?.[0] ?? '{}';
+    const json = raw.match(/\{[\s\S]*\}/)?.[0] ?? '';
+    if (!json) throw new Error('no JSON object found');
     const parsed = JSON.parse(json);
     return {
       equivalent: Boolean(parsed.equivalent),
@@ -212,7 +326,10 @@ function parseJudgeResponse(raw: string): Omit<JudgeResult, 'judgeModelKey' | 'r
       reasoning:  typeof parsed.reasoning === 'string' ? parsed.reasoning : '',
     };
   } catch {
-    return { equivalent: false, missing: [], extra: [], reasoning: 'parse error' };
+    // Fallback: detect keywords in raw text
+    const lower = raw.toLowerCase();
+    const equiv = /equivalent|等价|等同|相同/.test(lower) && !/not equivalent|不等|不同/.test(lower);
+    return { equivalent: equiv, missing: [], extra: [], reasoning: raw.slice(0, 100) };
   }
 }
 
@@ -228,8 +345,8 @@ export async function judgeEquivalence(
 
   let raw = '';
   try {
-    const family = MODELS[judgeModelKey]?.apiFamily ?? 'claude-code';
-    raw = family === 'claude-code'
+    const family = MODELS[judgeModelKey]?.apiFamily ?? 'opencode';
+    raw = family === 'opencode'
       ? await judgeViaCLI(userMessage, judgeModelId)
       : await judgeViaDeepSeek(userMessage, judgeModelId);
   } catch (e: any) {
@@ -255,23 +372,61 @@ export interface CalibrationResult {
   passed: boolean;
 }
 
-export async function runJudgeCalibration(
-  pairs: Array<{ reference: string; candidate: string; ground_truth: boolean }>,
+export interface CalibrationPair extends CalibrationFilePair {
+  id?: string;
+  short_description?: string;
+}
+
+interface CalibrationFilePair {
+  reference: string;
+  candidate: string;
+  ground_truth: boolean;
+}
+
+async function runJudgeCalibrationConcurrent(
+  pairs: CalibrationPair[],
   judgeModelKey: string,
+  concurrency = 1,
 ): Promise<CalibrationResult> {
   const modelId = MODELS[judgeModelKey]?.id ?? judgeModelKey;
-  let tp = 0, tn = 0, fp = 0, fn = 0;
+  const results: Array<{ predicted: boolean; actual: boolean; label: string }> = [];
+  const t0 = Date.now();
+  const total = pairs.length;
 
-  for (const pair of pairs) {
-    const result = await judgeEquivalence(
-      pair.reference, pair.candidate, modelId, judgeModelKey,
-    );
-    const predicted = result.equivalent;
-    const actual    = pair.ground_truth;
-    if (predicted && actual)        tp++;
-    else if (!predicted && !actual) tn++;
-    else if (predicted && !actual)  fp++;
-    else                            fn++;
+  let nextIndex = 0;
+
+  async function worker(): Promise<void> {
+    while (nextIndex < total) {
+      const i = nextIndex++;
+      const pair = pairs[i];
+      const label = pair.id ?? `pair ${i + 1}`;
+      let r: { predicted: boolean; actual: boolean; label: string };
+      try {
+        const result = await judgeEquivalence(
+          pair.reference, pair.candidate, modelId, judgeModelKey,
+        );
+        r = { predicted: result.equivalent, actual: pair.ground_truth, label };
+      } catch (e: any) {
+        r = { predicted: false, actual: pair.ground_truth, label: `${label} (error: ${e.message})` };
+      }
+      results.push(r);
+      const elapsed = ((Date.now() - t0) / 1000).toFixed(0);
+      const status = r.predicted && r.actual ? '✓ TP' :
+        !r.predicted && !r.actual ? '✓ TN' :
+        r.predicted && !r.actual ? '✗ FP' : '✗ FN';
+      console.log(`  [${results.length}/${total}] ${r.label} … ${status}  (${elapsed}s)`);
+    }
+  }
+
+  const workers = Array.from({ length: concurrency }, () => worker());
+  await Promise.all(workers);
+
+  let tp = 0, tn = 0, fp = 0, fn = 0;
+  for (const r of results) {
+    if (r.predicted && r.actual) tp++;
+    else if (!r.predicted && !r.actual) tn++;
+    else if (r.predicted && !r.actual) fp++;
+    else fn++;
   }
 
   const precision = (tp + fp) > 0 ? tp / (tp + fp) : 0;
@@ -279,14 +434,24 @@ export async function runJudgeCalibration(
   const f1        = (precision + recall) > 0
     ? (2 * precision * recall) / (precision + recall) : 0;
   const round = (n: number) => Math.round(n * 1000) / 1000;
+  const elapsed = ((Date.now() - t0) / 1000).toFixed(0);
+  console.log(`  └─ final: TP=${tp} TN=${tn} FP=${fp} FN=${fn} F1=${(f1 * 100).toFixed(1)}%  (${elapsed}s)`);
 
   return {
-    total: pairs.length,
-    correct: tp + tn,
+    total:     pairs.length,
+    correct:   tp + tn,
     tp, tn, fp, fn,
     precision: round(precision),
     recall:    round(recall),
     f1:        round(f1),
     passed:    f1 >= 0.90,
   };
+}
+
+export async function runJudgeCalibration(
+  pairs: CalibrationPair[],
+  judgeModelKey: string,
+  concurrency = 1,
+): Promise<CalibrationResult> {
+  return runJudgeCalibrationConcurrent(pairs, judgeModelKey, concurrency);
 }

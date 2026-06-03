@@ -60,9 +60,9 @@ for (const [char, comp] of Object.entries(xuManifest) as any[]) {
     }
     if (propDef.type === 'enum' && propDef.enum_map) {
       for (const [cn, en] of Object.entries(propDef.enum_map) as any[]) {
-        const expected = EXPECTED_MAPPINGS.find(([c]) => c === cn);
-        if (expected && expected[1] !== en) {
-          console.error(`❌  ${char}.${propKey}: '${cn}' maps to '${en}' but expected '${expected[1]}'`);
+        const match = EXPECTED_MAPPINGS.find(([c]) => c === cn);
+        if (match && match[1] !== en) {
+          console.error(`❌  ${char}.${propKey}: enum_map '${cn}' => '${en}' (expected '${match[1]}')`);
           errors++;
         }
       }
@@ -71,8 +71,8 @@ for (const [char, comp] of Object.entries(xuManifest) as any[]) {
 }
 
 if (errors === 0) {
-  console.log('✅  All manifest enum mappings are consistent.');
+  console.log('✅  All manifests valid');
 } else {
-  console.error(`\n${errors} error(s) found.`);
+  console.error(`\n${errors} error(s) found`);
   process.exit(1);
 }
