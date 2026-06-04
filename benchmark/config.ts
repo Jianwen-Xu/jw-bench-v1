@@ -25,7 +25,7 @@ export const MODELS: Record<string, ModelConfig> = {
     inputPricePer1kTokens: 0,
     outputPricePer1kTokens: 0,
     judgeModelKey: 'opencode-big-pickle',
-    enabled: true,
+    enabled: false,
   },
   'deepseek-v4-pro': {
     id: 'deepseek-chat',

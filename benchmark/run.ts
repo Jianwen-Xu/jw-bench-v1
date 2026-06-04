@@ -14,8 +14,7 @@
 import * as fs from 'fs';
 import * as os from 'os';
 import * as path from 'path';
-import { execFile } from 'child_process';
-import { promisify } from 'util';
+import { spawn } from 'child_process';
 import { program } from 'commander';
 import {
   MODELS, PILOT_CONFIG, FULL_CONFIG, getActiveModels, Format, Scenario,
@@ -58,8 +57,8 @@ interface CallResult {
 
 const ROOT = path.join(__dirname, '..');
 
-const execFileAsync = promisify(execFile);
-
+// ──────────────────────────────────────────────
+// Token estimator (fallback when API doesn't report counts)
 // ──────────────────────────────────────────────
 // Token estimation (cl100k_base via gpt-tokenizer)
 // CLI does not expose token counts; always estimated.
@@ -90,43 +89,80 @@ async function callOpenCodeCLI(
   userPrompt: string,
 ): Promise<CallResult> {
   const t0 = Date.now();
-
-  // opencode run has no --system-prompt-file; prepend system content to user message
   const fullPrompt = `${systemPrompt}\n\n${userPrompt}\n\n不要使用任何工具，只输出最终结果，不要解释。`;
 
-  const result = await execFileAsync('opencode', [
-    'run', fullPrompt,
-    '-m', modelId,
-    '--format', 'json',
-    '--pure',
-  ], {
-    maxBuffer: 10 * 1024 * 1024,
-    timeout: 180_000,
-  });
+  const maxRetries = 3;
 
-  const stdout = result.stdout;
-
-  // Parse NDJSON: collect all text + last step_finish tokens
-  let outputText = '';
-  let inputTokens = 0;
-  let outputTokens = 0;
-  for (const line of stdout.split('\n').filter(Boolean)) {
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
-      const ev = JSON.parse(line);
-      if (ev.type === 'text' && ev.part?.type === 'text') {
-        outputText += ev.part.text;
+      const child = spawn('opencode', [
+        'run', fullPrompt,
+        '-m', modelId,
+        '--format', 'json',
+        '--pure',
+      ], {
+        stdio: ['ignore', 'pipe', 'pipe'],
+        timeout: 300_000,
+      });
+
+      const chunks: Buffer[] = [];
+      child.stdout.on('data', (d: Buffer) => chunks.push(d));
+      let stderr = '';
+      child.stderr.on('data', (d: Buffer) => { stderr += d.toString(); });
+
+      const [exitCode, exitSignal] = await new Promise<[number | null, string | null]>((resolve) => {
+        child.on('close', (code, sig) => resolve([code, sig]));
+        child.on('error', () => resolve([null, null]));
+      });
+
+      // Clean up child resources
+      child.stdout.removeAllListeners();
+      child.stderr.removeAllListeners();
+      child.unref();
+
+      if (exitCode !== 0 || stderr.includes('ERROR')) {
+        throw new Error(
+          `opencode exited code=${exitCode} signal=${exitSignal}: ${stderr.slice(0, 200)}`,
+        );
       }
-      if (ev.type === 'step_finish' && ev.part?.tokens) {
-        inputTokens = ev.part.tokens.input ?? 0;
-        outputTokens = (ev.part.tokens.output ?? 0) + (ev.part.tokens.reasoning ?? 0);
+
+      const stdout = Buffer.concat(chunks).toString();
+
+      let outputText = '';
+      let inputTokens = 0;
+      let outputTokens = 0;
+      for (const line of stdout.split('\n').filter(Boolean)) {
+        try {
+          const ev = JSON.parse(line);
+          if (ev.type === 'text' && ev.part?.type === 'text') {
+            outputText += ev.part.text;
+          }
+          if (ev.type === 'step_finish' && ev.part?.tokens) {
+            inputTokens = ev.part.tokens.input ?? 0;
+            outputTokens = (ev.part.tokens.output ?? 0) + (ev.part.tokens.reasoning ?? 0);
+          }
+        } catch { /* skip */ }
       }
-    } catch { /* skip malformed lines */ }
+
+      if (inputTokens === 0)  inputTokens  = estimateTokens(fullPrompt);
+      if (outputTokens === 0) outputTokens = estimateTokens(outputText);
+
+      let latencyMs = Date.now() - t0;
+      await new Promise(r => setTimeout(r, 500));
+      return { text: outputText, inputTokens, outputTokens, latencyMs };
+
+    } catch (e: any) {
+      if (attempt < maxRetries) {
+        const delay = attempt * 2000;
+        process.stderr.write(`[retry ${attempt}/${maxRetries} in ${delay}ms: ${e.message.slice(0, 80)}]\n`);
+        await new Promise(r => setTimeout(r, delay));
+        continue;
+      }
+      throw e;
+    }
   }
-
-  if (inputTokens === 0)  inputTokens  = estimateTokens(fullPrompt);
-  if (outputTokens === 0) outputTokens = estimateTokens(outputText);
-
-  return { text: outputText, inputTokens, outputTokens, latencyMs: Date.now() - t0 };
+  // unreachable
+  throw new Error('opencode call exhausted retries');
 }
 
 // ──────────────────────────────────────────────
