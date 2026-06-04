@@ -1,0 +1,8 @@
+["Form",
+  ["Input", {"type":"text","req":true,"ph":"请输入用户名","bind":"username"}],
+  ["Input", {"type":"email","req":true,"ph":"请输入邮箱","bind":"email"}],
+  ["Input", {"type":"password","req":true,"ph":"请设置密码","bind":"password"}],
+  ["Select", {"bind":"country","opts":"countries"}],
+  ["Btn", {"v":"p","t":"register"}, "注册"],
+  ["Link", {"t":"login"}, "已有账号？登录"]
+]

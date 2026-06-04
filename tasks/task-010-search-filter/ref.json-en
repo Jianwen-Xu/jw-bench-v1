@@ -1,0 +1,6 @@
+["Row",
+  ["Input", {"ph":"搜索关键词...","bind":"query"}],
+  ["Select", {"bind":"category","opts":"categories"}],
+  ["Btn", {"v":"p","t":"search"}, "搜索"],
+  ["Btn", {"t":"reset"}, "重置"]
+]

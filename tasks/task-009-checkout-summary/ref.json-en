@@ -1,0 +1,15 @@
+["Card",
+  ["Text", "订单摘要"],
+  ["Row",
+    ["Img", {"src":"product-a"}],
+    ["Text", "商品A"]
+  ],
+  ["Row",
+    ["Img", {"src":"product-b"}],
+    ["Text", "商品B"]
+  ],
+  ["Text", "小计：¥200"],
+  ["Text", "运费：¥10"],
+  ["Text", {"v":"price"}, "总计：¥210"],
+  ["Btn", {"v":"p","t":"checkout"}, "去结算"]
+]

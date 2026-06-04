@@ -1,0 +1,7 @@
+[
+  "存在搜索输入框，placeholder='搜索关键词...'，bind=query",
+  "存在分类选择器（Select/选），bind=category",
+  "存在'搜索'按钮（primary/主样式），触发 search action",
+  "存在'重置'按钮，触发 reset action",
+  "所有元素在同一行（Row/行）内"
+]

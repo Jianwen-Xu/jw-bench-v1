@@ -1,0 +1,25 @@
+["Col",
+  ["Text", "数据概览"],
+  ["Row",
+    ["Card",
+      ["Text", {"v":"heading"}, "1,234"],
+      ["Text", "日活用户"],
+      ["Badge", {"v":"success"}, "+12%"]
+    ],
+    ["Card",
+      ["Text", {"v":"heading"}, "856"],
+      ["Text", "总订单"],
+      ["Badge", {"v":"success"}, "+5%"]
+    ],
+    ["Card",
+      ["Text", {"v":"heading"}, "¥5,678"],
+      ["Text", "营收"],
+      ["Badge", {"v":"success"}, "+8%"]
+    ],
+    ["Card",
+      ["Text", {"v":"heading"}, "98.5%"],
+      ["Text", "完成率"],
+      ["Badge", {"v":"success"}, "+3%"]
+    ]
+  ]
+]

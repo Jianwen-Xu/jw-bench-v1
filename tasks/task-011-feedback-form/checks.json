@@ -1,0 +1,9 @@
+[
+  "存在标题'意见反馈'",
+  "存在反馈类型选择器（Select/选），bind=type",
+  "存在文本域输入框（textarea/区），placeholder 正确，bind=content",
+  "存在联系方式输入框，placeholder='手机号或邮箱（选填）'，bind=contact",
+  "存在'提交反馈'按钮（primary/主样式），触发 submitFeedback action",
+  "存在'取消'按钮，触发 cancel action",
+  "整体包裹在 Form（域）中"
+]

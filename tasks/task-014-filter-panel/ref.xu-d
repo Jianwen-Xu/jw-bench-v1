@@ -1,0 +1,10 @@
+卡
+　文 筛选条件
+　入 空输入关键词 值keyword
+　选 值category 选项categories
+　切 值showActive
+　文 排序方式
+　选 值sortBy 选项sortOptions
+　排
+　　按 主 applyFilter 应用
+　　按 resetFilter 重置

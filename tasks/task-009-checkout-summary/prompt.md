@@ -1,0 +1,11 @@
+设计一个结账摘要卡片，包含：
+- 卡片（Card）作为容器，内部包括：
+  - 标题"订单摘要"（Text）
+  - 商品列表，每个商品占一行（Row），包含商品图片（Image）和商品名称（Text）：
+    - "商品A" + 图片
+    - "商品B" + 图片
+  - 分割线后显示价格汇总：
+    - "小计：¥200"（Text）
+    - "运费：¥10"（Text）
+    - "总计：¥210"（Text，加粗样式 variant=bold/strong）
+  - "去结算"按钮（Button，variant=primary，onTap=checkout）

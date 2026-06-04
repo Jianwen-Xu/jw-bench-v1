@@ -1,0 +1,9 @@
+[
+  "顶部有导航栏（NavBar/导），包含用户头像（Avatar/像）和标题'我的应用'",
+  "导航栏下方有'首页'链接触发 home action",
+  "有'个人中心'链接触发 profile action",
+  "有'设置'链接触发 settings action",
+  "页面底部有版权文本'©2026 My App'",
+  "整体结构为纵向排列（Column/列）",
+  "Avatar 放置在 NavBar（导）内部左侧"
+]

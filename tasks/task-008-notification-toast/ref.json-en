@@ -1,0 +1,10 @@
+["Col",
+  ["Text", "通知中心"],
+  ["Toast", {"v":"success","bind":"toastSuccess"}, "操作成功"],
+  ["Btn", {"t":"toastSuccess"}, "显示成功提示"],
+  ["Toast", {"v":"error","bind":"toastError"}, "操作失败"],
+  ["Btn", {"t":"toastError"}, "显示错误提示"],
+  ["Toast", {"v":"warning","bind":"toastWarning"}, "请确认信息"],
+  ["Btn", {"t":"toastWarning"}, "显示警告提示"],
+  ["Text", "点击按钮查看对应提示"]
+]

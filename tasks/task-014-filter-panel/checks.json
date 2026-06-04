@@ -1,0 +1,11 @@
+[
+  "存在卡片标题'筛选条件'",
+  "存在关键词输入框，placeholder='输入关键词'，bind=keyword",
+  "存在分类选择器（Select/选），bind=category",
+  "存在状态切换开关（Toggle/开），标签'仅显示有效'，bind=showActive",
+  "存在'排序方式'标签文本 + 排序选择器（bind=sortBy）",
+  "存在'应用'按钮（primary/主样式），触发 applyFilter action",
+  "存在'重置'按钮，触发 resetFilter action",
+  "应用和重置按钮在同一行（Row/行）中",
+  "整体包裹在 Card（卡）容器中"
+]

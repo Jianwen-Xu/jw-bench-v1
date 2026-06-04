@@ -1,0 +1,10 @@
+[
+  "存在用户名输入框（必填），绑定 username 状态",
+  "存在邮箱输入框（type=email，必填），绑定 email 状态",
+  "存在密码输入框（type=password，必填），绑定 password 状态",
+  "存在国家选择器（Select/选），绑定 country 状态",
+  "存在'注册'按钮触发 register action，样式为 primary（主）",
+  "存在'已有账号？登录'链接触发 login action",
+  "整体包裹在表单域（Form/域）中",
+  "所有输入框有对应的 placeholder"
+]

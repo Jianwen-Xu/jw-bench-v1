@@ -69,7 +69,11 @@ export const PILOT_CONFIG = {
   models: ['opencode-big-pickle'],
   formats: ['jsx', 'json-en', 'xu-c', 'xu-d'] as Format[],
   scenarios: ['A'] as Scenario[],
-  taskIds: ['task-001', 'task-002', 'task-003', 'task-004', 'task-005'],
+  taskIds: [
+    'task-001', 'task-002', 'task-003', 'task-004', 'task-005',
+    'task-006', 'task-007', 'task-008', 'task-009', 'task-010',
+    'task-011', 'task-012', 'task-013', 'task-014', 'task-015',
+  ],
   repetitions: 3,
   temperature: 0,
 };

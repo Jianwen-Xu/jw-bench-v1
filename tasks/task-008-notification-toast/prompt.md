@@ -1,0 +1,11 @@
+设计一个通知提示页面：
+- 页面标题"通知中心"（Text）
+- 三个提示区域，每个包含一个提示条（Toast）和对应的触发按钮：
+  - 成功提示条（variant=success，bind=toastSuccess）：显示"操作成功"
+  - 成功后触发按钮（onTap=toastSuccess）
+  - 错误提示条（variant=error，bind=toastError）：显示"操作失败"
+  - 错误后触发按钮（onTap=toastError）
+  - 警告提示条（variant=warning，bind=toastWarning）：显示"请确认信息"
+  - 警告后触发按钮（onTap=toastWarning）
+- 底部显示提示文字"点击按钮查看对应提示"
+- 所有元素纵向排列（Column）

@@ -1,0 +1,10 @@
+["Col",
+  ["Nav",
+    ["Avt"],
+    ["Text", "我的应用"]
+  ],
+  ["Link", {"t":"home"}, "首页"],
+  ["Link", {"t":"profile"}, "个人中心"],
+  ["Link", {"t":"settings"}, "设置"],
+  ["Text", "©2026 My App"]
+]

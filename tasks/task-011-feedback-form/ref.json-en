@@ -1,0 +1,8 @@
+["Form",
+  ["Text", "意见反馈"],
+  ["Select", {"bind":"type","opts":"feedbackTypes"}],
+  ["Input", {"ph":"请详细描述您的问题或建议...","bind":"content"}],
+  ["Input", {"ph":"手机号或邮箱（选填）","bind":"contact"}],
+  ["Btn", {"v":"p","t":"submitFeedback"}, "提交反馈"],
+  ["Btn", {"t":"cancel"}, "取消"]
+]
