@@ -154,7 +154,7 @@ async function callOpenCodeCLI(
     } catch (e: any) {
       if (attempt < maxRetries) {
         const delay = attempt * 2000;
-        process.stderr.write(`[retry ${attempt}/${maxRetries} in ${delay}ms: ${e.message.slice(0, 80)}]\n`);
+        console.warn(`[retry ${attempt}/${maxRetries} in ${delay}ms: ${e.message.slice(0, 80)}]`);
         await new Promise(r => setTimeout(r, delay));
         continue;
       }
@@ -312,9 +312,104 @@ async function runJudgeCalibrationPhase(parallel = false) {
 }
 
 // ──────────────────────────────────────────────
+// Shared cell processing
+// ──────────────────────────────────────────────
+interface CellConfig {
+  modelKey: string;
+  format: Format;
+  scenario: Scenario;
+  taskId: string;
+  rep: number;
+}
+
+async function runCells(
+  cells: CellConfig[],
+  runsDir: string,
+  concurrency: number,
+  phase: string,
+): Promise<RunRecord[]> {
+  const records: RunRecord[] = [];
+  const total = cells.length;
+  let done = 0;
+
+  async function worker(): Promise<void> {
+    while (true) {
+      const idx = (() => { const i = done; done++; return i; })();
+      if (idx >= total) return;
+      const cell = cells[idx];
+      const { modelKey, format, scenario, taskId, rep } = cell;
+      const modelCfg = MODELS[modelKey];
+      const sysPrompt = loadSystemPrompt(format);
+      const task = loadTask(taskId);
+
+      process.stdout.write(
+        `[${idx + 1}/${total}] ${modelKey} x ${format} x ${taskId} rep${rep} ... `,
+      );
+
+      let cr: CallResult = { text: '', inputTokens: 0, outputTokens: 0, latencyMs: 0 };
+      let callErr = '';
+      try {
+        cr = await callModel(modelKey, sysPrompt, task.prompt);
+      } catch (e: any) {
+        callErr = e.message ?? String(e);
+        console.log(`ERROR: ${callErr}`);
+      }
+
+      const val = cr.text
+        ? validate(cr.text, format)
+        : { M1: 0 as const, M2: 0 as const, M3: 0 as const, M4: 0 as const,
+            errors: [callErr || 'empty output'] };
+
+      let M5: 0|1 = 0;
+      const judgeErrs: string[] = [];
+      const objPass = val.M1 && val.M2 && val.M3 && val.M4;
+
+      if (objPass && cr.text) {
+        try {
+          const jr = await judgeEquivalence(
+            task.refs[format],
+            cr.text,
+            MODELS[modelCfg.judgeModelKey].id,
+            modelCfg.judgeModelKey,
+          );
+          M5 = jr.equivalent ? 1 : 0;
+          if (!jr.equivalent) judgeErrs.push(...jr.missing.map(m => `missing: ${m}`));
+        } catch (e: any) {
+          judgeErrs.push(`judge: ${e.message}`);
+        }
+      }
+
+      const UGR = (objPass && M5) ? 1 : 0;
+      const costUsd =
+        (cr.inputTokens  * modelCfg.inputPricePer1kTokens +
+         cr.outputTokens * modelCfg.outputPricePer1kTokens) / 1000;
+
+      const record: RunRecord = {
+        runId: makeRunId(), phase, model: modelKey,
+        format, scenario, taskId, rep,
+        M1: val.M1, M2: val.M2, M3: val.M3, M4: val.M4, M5, UGR,
+        inputTokens: cr.inputTokens, outputTokens: cr.outputTokens,
+        latencyMs: cr.latencyMs, costUsd,
+        errors: [...val.errors, ...judgeErrs],
+        rawOutput: cr.text,
+      };
+
+      records.push(record);
+      saveRecord(record, runsDir);
+      console.log(`UGR=${UGR} M1=${val.M1} M2=${val.M2} M3=${val.M3} M4=${val.M4} M5=${M5}`);
+    }
+  }
+
+  const poolSize = Math.min(concurrency, total);
+  const workers = Array.from({ length: poolSize }, () => worker());
+  await Promise.all(workers);
+  return records;
+}
+
+// ──────────────────────────────────────────────
 // Pilot phase
 // ──────────────────────────────────────────────
-async function runPilot(models: string[]) {
+async function runPilot(models: string[], concurrency = 1) {
   const dateTag = new Date().toISOString().slice(0, 10);
   const runsDir  = path.join(ROOT, 'runs', `pilot-${dateTag}`);
   fs.mkdirSync(runsDir, { recursive: true });
@@ -325,94 +420,35 @@ async function runPilot(models: string[]) {
     cfg.scenarios.length * cfg.taskIds.length * cfg.repetitions;
   console.log(`🚀  Pilot: ${total} calls — models: ${cfg.models.join(', ')}\n`);
 
-  const records: RunRecord[] = [];
-  let done = 0;
-
+  const cells: CellConfig[] = [];
   for (const modelKey of cfg.models) {
-    const modelCfg = MODELS[modelKey];
     for (const format of cfg.formats) {
-      const sysPrompt = loadSystemPrompt(format);
       for (const scenario of cfg.scenarios as Scenario[]) {
         for (const taskId of cfg.taskIds) {
-          const task = loadTask(taskId);
           for (let rep = 1; rep <= cfg.repetitions; rep++) {
-            process.stdout.write(
-              `[${++done}/${total}] ${modelKey} × ${format} × ${taskId} rep${rep} … `,
-            );
-
-            let cr: CallResult = { text: '', inputTokens: 0, outputTokens: 0, latencyMs: 0 };
-            let callErr = '';
-            try {
-              cr = await callModel(modelKey, sysPrompt, task.prompt);
-            } catch (e: any) {
-              callErr = e.message ?? String(e);
-              console.log(`ERROR: ${callErr}`);
-            }
-
-            const val = cr.text
-              ? validate(cr.text, format)
-              : { M1: 0 as const, M2: 0 as const, M3: 0 as const, M4: 0 as const,
-                  errors: [callErr || 'empty output'] };
-
-            let M5: 0|1 = 0;
-            const judgeErrs: string[] = [];
-            const objPass = val.M1 && val.M2 && val.M3 && val.M4;
-
-            if (objPass && cr.text) {
-              try {
-                const jr = await judgeEquivalence(
-                  task.refs[format],
-                  cr.text,
-                  MODELS[modelCfg.judgeModelKey].id,
-                  modelCfg.judgeModelKey,
-                );
-                M5 = jr.equivalent ? 1 : 0;
-                if (!jr.equivalent) judgeErrs.push(...jr.missing.map(m => `missing: ${m}`));
-              } catch (e: any) {
-                judgeErrs.push(`judge: ${e.message}`);
-              }
-            }
-
-            const UGR = (objPass && M5) ? 1 : 0;
-            const costUsd =
-              (cr.inputTokens  * modelCfg.inputPricePer1kTokens +
-               cr.outputTokens * modelCfg.outputPricePer1kTokens) / 1000;
-
-            const record: RunRecord = {
-              runId: makeRunId(), phase: 'pilot', model: modelKey,
-              format, scenario, taskId, rep,
-              M1: val.M1, M2: val.M2, M3: val.M3, M4: val.M4, M5, UGR,
-              inputTokens: cr.inputTokens, outputTokens: cr.outputTokens,
-              latencyMs: cr.latencyMs, costUsd,
-              errors: [...val.errors, ...judgeErrs],
-              rawOutput: cr.text,
-            };
-
-            records.push(record);
-            saveRecord(record, runsDir);
-            console.log(
-              `UGR=${UGR} M1=${val.M1} M2=${val.M2} M3=${val.M3} M4=${val.M4} M5=${M5}`,
-            );
-
-            await new Promise(r => setTimeout(r, 300));
+            cells.push({ modelKey, format, scenario, taskId, rep });
           }
         }
       }
     }
   }
 
-  generatePilotReport(records, runsDir);
+  const records = await runCells(cells, runsDir, concurrency, 'pilot');
+  generateReport(records, runsDir, 'Pilot');
 }
 
 // ──────────────────────────────────────────────
 // Pilot report
 // ──────────────────────────────────────────────
-function generatePilotReport(records: RunRecord[], runsDir: string) {
+function generateReport(records: RunRecord[], runsDir: string, phase = 'Pilot') {
   const formats: Format[] = ['jsx', 'json-en', 'xu-c', 'xu-d'];
+  const phaseLower = phase.toLowerCase();
+  const reportFilename = `${phaseLower}-report.md`;
+  const tokenNote = `> Token counts are estimated via cl100k_base (gpt-tokenizer) for non-opencode models.\n` +
+    `> opencode model token counts are exact (NDJSON step_finish).`;
+
   let report =
-    `# JW-Bench v1 — Pilot Report\n\nGenerated: ${new Date().toISOString()}\n\n` +
-    `> ⚠️  Token counts for **Claude models** are *estimated* via cl100k_base (gpt-tokenizer).\n` +
-    `> DeepSeek token counts are exact (API usage field).\n\n`;
+    `# JW-Bench v1 — ${phase} Report\n\nGenerated: ${new Date().toISOString()}\n\n${tokenNote}\n\n`;
 
   report += `## UGR Summary\n\n| Format | UGR | 95% CI (Wilson) | n |\n|---|---|---|---|\n`;
   const ugrMap: Record<string, number[]> = {};
@@ -433,7 +469,7 @@ function generatePilotReport(records: RunRecord[], runsDir: string) {
   report += `\n## H1: XU-CN-D vs JSX\n\n` +
     `- UGR(XU-CN-D) = ${(pXuD*100).toFixed(1)}%\n` +
     `- UGR(JSX)     = ${(pJSX*100).toFixed(1)}%\n` +
-    `- Cohen's h    = ${h}\n` +
+    `- Cohen's h    = ${h.toFixed(4)}\n` +
     `- **Decision**: ${action}\n`;
 
   report += `\n## Attrition Funnels\n\n`;
@@ -448,108 +484,49 @@ function generatePilotReport(records: RunRecord[], runsDir: string) {
     report += `| ${fmt} | ${totals[Math.floor(totals.length / 2)] ?? 0} |\n`;
   }
 
-  const reportPath = path.join(runsDir, 'pilot-report.md');
+  const reportPath = path.join(runsDir, reportFilename);
   fs.writeFileSync(reportPath, report);
-  console.log(`\n📊  Pilot report: ${reportPath}`);
-  console.log(`\n── Cohen's h (XU-CN-D vs JSX) = ${h} → ${action} ──\n`);
+  console.log(`\n📊  ${phase} report: ${reportPath}`);
+  console.log(`\n── Cohen's h (XU-CN-D vs JSX) = ${h.toFixed(4)} → ${action} ──\n`);
 }
 
 // ──────────────────────────────────────────────
 // Full phase runner
 // ──────────────────────────────────────────────
-async function runFull(models: string[], n: number) {
+async function runFull(models: string[], n: number, concurrency = 1) {
   const dateTag = new Date().toISOString().slice(0, 10);
   const runsDir  = path.join(ROOT, 'runs', `full-${dateTag}`);
   fs.mkdirSync(runsDir, { recursive: true });
 
   const cfg = { ...FULL_CONFIG, models };
-  // For full phase we enumerate all task IDs found in tasks/
-  const taskIds = fs.readdirSync(path.join(ROOT, 'tasks'))
+  const allTasks = fs.readdirSync(path.join(ROOT, 'tasks'))
     .filter(d => d.startsWith('task-'))
-    .sort()
-    .slice(0, n);
+    .sort();
+  const taskIds = allTasks.slice(0, n);
+  if (n > allTasks.length) {
+    console.warn(`  Warning: --n ${n} > available tasks (${allTasks.length}), using all ${allTasks.length}`);
+  }
 
   const total =
     cfg.models.length * cfg.formats.length *
     cfg.scenarios.length * taskIds.length * cfg.repetitions;
   console.log(`Running full phase: ${total} calls — models: ${cfg.models.join(', ')}, n=${taskIds.length}\n`);
 
-  const records: RunRecord[] = [];
-  let done = 0;
-
+  const cells: CellConfig[] = [];
   for (const modelKey of cfg.models) {
-    const modelCfg = MODELS[modelKey];
     for (const format of cfg.formats) {
-      const sysPrompt = loadSystemPrompt(format);
       for (const scenario of cfg.scenarios as Scenario[]) {
         for (const taskId of taskIds) {
-          const task = loadTask(taskId);
           for (let rep = 1; rep <= cfg.repetitions; rep++) {
-            process.stdout.write(
-              `[${++done}/${total}] ${modelKey} x ${format} x ${taskId} rep${rep} ... `,
-            );
-
-            let cr: CallResult = { text: '', inputTokens: 0, outputTokens: 0, latencyMs: 0 };
-            let callErr = '';
-            try {
-              cr = await callModel(modelKey, sysPrompt, task.prompt);
-            } catch (e: any) {
-              callErr = e.message ?? String(e);
-              console.log(`ERROR: ${callErr}`);
-            }
-
-            const val = cr.text
-              ? validate(cr.text, format)
-              : { M1: 0 as const, M2: 0 as const, M3: 0 as const, M4: 0 as const,
-                  errors: [callErr || 'empty output'] };
-
-            let M5: 0|1 = 0;
-            const judgeErrs: string[] = [];
-            const objPass = val.M1 && val.M2 && val.M3 && val.M4;
-
-            if (objPass && cr.text) {
-              try {
-                const jr = await judgeEquivalence(
-                  task.refs[format],
-                  cr.text,
-                  MODELS[modelCfg.judgeModelKey].id,
-                  modelCfg.judgeModelKey,
-                );
-                M5 = jr.equivalent ? 1 : 0;
-                if (!jr.equivalent) judgeErrs.push(...jr.missing.map(m => `missing: ${m}`));
-              } catch (e: any) {
-                judgeErrs.push(`judge: ${e.message}`);
-              }
-            }
-
-            const UGR = (objPass && M5) ? 1 : 0;
-            const costUsd =
-              (cr.inputTokens  * modelCfg.inputPricePer1kTokens +
-               cr.outputTokens * modelCfg.outputPricePer1kTokens) / 1000;
-
-            const record: RunRecord = {
-              runId: makeRunId(), phase: 'full', model: modelKey,
-              format, scenario, taskId, rep,
-              M1: val.M1, M2: val.M2, M3: val.M3, M4: val.M4, M5, UGR,
-              inputTokens: cr.inputTokens, outputTokens: cr.outputTokens,
-              latencyMs: cr.latencyMs, costUsd,
-              errors: [...val.errors, ...judgeErrs],
-              rawOutput: cr.text,
-            };
-
-            records.push(record);
-            saveRecord(record, runsDir);
-            console.log(
-              `UGR=${UGR} M1=${val.M1} M2=${val.M2} M3=${val.M3} M4=${val.M4} M5=${M5}`,
-            );
-
-            await new Promise(r => setTimeout(r, 300));
+            cells.push({ modelKey, format, scenario, taskId, rep });
           }
         }
       }
     }
   }
 
+  const records = await runCells(cells, runsDir, concurrency, 'full');
+  generateReport(records, runsDir, 'Full');
   console.log(`\nFull run complete. ${records.length} records saved to ${runsDir}`);
 }
 
@@ -561,6 +538,7 @@ program
   .option('--n <n>', 'tasks per cell for full phase', '80')
   .option('--deepseek', 'include DeepSeek models (requires DEEPSEEK_API_KEY in .env)', false)
   .option('--parallel', 'run judge calibration in parallel (concurrency=10)', false)
+  .option('--concurrency <n>', 'parallel workers for model calls (default 1)', '1')
   .parse();
 
 const opts = program.opts();
@@ -571,17 +549,16 @@ if (includeDeepSeek && !DEEPSEEK_API_KEY) {
   process.exit(1);
 }
 
-// No --deepseek means opencode models only (default)
-
 const activeModels = getActiveModels(includeDeepSeek);
+const concurrency = Math.max(1, parseInt(opts.concurrency, 10) || 1);
 
 (async () => {
   if (opts.phase === 'judge-calibration') {
     await runJudgeCalibrationPhase(!!opts.parallel);
   } else if (opts.phase === 'pilot') {
-    await runPilot(activeModels);
+    await runPilot(activeModels, concurrency);
   } else if (opts.phase === 'full') {
-    await runFull(activeModels, parseInt(opts.n, 10));
+    await runFull(activeModels, parseInt(opts.n, 10), concurrency);
   } else {
     console.log('Unknown phase: ' + opts.phase + '. Use pilot, full, or judge-calibration.');
     process.exit(1);
