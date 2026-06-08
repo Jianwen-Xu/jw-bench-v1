@@ -1,0 +1,14 @@
+["Card",
+  ["Row",
+    ["Img",{"size":"m","src":"wishlist-item"}],
+    ["Col",
+      ["Text",{"v":"heading"},"时尚背包"],
+      ["Text",{"v":"price"},"¥299"],
+      ["Badge",{"v":"s"},"有货"]
+    ],
+    ["Col",
+      ["Btn",{"v":"p","t":"addToCart"},"加入购物车"],
+      ["Link",{"t":"removeWishlist"},"移除"]
+    ]
+  ]
+]

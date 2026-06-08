@@ -1,0 +1,8 @@
+[
+  "存在 Card",
+  "存在标题\"倒计时\"",
+  "存在四个时间块（天/时/分/秒）",
+  "每个有 heading 数值+caption 标签",
+  "存在\"开始\"按钮 primary 触发 startTimer",
+  "存在\"重置\"按钮 ghost 触发 resetTimer"
+]

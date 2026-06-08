@@ -1,0 +1,12 @@
+["Card",
+  ["Col",
+    ["Img",{"size":"l","src":"movie-poster"}],
+    ["Text",{"v":"heading"},"星际穿越"],
+    ["Row",
+      ["Badge",{"v":"s"},"9.3"],
+      ["Text","2014"],
+      ["Badge",{"v":"info"},"科幻"]
+    ],
+    ["Btn",{"v":"p","t":"buyTicket"},"购票"]
+  ]
+]

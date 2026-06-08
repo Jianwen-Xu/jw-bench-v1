@@ -1,0 +1,12 @@
+["Card",
+  ["Col",
+    ["Badge",{"v":"danger"},"⚠"],
+    ["Text",{"v":"heading"},"注销账户"],
+    ["Text",{"v":"body"},"此操作不可撤销。"],
+    ["Input",{"ph":"输入'确认删除'以继续","bind":"confirmDelete"}],
+    ["Row",
+      ["Btn",{"v":"p","t":"confirmDeletion"},"确认注销"],
+      ["Btn",{"v":"g","t":"cancelDeletion"},"取消"]
+    ]
+  ]
+]

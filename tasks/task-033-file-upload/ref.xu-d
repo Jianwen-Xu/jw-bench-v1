@@ -1,0 +1,10 @@
+卡
+　列
+　　文 主标题 上传文件
+　　按 主 selectFile 选择文件
+　　排
+　　　文 报告.pdf
+　　　文 说明 2.5 MB
+　　　标 成功 已上传
+　　　链 removeFile 删除
+　　按 主 submitFiles 提交

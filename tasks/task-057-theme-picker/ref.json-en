@@ -1,0 +1,18 @@
+["Col",
+  ["Text",{"v":"heading"},"选择主题"],
+  ["Row",
+    ["Card",
+      ["Text","浅色"],
+      ["Text",{"v":"caption"},"浅色主题"]
+    ],
+    ["Card",
+      ["Text","深色"],
+      ["Text",{"v":"caption"},"深色主题"]
+    ],
+    ["Card",
+      ["Text","自动"],
+      ["Text",{"v":"caption"},"跟随系统"]
+    ]
+  ],
+  ["Btn",{"v":"p","t":"applyTheme"},"应用主题"]
+]

@@ -1,0 +1,13 @@
+["Card",
+  ["Col",
+    ["Row",
+      ["Avt",{"size":"m","shape":"circle","src":"user"}],
+      ["Col",
+        ["Text",{"v":"heading"},"当前用户"],
+        ["Text",{"v":"caption"},"user@example.com"]
+      ]
+    ],
+    ["Btn",{"v":"p","t":"switchAccount"},"切换账号"],
+    ["Link",{"t":"addAccount"},"添加账号"]
+  ]
+]

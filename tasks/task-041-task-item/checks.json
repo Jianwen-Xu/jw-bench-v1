@@ -1,0 +1,9 @@
+[
+  "存在 Card",
+  "存在 Row",
+  "存在 Checkbox bind=taskDone",
+  "存在任务名（heading）",
+  "存在截止日期（caption）",
+  "存在 Badge danger \"高\"",
+  "存在\"删除\"按钮 ghost 触发 deleteTask"
+]

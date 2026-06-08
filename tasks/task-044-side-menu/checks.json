@@ -1,0 +1,8 @@
+[
+  "存在 Card",
+  "存在三个菜单 Row",
+  "每个含 Badge+Link",
+  "首页 info goHome",
+  "数据统计 success goStats",
+  "系统设置 warning goSettings"
+]

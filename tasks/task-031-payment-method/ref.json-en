@@ -1,0 +1,15 @@
+["Card",
+  ["Col",
+    ["Text",{"v":"heading"},"选择支付方式"],
+    ["Row",
+      ["Checkbox",{"bind":"payWechat"},"微信支付"]
+    ],
+    ["Row",
+      ["Checkbox",{"bind":"payAlipay"},"支付宝"]
+    ],
+    ["Row",
+      ["Checkbox",{"bind":"payCard"},"银行卡"]
+    ],
+    ["Btn",{"v":"p","t":"confirmPayment"},"确认支付"]
+  ]
+]

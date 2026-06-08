@@ -1,0 +1,10 @@
+[
+  "存在标题\"预约服务\"",
+  "存在服务类型 Select bind=serviceType",
+  "存在日期输入框 bind=bookingDate",
+  "存在时间输入框 bind=bookingTime",
+  "存在备注输入框 bind=notes",
+  "存在\"提交预约\"按钮 primary 触发 submitBooking",
+  "存在\"取消\"按钮",
+  "整体在 Form 中"
+]

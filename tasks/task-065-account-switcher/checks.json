@@ -1,0 +1,7 @@
+[
+  "存在 Card",
+  "存在 Row（头像+用户名+邮箱）",
+  "用户名 heading 邮箱 caption",
+  "存在\"切换账号\"按钮 primary switchAccount",
+  "存在\"添加账号\"链接 addAccount"
+]

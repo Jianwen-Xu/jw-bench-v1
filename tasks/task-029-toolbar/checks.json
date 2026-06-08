@@ -1,0 +1,7 @@
+[
+  "存在搜索输入框 bind=searchQuery",
+  "存在筛选器 Select bind=filter",
+  "存在\"添加\"按钮 primary 触发 addNew",
+  "存在\"导出\"按钮 secondary 触发 exportData",
+  "所有元素在 Row 中"
+]

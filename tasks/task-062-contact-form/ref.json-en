@@ -1,0 +1,8 @@
+["Form",
+  ["Text",{"v":"heading"},"联系我们"],
+  ["Input",{"ph":"姓名","bind":"contactName"}],
+  ["Input",{"type":"email","ph":"邮箱","bind":"contactEmail"}],
+  ["Input",{"type":"number","ph":"电话","bind":"contactPhone"}],
+  ["Input",{"ph":"留言内容","bind":"contactMessage"}],
+  ["Btn",{"v":"p","t":"sendMessage"},"发送"]
+]

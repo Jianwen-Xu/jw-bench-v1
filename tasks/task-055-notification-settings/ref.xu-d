@@ -1,0 +1,14 @@
+列
+　文 主标题 通知设置
+　卡
+　　列
+　　　排
+　　　　文 评论回复
+　　　　切 值notifComment
+　　　排
+　　　　文 新粉丝
+　　　　切 值notifFollower
+　　　排
+　　　　文 系统公告
+　　　　切 值notifSystem
+　按 主 saveNotifSettings 保存设置

@@ -1,0 +1,17 @@
+["Card",
+  ["Col",
+    ["Row",
+      ["Avt",{"size":"m","shape":"circle","src":"user"}],
+      ["Col",
+        ["Text",{"v":"heading"},"张三"],
+        ["Text",{"v":"caption"},"2小时前"]
+      ]
+    ],
+    ["Text","今天去了新开的餐厅，环境很棒！"],
+    ["Row",
+      ["Btn",{"v":"g","t":"like"},"点赞"],
+      ["Btn",{"v":"g","t":"comment"},"评论"],
+      ["Link",{"t":"share"},"分享"]
+    ]
+  ]
+]

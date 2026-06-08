@@ -1,0 +1,9 @@
+[
+  "存在 Card",
+  "存在海报 Image（大）",
+  "存在标题（heading）",
+  "存在 Badge success \"9.3\"",
+  "存在\"2014\"",
+  "存在 Badge info \"科幻\"",
+  "存在\"购票\"按钮 primary 触发 buyTicket"
+]

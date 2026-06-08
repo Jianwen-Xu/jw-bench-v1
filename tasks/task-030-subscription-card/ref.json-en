@@ -1,0 +1,11 @@
+["Card",
+  ["Col",
+    ["Text",{"v":"heading"},"年度会员"],
+    ["Text",{"v":"price"},"¥199/年"],
+    ["Text","无限次使用"],
+    ["Text","优先客服支持"],
+    ["Text","独家内容访问"],
+    ["Btn",{"v":"p","t":"subscribeNow"},"立即订阅"],
+    ["Link",{"t":"learnMore"},"了解详情"]
+  ]
+]

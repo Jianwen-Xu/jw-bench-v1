@@ -1,0 +1,11 @@
+["Card",
+  ["Row",
+    ["Avt",{"size":"m","shape":"circle","src":"agent"}],
+    ["Col",
+      ["Text",{"v":"heading"},"客服小美"],
+      ["Text","您好，有什么可以帮您？"],
+      ["Text",{"v":"caption"},"10:30"]
+    ],
+    ["Badge",{"v":"danger"},"2"]
+  ]
+]

@@ -1,0 +1,13 @@
+["Card",
+  ["Col",
+    ["Text",{"v":"heading"},"上传文件"],
+    ["Btn",{"v":"p","t":"selectFile"},"选择文件"],
+    ["Row",
+      ["Text","报告.pdf"],
+      ["Text",{"v":"caption"},"2.5 MB"],
+      ["Badge",{"v":"s"},"已上传"],
+      ["Link",{"t":"removeFile"},"删除"]
+    ],
+    ["Btn",{"v":"p","t":"submitFiles"},"提交"]
+  ]
+]

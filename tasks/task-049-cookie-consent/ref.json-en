@@ -1,0 +1,12 @@
+["Card",
+  ["Col",
+    ["Img",{"size":"m","src":"cookie-icon"}],
+    ["Text",{"v":"heading"},"Cookie 声明"],
+    ["Text","我们使用 Cookie 来提升您的体验。"],
+    ["Row",
+      ["Btn",{"v":"p","t":"acceptAll"},"接受所有"],
+      ["Btn",{"v":"s","t":"acceptNecessary"},"仅必要"],
+      ["Link",{"t":"cookieSettings"},"设置"]
+    ]
+  ]
+]

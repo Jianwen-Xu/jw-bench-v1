@@ -1,0 +1,20 @@
+["Col",
+  ["Text",{"v":"heading"},"通知设置"],
+  ["Card",
+    ["Col",
+      ["Row",
+        ["Text","评论回复"],
+        ["Tog",{"bind":"notifComment"}]
+      ],
+      ["Row",
+        ["Text","新粉丝"],
+        ["Tog",{"bind":"notifFollower"}]
+      ],
+      ["Row",
+        ["Text","系统公告"],
+        ["Tog",{"bind":"notifSystem"}]
+      ]
+    ]
+  ],
+  ["Btn",{"v":"p","t":"saveNotifSettings"},"保存设置"]
+]

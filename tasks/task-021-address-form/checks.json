@@ -1,0 +1,9 @@
+[
+  "存在标题\"添加新地址\"",
+  "存在收件人输入框 bind=recipient",
+  "存在手机号输入框（type=number）bind=phone",
+  "存在省份选择器 bind=province",
+  "存在地址输入框 bind=address",
+  "存在\"保存地址\"按钮 primary 触发 saveAddress",
+  "整体在 Form 中"
+]

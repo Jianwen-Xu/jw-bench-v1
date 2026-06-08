@@ -1,0 +1,8 @@
+[
+  "存在 Card",
+  "存在 Row",
+  "存在 Image（中）",
+  "存在商品名（heading）+价格（price）+Badge success\"有货\"",
+  "存在\"加入购物车\"按钮 primary addToCart",
+  "存在\"移除\"链接"
+]

@@ -1,0 +1,9 @@
+[
+  "存在标题\"欢迎回来\"",
+  "存在三个 social 按钮 Row",
+  "微信/QQ/微博 secondary",
+  "存在分隔文字",
+  "存在邮箱+密码输入框",
+  "存在\"登录\"按钮 primary loginSubmit",
+  "存在\"注册账号\"链接 goRegister"
+]

@@ -1,0 +1,8 @@
+[
+  "存在标题\"重置密码\"",
+  "存在说明",
+  "存在邮箱输入框（type=email，必填）",
+  "存在\"发送重置链接\"按钮 primary sendResetLink",
+  "存在\"返回登录\"链接 backToLogin",
+  "整体在 Form 中"
+]

@@ -1,0 +1,9 @@
+["Card",
+  ["Col",
+    ["Avt",{"size":"m","shape":"circle","src":"user"}],
+    ["Text",{"v":"body"},"\"使用后效率提高50%，强烈推荐！\""],
+    ["Text",{"v":"heading"},"张先生"],
+    ["Text",{"v":"caption"},"高级用户"],
+    ["Badge",{"v":"s"},"★★★★★"]
+  ]
+]

@@ -1,0 +1,8 @@
+[
+  "存在标题\"订单状态\"",
+  "步骤1: Badge success \"✓\" + \"已下单\"",
+  "步骤2: Badge success \"✓\" + \"已确认\"",
+  "步骤3: Badge warning \"●\" + \"配送中\"",
+  "步骤4: Badge info \"○\" + \"已完成\"",
+  "存在\"查看详情\"按钮 primary 触发 viewDetail"
+]

@@ -1,0 +1,8 @@
+[
+  "存在 Card",
+  "存在 Row",
+  "存在专辑封面（中，方形）",
+  "存在歌名（heading）+歌手（caption）",
+  "存在\"播放\"按钮 primary playMusic",
+  "存在\"下一首\"按钮 ghost nextTrack"
+]

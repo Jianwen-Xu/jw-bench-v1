@@ -1,0 +1,11 @@
+["Card",
+  ["Row",
+    ["Avt",{"size":"m","shape":"circle","src":"reviewer"}],
+    ["Col",
+      ["Text",{"v":"heading"},"匿名用户"],
+      ["Text","产品质量很好，非常满意！"],
+      ["Badge",{"v":"s"},"5.0"],
+      ["Text",{"v":"caption"},"2026-01-15"]
+    ]
+  ]
+]

@@ -1,0 +1,11 @@
+["Card",
+  ["Row",
+    ["Checkbox",{"bind":"taskDone"}],
+    ["Col",
+      ["Text",{"v":"heading"},"完成报告"],
+      ["Text",{"v":"caption"},"截止：2026-01-20"]
+    ],
+    ["Badge",{"v":"danger"},"高"],
+    ["Btn",{"v":"g","t":"deleteTask"},"删除"]
+  ]
+]

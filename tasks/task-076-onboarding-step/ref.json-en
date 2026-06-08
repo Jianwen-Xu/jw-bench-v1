@@ -1,0 +1,12 @@
+["Card",
+  ["Col",
+    ["Img",{"size":"l","src":"onboarding"}],
+    ["Text",{"v":"heading"},"欢迎使用"],
+    ["Text",{"v":"body"},"探索更多精彩功能。"],
+    ["Badge",{"v":"info"},"1/3"],
+    ["Row",
+      ["Btn",{"v":"p","t":"nextStep"},"下一步"],
+      ["Link",{"t":"skipOnboarding"},"跳过"]
+    ]
+  ]
+]

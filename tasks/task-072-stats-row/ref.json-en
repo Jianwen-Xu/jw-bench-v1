@@ -1,0 +1,17 @@
+["Row",
+  ["Col",
+    ["Text",{"v":"heading"},"12,345"],
+    ["Text",{"v":"caption"},"总用户"],
+    ["Badge",{"v":"s"},"+15%"]
+  ],
+  ["Col",
+    ["Text",{"v":"heading"},"8,901"],
+    ["Text",{"v":"caption"},"总订单"],
+    ["Badge",{"v":"s"},"+8%"]
+  ],
+  ["Col",
+    ["Text",{"v":"heading"},"¥156万"],
+    ["Text",{"v":"caption"},"总收入"],
+    ["Badge",{"v":"s"},"+23%"]
+  ]
+]

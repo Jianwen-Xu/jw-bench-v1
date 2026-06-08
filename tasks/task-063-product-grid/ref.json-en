@@ -1,0 +1,23 @@
+["Col",
+  ["Text",{"v":"heading"},"推荐商品"],
+  ["Row",
+    ["Card",
+      ["Img",{"size":"m","src":"p1"}],
+      ["Text","商品A"],
+      ["Text",{"v":"price"},"¥129"],
+      ["Btn",{"v":"p","t":"buyProduct"},"购买"]
+    ],
+    ["Card",
+      ["Img",{"size":"m","src":"p2"}],
+      ["Text","商品B"],
+      ["Text",{"v":"price"},"¥199"],
+      ["Btn",{"v":"p","t":"buyProduct"},"购买"]
+    ],
+    ["Card",
+      ["Img",{"size":"m","src":"p3"}],
+      ["Text","商品C"],
+      ["Text",{"v":"price"},"¥299"],
+      ["Btn",{"v":"p","t":"buyProduct"},"购买"]
+    ]
+  ]
+]

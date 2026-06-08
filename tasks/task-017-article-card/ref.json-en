@@ -1,0 +1,7 @@
+["Card",
+  ["Img",{"size":"l","src":"article-cover"}],
+  ["Text",{"v":"heading"},"探索未来科技"],
+  ["Text","人工智能正在改变我们的生活..."],
+  ["Badge",{"v":"info"},"科技"],
+  ["Link",{"t":"readMore"},"阅读更多"]
+]

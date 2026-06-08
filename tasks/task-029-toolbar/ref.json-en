@@ -1,0 +1,6 @@
+["Row",
+  ["Input",{"ph":"搜索...","bind":"searchQuery"}],
+  ["Select",{"bind":"filter","opts":"filterOptions"}],
+  ["Btn",{"v":"p","t":"addNew"},"添加"],
+  ["Btn",{"v":"s","t":"exportData"},"导出"]
+]

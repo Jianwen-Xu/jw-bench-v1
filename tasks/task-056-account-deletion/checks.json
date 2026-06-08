@@ -1,0 +1,9 @@
+[
+  "存在 Card",
+  "存在 Badge danger \"⚠\"",
+  "存在标题（heading）",
+  "存在警告（body）",
+  "存在确认输入框",
+  "存在\"确认注销\"按钮 primary confirmDeletion",
+  "存在\"取消\"按钮 ghost cancelDeletion"
+]

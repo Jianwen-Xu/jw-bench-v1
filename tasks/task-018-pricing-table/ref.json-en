@@ -1,0 +1,24 @@
+["Col",
+  ["Text",{"v":"heading"},"选择方案"],
+  ["Row",
+    ["Card",
+      ["Text",{"v":"heading"},"免费版"],
+      ["Text",{"v":"price"},"¥0"],
+      ["Text","基础功能"],
+      ["Btn",{"v":"g","t":"selectFree"},"免费使用"]
+    ],
+    ["Card",
+      ["Text",{"v":"heading"},"专业版"],
+      ["Text",{"v":"price"},"¥99"],
+      ["Text","全部功能"],
+      ["Text","10个用户"],
+      ["Btn",{"v":"p","t":"selectPro"},"立即订阅"]
+    ],
+    ["Card",
+      ["Text",{"v":"heading"},"企业版"],
+      ["Text",{"v":"price"},"¥499"],
+      ["Text","不限用户"],
+      ["Btn",{"v":"s","t":"selectEnterprise"},"联系我们"]
+    ]
+  ]
+]

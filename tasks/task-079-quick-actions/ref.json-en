@@ -1,0 +1,21 @@
+["Col",
+  ["Text",{"v":"heading"},"快捷操作"],
+  ["Row",
+    ["Card",
+      ["Img",{"size":"s","src":"add"}],
+      ["Text",{"v":"caption"},"新建"]
+    ],
+    ["Card",
+      ["Img",{"size":"s","src":"search"}],
+      ["Text",{"v":"caption"},"搜索"]
+    ],
+    ["Card",
+      ["Img",{"size":"s","src":"share"}],
+      ["Text",{"v":"caption"},"分享"]
+    ],
+    ["Card",
+      ["Img",{"size":"s","src":"settings"}],
+      ["Text",{"v":"caption"},"设置"]
+    ]
+  ]
+]

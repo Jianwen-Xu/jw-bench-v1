@@ -1,0 +1,10 @@
+[
+  "存在标题\"编辑资料\"",
+  "存在用户头像（Avatar）",
+  "存在昵称输入框 bind=nickname",
+  "存在简介输入框 bind=bio",
+  "存在性别选择器 bind=gender",
+  "存在\"保存\"按钮（primary）触发 saveProfile",
+  "存在\"取消\"按钮触发 cancelEdit",
+  "整体在 Form 中"
+]

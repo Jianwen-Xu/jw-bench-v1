@@ -1,0 +1,9 @@
+[
+  "存在标题\"通知设置\"",
+  "存在 Card",
+  "存在评论回复 Toggle notifComment",
+  "存在新粉丝 Toggle notifFollower",
+  "存在系统公告 Toggle notifSystem",
+  "每项为 Row 布局",
+  "存在\"保存设置\"按钮 primary saveNotifSettings"
+]

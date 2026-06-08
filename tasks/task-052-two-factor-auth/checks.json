@@ -1,0 +1,9 @@
+[
+  "存在标题\"二次验证\"",
+  "存在说明",
+  "存在验证码输入框（type=number）",
+  "存在\"验证\"按钮 primary verifyCode",
+  "存在\"重新发送\"链接 resendCode",
+  "存在倒计时（caption）",
+  "整体在 Form 中"
+]

@@ -1,0 +1,8 @@
+[
+  "存在 Card",
+  "存在引导 Image（大）",
+  "存在标题（heading）+描述（body）",
+  "存在 Badge info \"1/3\"",
+  "存在\"下一步\"按钮 primary nextStep",
+  "存在\"跳过\"链接 skipOnboarding"
+]

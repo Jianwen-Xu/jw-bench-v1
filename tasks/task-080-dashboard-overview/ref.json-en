@@ -1,0 +1,31 @@
+["Col",
+  ["Text",{"v":"heading"},"控制台"],
+  ["Row",
+    ["Card",
+      ["Text",{"v":"heading"},"1,234"],
+      ["Text",{"v":"body"},"今日访问"]
+    ],
+    ["Card",
+      ["Text",{"v":"heading"},"856"],
+      ["Text",{"v":"body"},"活跃用户"]
+    ],
+    ["Card",
+      ["Text",{"v":"heading"},"¥12.5万"],
+      ["Text",{"v":"body"},"总收入"]
+    ]
+  ],
+  ["Row",
+    ["Card",
+      ["Img",{"size":"s","src":"ic-add"}],
+      ["Text",{"v":"caption"},"新建"]
+    ],
+    ["Card",
+      ["Img",{"size":"s","src":"ic-search"}],
+      ["Text",{"v":"caption"},"搜索"]
+    ],
+    ["Card",
+      ["Img",{"size":"s","src":"ic-export"}],
+      ["Text",{"v":"caption"},"导出"]
+    ]
+  ]
+]

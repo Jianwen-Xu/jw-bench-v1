@@ -1,0 +1,28 @@
+["Col",
+  ["Text","最新评论"],
+  ["Row",
+    ["Avt",{"size":"m","shape":"circle","src":"u1"}],
+    ["Col",
+      ["Text",{"v":"heading"},"小明"],
+      ["Text","好文章！"],
+      ["Text",{"v":"caption"},"2小时前"]
+    ]
+  ],
+  ["Row",
+    ["Avt",{"size":"m","shape":"circle","src":"u2"}],
+    ["Col",
+      ["Text",{"v":"heading"},"小红"],
+      ["Text","学习了！"],
+      ["Text",{"v":"caption"},"5小时前"]
+    ]
+  ],
+  ["Row",
+    ["Avt",{"size":"m","shape":"circle","src":"u3"}],
+    ["Col",
+      ["Text",{"v":"heading"},"小华"],
+      ["Text","收藏了"],
+      ["Text",{"v":"caption"},"1天前"]
+    ]
+  ],
+  ["Link",{"t":"loadMore"},"加载更多"]
+]

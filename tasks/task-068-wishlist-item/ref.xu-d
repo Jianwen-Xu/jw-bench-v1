@@ -1,0 +1,10 @@
+卡
+　排
+　　图 中 wishlist-item
+　　列
+　　　文 主标题 时尚背包
+　　　文 价格 ¥299
+　　　标 成功 有货
+　　列
+　　　按 主 addToCart 加入购物车
+　　　链 removeWishlist 移除

@@ -1,0 +1,9 @@
+["Card",
+  ["Col",
+    ["Text",{"v":"heading"},"您最喜欢哪个前端框架？"],
+    ["Btn",{"v":"s","t":"voteReact"},"React"],
+    ["Btn",{"v":"s","t":"voteVue"},"Vue"],
+    ["Btn",{"v":"s","t":"voteAngular"},"Angular"],
+    ["Text",{"v":"caption"},"共 256 人参与"]
+  ]
+]

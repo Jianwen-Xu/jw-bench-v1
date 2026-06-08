@@ -1,0 +1,20 @@
+["Col",
+  ["Text",{"v":"heading"},"推荐内容"],
+  ["Row",
+    ["Card",
+      ["Img",{"size":"m","src":"t1"}],
+      ["Text","文章一"],
+      ["Text",{"v":"caption"},"摘要一"]
+    ],
+    ["Card",
+      ["Img",{"size":"m","src":"t2"}],
+      ["Text","文章二"],
+      ["Text",{"v":"caption"},"摘要二"]
+    ],
+    ["Card",
+      ["Img",{"size":"m","src":"t3"}],
+      ["Text","文章三"],
+      ["Text",{"v":"caption"},"摘要三"]
+    ]
+  ]
+]

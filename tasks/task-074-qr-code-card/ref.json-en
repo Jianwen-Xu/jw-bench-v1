@@ -1,0 +1,11 @@
+["Card",
+  ["Col",
+    ["Img",{"size":"m","shape":"square","src":"qrcode"}],
+    ["Text",{"v":"heading"},"扫码下载"],
+    ["Text",{"v":"caption"},"扫描二维码下载应用"],
+    ["Row",
+      ["Btn",{"v":"s","t":"saveQRCode"},"保存图片"],
+      ["Btn",{"v":"p","t":"shareQRCode"},"分享"]
+    ]
+  ]
+]

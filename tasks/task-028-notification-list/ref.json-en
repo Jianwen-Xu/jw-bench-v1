@@ -1,0 +1,22 @@
+["Col",
+  ["Text",{"v":"heading"},"消息通知"],
+  ["Row",
+    ["Badge",{"v":"info"},"系统"],
+    ["Text","订单已发货"],
+    ["Text",{"v":"caption"},"10分钟前"],
+    ["Link",{"t":"viewNotif"},"详情"]
+  ],
+  ["Row",
+    ["Badge",{"v":"s"},"活动"],
+    ["Text","优惠券可用"],
+    ["Text",{"v":"caption"},"1小时前"],
+    ["Link",{"t":"viewNotif"},"详情"]
+  ],
+  ["Row",
+    ["Badge",{"v":"warning"},"提醒"],
+    ["Text","会员即将过期"],
+    ["Text",{"v":"caption"},"昨天"],
+    ["Link",{"t":"viewNotif"},"详情"]
+  ],
+  ["Link",{"t":"markAllRead"},"全部已读"]
+]

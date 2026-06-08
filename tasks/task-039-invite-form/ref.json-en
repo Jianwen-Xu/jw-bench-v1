@@ -1,0 +1,8 @@
+["Form",
+  ["Text",{"v":"heading"},"邀请成员"],
+  ["Input",{"type":"email","req":true,"ph":"请输入对方邮箱","bind":"inviteEmail"}],
+  ["Select",{"bind":"inviteRole","opts":"roles"}],
+  ["Input",{"ph":"添加附言...","bind":"inviteMessage"}],
+  ["Btn",{"v":"p","t":"sendInvite"},"发送邀请"],
+  ["Btn",{"t":"cancelInvite"},"取消"]
+]

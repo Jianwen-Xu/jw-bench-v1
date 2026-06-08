@@ -1,0 +1,8 @@
+[
+  "存在 Card",
+  "顶部有头像+用户名（heading）+时间（caption）",
+  "存在正文",
+  "存在\"点赞\"按钮 ghost 触发 like",
+  "存在\"评论\"按钮 ghost 触发 comment",
+  "存在\"分享\"链接触发 share"
+]

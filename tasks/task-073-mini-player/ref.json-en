@@ -1,0 +1,11 @@
+["Card",
+  ["Row",
+    ["Img",{"size":"m","shape":"square","src":"album"}],
+    ["Col",
+      ["Text",{"v":"heading"},"晴天"],
+      ["Text",{"v":"caption"},"周杰伦"]
+    ],
+    ["Btn",{"v":"p","t":"playMusic"},"播放"],
+    ["Btn",{"v":"g","t":"nextTrack"},"下一首"]
+  ]
+]

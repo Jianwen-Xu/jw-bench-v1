@@ -1,0 +1,15 @@
+["Card",
+  ["Col",
+    ["Row",
+      ["Avt",{"size":"m","shape":"circle","src":"admin"}],
+      ["Col",
+        ["Text",{"v":"heading"},"admin"],
+        ["Text",{"v":"caption"},"管理员"]
+      ]
+    ],
+    ["Link",{"t":"goProfile"},"个人资料"],
+    ["Link",{"t":"goAccountSettings"},"账户设置"],
+    ["Link",{"t":"goMessages"},"消息中心"],
+    ["Link",{"t":"logout","v":"subtle"},"退出登录"]
+  ]
+]

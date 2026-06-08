@@ -1,0 +1,34 @@
+["Col",
+  ["Text",{"v":"caption"},"共找到 12 条结果"],
+  ["Card",
+    ["Row",
+      ["Img",{"size":"m","src":"r1"}],
+      ["Col",
+        ["Text",{"v":"heading"},"标题1"],
+        ["Text","摘要1"],
+        ["Badge",{"v":"info"},"标签1"]
+      ]
+    ]
+  ],
+  ["Card",
+    ["Row",
+      ["Img",{"size":"m","src":"r2"}],
+      ["Col",
+        ["Text",{"v":"heading"},"标题2"],
+        ["Text","摘要2"],
+        ["Badge",{"v":"info"},"标签2"]
+      ]
+    ]
+  ],
+  ["Card",
+    ["Row",
+      ["Img",{"size":"m","src":"r3"}],
+      ["Col",
+        ["Text",{"v":"heading"},"标题3"],
+        ["Text","摘要3"],
+        ["Badge",{"v":"info"},"标签3"]
+      ]
+    ]
+  ],
+  ["Link",{"t":"loadMore"},"加载更多"]
+]

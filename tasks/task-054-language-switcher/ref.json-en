@@ -1,0 +1,9 @@
+["Col",
+  ["Text",{"v":"heading"},"切换语言"],
+  ["Row",
+    ["Btn",{"v":"p","t":"switchCN"},"中文"],
+    ["Btn",{"v":"g","t":"switchEN"},"English"],
+    ["Btn",{"v":"g","t":"switchJP"},"日本語"]
+  ],
+  ["Badge",{"v":"s"},"当前"]
+]

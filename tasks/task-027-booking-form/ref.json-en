@@ -1,0 +1,9 @@
+["Form",
+  ["Text",{"v":"heading"},"预约服务"],
+  ["Select",{"bind":"serviceType","opts":"services"}],
+  ["Input",{"ph":"选择日期","bind":"bookingDate"}],
+  ["Input",{"ph":"选择时间","bind":"bookingTime"}],
+  ["Input",{"ph":"备注","bind":"notes"}],
+  ["Btn",{"v":"p","t":"submitBooking"},"提交预约"],
+  ["Btn",{"t":"cancelBooking"},"取消"]
+]

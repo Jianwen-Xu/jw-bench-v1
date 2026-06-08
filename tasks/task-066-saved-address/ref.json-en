@@ -1,0 +1,12 @@
+["Card",
+  ["Col",
+    ["Badge",{"v":"s"},"默认"],
+    ["Text",{"v":"heading"},"张三"],
+    ["Text","北京市朝阳区建国路88号"],
+    ["Text","13800138000"],
+    ["Row",
+      ["Link",{"t":"editAddress"},"编辑"],
+      ["Link",{"t":"deleteAddress"},"删除"]
+    ]
+  ]
+]

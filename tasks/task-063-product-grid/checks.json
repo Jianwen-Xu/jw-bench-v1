@@ -1,0 +1,5 @@
+[
+  "存在标题\"推荐商品\"（heading）",
+  "存在三个商品 Card 横向排列",
+  "每个有 Image（中）+名称+价格（price）+购买按钮 primary buyProduct"
+]

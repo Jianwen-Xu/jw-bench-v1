@@ -181,7 +181,7 @@ function traverseXuTree(node: any): { m3Errors: string[]; m4Errors: string[] } {
         } else {
           const manifest = MANIFEST[tag];
           // Check props object (second element if it's an object, not array)
-          if (n.length > 1 && typeof n[1] === 'object' && !Array.isArray(n[1])) {
+          if (n.length > 1 && n[1] !== null && typeof n[1] === 'object' && !Array.isArray(n[1])) {
             const props = n[1];
             for (const [k, v] of Object.entries(props)) {
               if (!manifest.props[k]) {

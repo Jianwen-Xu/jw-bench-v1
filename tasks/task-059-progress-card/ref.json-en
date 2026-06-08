@@ -1,0 +1,9 @@
+["Card",
+  ["Col",
+    ["Text",{"v":"heading"},"React 入门教程"],
+    ["Text","已完成 65%"],
+    ["Badge",{"v":"s"},"进行中"],
+    ["Text",{"v":"caption"},"已学习 13/20 课时"],
+    ["Btn",{"v":"p","t":"continueLearning"},"继续学习"]
+  ]
+]

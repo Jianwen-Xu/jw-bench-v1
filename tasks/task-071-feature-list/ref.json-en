@@ -1,0 +1,24 @@
+["Col",
+  ["Text",{"v":"heading"},"核心功能"],
+  ["Row",
+    ["Img",{"size":"s","shape":"square","src":"ic1"}],
+    ["Col",
+      ["Text",{"v":"heading"},"智能分析"],
+      ["Text",{"v":"body"},"AI 数据分析"]
+    ]
+  ],
+  ["Row",
+    ["Img",{"size":"s","shape":"square","src":"ic2"}],
+    ["Col",
+      ["Text",{"v":"heading"},"实时同步"],
+      ["Text",{"v":"body"},"多端数据同步"]
+    ]
+  ],
+  ["Row",
+    ["Img",{"size":"s","shape":"square","src":"ic3"}],
+    ["Col",
+      ["Text",{"v":"heading"},"安全可靠"],
+      ["Text",{"v":"body"},"银行级加密"]
+    ]
+  ]
+]

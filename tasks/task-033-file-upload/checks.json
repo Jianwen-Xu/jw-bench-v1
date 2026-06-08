@@ -1,0 +1,7 @@
+[
+  "存在 Card",
+  "存在标题\"上传文件\"",
+  "存在\"选择文件\"按钮 primary 触发 selectFile",
+  "存在文件行：文件名+大小+Badge+删除链接",
+  "存在\"提交\"按钮 primary 触发 submitFiles"
+]

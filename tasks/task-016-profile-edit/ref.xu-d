@@ -1,0 +1,8 @@
+域
+　文 编辑资料
+　头像 中
+　入 空请输入昵称 值nickname
+　入 空介绍一下自己... 值bio
+　选 值gender 选项genders
+　按 主 saveProfile 保存
+　按 cancelEdit 取消

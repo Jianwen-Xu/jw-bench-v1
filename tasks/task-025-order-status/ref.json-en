@@ -1,0 +1,20 @@
+["Col",
+  ["Text",{"v":"heading"},"订单状态"],
+  ["Row",
+    ["Badge",{"v":"s"},"✓"],
+    ["Text","已下单"]
+  ],
+  ["Row",
+    ["Badge",{"v":"s"},"✓"],
+    ["Text","已确认"]
+  ],
+  ["Row",
+    ["Badge",{"v":"warning"},"●"],
+    ["Text","配送中"]
+  ],
+  ["Row",
+    ["Badge",{"v":"info"},"○"],
+    ["Text","已完成"]
+  ],
+  ["Btn",{"v":"p","t":"viewDetail"},"查看详情"]
+]

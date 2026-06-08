@@ -1,0 +1,12 @@
+["Card",
+  ["Col",
+    ["Img",{"size":"l","src":"recipe"}],
+    ["Text",{"v":"heading"},"番茄炒蛋"],
+    ["Row",
+      ["Badge",{"v":"info"},"简单"],
+      ["Text","15分钟"]
+    ],
+    ["Text","食材：番茄、鸡蛋、葱、盐、糖"],
+    ["Link",{"t":"viewRecipe"},"查看完整做法"]
+  ]
+]

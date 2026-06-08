@@ -1,0 +1,9 @@
+[
+  "存在 Card 容器",
+  "存在 Row 水平布局",
+  "存在商品图片（medium）",
+  "存在商品名（heading）",
+  "存在价格（price）",
+  "存在数量输入框（type=number）",
+  "存在\"删除\"按钮触发 removeItem"
+]

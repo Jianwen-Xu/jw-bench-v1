@@ -1,0 +1,9 @@
+[
+  "存在 Card",
+  "存在标题（heading）",
+  "存在日期行",
+  "存在地点行",
+  "存在 Badge info \"科技\"",
+  "存在票价（price）",
+  "存在\"立即报名\"按钮 primary 触发 registerEvent"
+]

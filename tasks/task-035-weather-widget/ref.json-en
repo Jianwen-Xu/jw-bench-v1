@@ -1,0 +1,11 @@
+["Card",
+  ["Row",
+    ["Img",{"size":"m","shape":"square","src":"weather-icon"}],
+    ["Col",
+      ["Text",{"v":"heading"},"26°C"],
+      ["Text","北京"],
+      ["Text",{"v":"caption"},"湿度：45%"],
+      ["Text",{"v":"caption"},"风速：3级"]
+    ]
+  ]
+]

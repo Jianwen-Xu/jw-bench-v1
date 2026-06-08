@@ -1,0 +1,13 @@
+["Card",
+  ["Col",
+    ["Text",{"v":"heading"},"邀请好友"],
+    ["Text","邀请好友注册，双方得优惠券！"],
+    ["Text",{"v":"heading"},"ABCD1234"],
+    ["Badge",{"v":"s"},"有效"],
+    ["Text",{"v":"caption"},"有效期至 2026-12-31"],
+    ["Row",
+      ["Btn",{"v":"s","t":"copyInviteLink"},"复制链接"],
+      ["Btn",{"v":"p","t":"shareInvite"},"分享"]
+    ]
+  ]
+]

@@ -1,0 +1,8 @@
+["Form",
+  ["Text","添加新地址"],
+  ["Input",{"ph":"收件人姓名","bind":"recipient"}],
+  ["Input",{"type":"number","ph":"手机号","bind":"phone"}],
+  ["Select",{"bind":"province","opts":"provinces"}],
+  ["Input",{"ph":"详细地址","bind":"address"}],
+  ["Btn",{"v":"p","t":"saveAddress"},"保存地址"]
+]

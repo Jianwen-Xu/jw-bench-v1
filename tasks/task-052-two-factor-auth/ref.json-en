@@ -1,0 +1,8 @@
+["Form",
+  ["Text",{"v":"heading"},"二次验证"],
+  ["Text","请输入6位验证码"],
+  ["Input",{"type":"number","ph":"6位验证码","bind":"verificationCode"}],
+  ["Btn",{"v":"p","t":"verifyCode"},"验证"],
+  ["Link",{"t":"resendCode"},"重新发送"],
+  ["Text",{"v":"caption"},"60秒后可重新发送"]
+]

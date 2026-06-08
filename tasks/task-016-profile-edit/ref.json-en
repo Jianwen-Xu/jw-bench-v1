@@ -1,0 +1,9 @@
+["Form",
+  ["Text","编辑资料"],
+  ["Avt",{"size":"m"}],
+  ["Input",{"ph":"请输入昵称","bind":"nickname"}],
+  ["Input",{"ph":"介绍一下自己...","bind":"bio"}],
+  ["Select",{"bind":"gender","opts":"genders"}],
+  ["Btn",{"v":"p","t":"saveProfile"},"保存"],
+  ["Btn",{"t":"cancelEdit"},"取消"]
+]

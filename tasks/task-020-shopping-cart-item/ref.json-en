@@ -1,0 +1,11 @@
+["Card",
+  ["Row",
+    ["Img",{"size":"m","src":"product"}],
+    ["Col",
+      ["Text",{"v":"heading"},"商品名称"],
+      ["Text",{"v":"price"},"¥99.00"],
+      ["Input",{"type":"number","bind":"quantity","ph":"1"}],
+      ["Btn",{"v":"s","t":"removeItem"},"删除"]
+    ]
+  ]
+]

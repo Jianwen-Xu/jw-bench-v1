@@ -1,0 +1,8 @@
+[
+  "存在 Card",
+  "顶部有头像+用户名+角色",
+  "存在\"个人资料\"链接 goProfile",
+  "存在\"账户设置\"链接 goAccountSettings",
+  "存在\"消息中心\"链接 goMessages",
+  "存在\"退出登录\"链接 logout（subtle）"
+]

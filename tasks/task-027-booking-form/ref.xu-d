@@ -1,0 +1,8 @@
+域
+　文 主标题 预约服务
+　选 值serviceType 选项services
+　入 空选择日期 值bookingDate
+　入 空选择时间 值bookingTime
+　入 空备注 值notes
+　按 主 submitBooking 提交预约
+　按 cancelBooking 取消

@@ -1,0 +1,27 @@
+["Card",
+  ["Col",
+    ["Text",{"v":"heading"},"倒计时"],
+    ["Row",
+      ["Col",
+        ["Text",{"v":"heading"},"02"],
+        ["Text",{"v":"caption"},"天"]
+      ],
+      ["Col",
+        ["Text",{"v":"heading"},"14"],
+        ["Text",{"v":"caption"},"时"]
+      ],
+      ["Col",
+        ["Text",{"v":"heading"},"30"],
+        ["Text",{"v":"caption"},"分"]
+      ],
+      ["Col",
+        ["Text",{"v":"heading"},"45"],
+        ["Text",{"v":"caption"},"秒"]
+      ]
+    ],
+    ["Row",
+      ["Btn",{"v":"p","t":"startTimer"},"开始"],
+      ["Btn",{"v":"g","t":"resetTimer"},"重置"]
+    ]
+  ]
+]

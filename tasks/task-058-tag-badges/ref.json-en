@@ -1,0 +1,12 @@
+["Col",
+  ["Text",{"v":"heading"},"热门标签"],
+  ["Row",
+    ["Badge",{"v":"info"},"前端开发"],
+    ["Badge",{"v":"s"},"React"],
+    ["Badge",{"v":"warning"},"TypeScript"],
+    ["Badge",{"v":"danger"},"Node.js"],
+    ["Badge",{"v":"info"},"CSS"],
+    ["Badge",{"v":"s"},"JavaScript"]
+  ],
+  ["Link",{"t":"viewMoreTags"},"查看更多"]
+]

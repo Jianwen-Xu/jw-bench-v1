@@ -1,0 +1,7 @@
+[
+  "存在标题\"选择方案\"",
+  "存在三个方案卡片横向排列",
+  "免费版 heading+price+ghost 按钮 selectFree",
+  "专业版 primary 按钮 selectPro",
+  "企业版 secondary 按钮 selectEnterprise"
+]

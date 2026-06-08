@@ -1,0 +1,17 @@
+["Col",
+  ["Text","相册"],
+  ["Row",
+    ["Col",
+      ["Img",{"size":"m","shape":"square","src":"p1"}],
+      ["Text",{"v":"caption"},"风景1"]
+    ],
+    ["Col",
+      ["Img",{"size":"m","shape":"square","src":"p2"}],
+      ["Text",{"v":"caption"},"风景2"]
+    ],
+    ["Col",
+      ["Img",{"size":"m","shape":"square","src":"p3"}],
+      ["Text",{"v":"caption"},"风景3"]
+    ]
+  ]
+]

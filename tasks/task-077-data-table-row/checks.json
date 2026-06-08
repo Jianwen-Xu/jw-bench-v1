@@ -1,0 +1,10 @@
+[
+  "存在 Card",
+  "存在 Row",
+  "存在姓名（heading）",
+  "存在年龄",
+  "存在部门",
+  "存在 Badge success \"在职\"",
+  "存在\"编辑\"链接 editUser",
+  "存在\"删除\"链接 deleteUser"
+]

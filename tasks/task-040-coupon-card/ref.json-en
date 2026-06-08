@@ -1,0 +1,12 @@
+["Card",
+  ["Col",
+    ["Badge",{"v":"s"},"满减券"],
+    ["Text",{"v":"price"},"满100减20"],
+    ["Text",{"v":"caption"},"有效期至2026-12-31"],
+    ["Text","CODE2026"],
+    ["Row",
+      ["Btn",{"v":"s","t":"copyCoupon"},"复制优惠码"],
+      ["Btn",{"v":"p","t":"useCoupon"},"立即使用"]
+    ]
+  ]
+]

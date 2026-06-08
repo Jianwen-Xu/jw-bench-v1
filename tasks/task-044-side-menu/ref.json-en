@@ -1,0 +1,16 @@
+["Card",
+  ["Col",
+    ["Row",
+      ["Badge",{"v":"info"},"🏠"],
+      ["Link",{"t":"goHome"},"首页"]
+    ],
+    ["Row",
+      ["Badge",{"v":"s"},"📊"],
+      ["Link",{"t":"goStats"},"数据统计"]
+    ],
+    ["Row",
+      ["Badge",{"v":"warning"},"⚙️"],
+      ["Link",{"t":"goSettings"},"系统设置"]
+    ]
+  ]
+]

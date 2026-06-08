@@ -1,0 +1,8 @@
+[
+  "存在 Card",
+  "存在标题\"选择支付方式\"",
+  "存在微信支付 Checkbox bind=payWechat",
+  "存在支付宝 Checkbox bind=payAlipay",
+  "存在银行卡 Checkbox bind=payCard",
+  "存在\"确认支付\"按钮 primary 触发 confirmPayment"
+]

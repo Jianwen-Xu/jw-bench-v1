@@ -1,0 +1,9 @@
+[
+  "存在 Card",
+  "存在 Badge success \"默认\"",
+  "存在收件人（heading）",
+  "存在地址",
+  "存在电话",
+  "存在\"编辑\"链接 editAddress",
+  "存在\"删除\"链接 deleteAddress"
+]

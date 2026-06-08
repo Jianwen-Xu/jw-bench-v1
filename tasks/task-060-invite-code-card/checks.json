@@ -1,0 +1,10 @@
+[
+  "存在 Card",
+  "存在标题\"邀请好友\"（heading）",
+  "存在说明",
+  "存在邀请码（heading）",
+  "存在 Badge success \"有效\"",
+  "存在有效期（caption）",
+  "存在\"复制链接\"按钮 copyInviteLink",
+  "存在\"分享\"按钮 primary shareInvite"
+]

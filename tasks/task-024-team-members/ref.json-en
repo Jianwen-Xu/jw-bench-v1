@@ -1,0 +1,23 @@
+["Col",
+  ["Text",{"v":"heading"},"我们的团队"],
+  ["Row",
+    ["Card",
+      ["Avt",{"size":"l","shape":"circle","src":"m1"}],
+      ["Text",{"v":"heading"},"张三"],
+      ["Text",{"v":"body"},"CEO"],
+      ["Link",{"t":"contactMember"},"联系"]
+    ],
+    ["Card",
+      ["Avt",{"size":"l","shape":"circle","src":"m2"}],
+      ["Text",{"v":"heading"},"李四"],
+      ["Text",{"v":"body"},"CTO"],
+      ["Link",{"t":"contactMember"},"联系"]
+    ],
+    ["Card",
+      ["Avt",{"size":"l","shape":"circle","src":"m3"}],
+      ["Text",{"v":"heading"},"王五"],
+      ["Text",{"v":"body"},"PM"],
+      ["Link",{"t":"contactMember"},"联系"]
+    ]
+  ]
+]

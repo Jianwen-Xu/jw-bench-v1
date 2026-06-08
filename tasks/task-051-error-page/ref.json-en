@@ -1,0 +1,9 @@
+["Card",
+  ["Col",
+    ["Text",{"v":"heading"},"404"],
+    ["Text","页面未找到"],
+    ["Text",{"v":"body"},"您访问的页面不存在。"],
+    ["Btn",{"v":"p","t":"reloadPage"},"重新加载"],
+    ["Link",{"t":"backToHome"},"返回首页"]
+  ]
+]

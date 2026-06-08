@@ -1,0 +1,10 @@
+["Card",
+  ["Row",
+    ["Text",{"v":"heading"},"张三"],
+    ["Text","28"],
+    ["Text","技术部"],
+    ["Badge",{"v":"s"},"在职"],
+    ["Link",{"t":"editUser"},"编辑"],
+    ["Link",{"t":"deleteUser"},"删除"]
+  ]
+]

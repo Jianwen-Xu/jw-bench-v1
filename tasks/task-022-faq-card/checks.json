@@ -1,0 +1,8 @@
+[
+  "存在 Card 容器",
+  "存在问题标题（heading）",
+  "存在回答（body）",
+  "存在\"有帮助\"按钮 primary 触发 helpfulYes",
+  "存在\"没有帮助\"按钮 ghost 触发 helpfulNo",
+  "存在统计文字（caption）"
+]

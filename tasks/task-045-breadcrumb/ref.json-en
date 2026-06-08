@@ -1,0 +1,7 @@
+["Row",
+  ["Link",{"t":"navHome"},"首页"],
+  ["Text",">"],
+  ["Link",{"t":"navCategory"},"分类"],
+  ["Text",">"],
+  ["Text","当前页面"]
+]

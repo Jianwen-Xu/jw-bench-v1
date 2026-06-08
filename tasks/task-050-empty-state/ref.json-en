@@ -1,0 +1,7 @@
+["Col",
+  ["Img",{"size":"l","src":"empty-state"}],
+  ["Text",{"v":"heading"},"暂无数据"],
+  ["Text",{"v":"body"},"当前没有可显示的内容。"],
+  ["Btn",{"v":"p","t":"refreshData"},"刷新"],
+  ["Link",{"t":"goHomePage"},"返回首页"]
+]
