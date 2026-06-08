@@ -10,6 +10,7 @@
  */
 import { spawn } from 'child_process';
 import { MODELS, DEEPSEEK_API_KEY } from './config';
+import { toNormalizedDump, detectFormat } from './xu-parser';
 
 export interface JudgeResult {
   equivalent: boolean;
@@ -112,22 +113,51 @@ const TAG_MAP: Record<string, string> = {
 const ENGLISH_TAGS = new Set(Object.values(TAG_MAP));
 
 export function toAbstractDump(wire: string): string {
-  const hasJSXTags = /<\/?[A-Z][a-zA-Z]*[^>]*>/.test(wire);
-  const hasChineseTags = /["']?[列排卡域文图按入选框切链栏标提头像]/m.test(wire);
-  const hasIndentedLines = /^[　 ]+[一-龥]/m.test(wire);
+  const fmt = detectFormat(wire);
+  if (fmt === 'jsx') return toDumpFromJSX(wire);
+  if (fmt === 'json-en') return toDumpFromJSON_EN(wire);
+  return toNormalizedDump(wire);
+}
 
-  if (hasJSXTags) return toDumpFromJSX(wire);
-  if (hasIndentedLines) return toDumpFromXuD(wire);
-  if (hasChineseTags) {
-    try {
-      const parsed = JSON.parse(wire);
-      if (Array.isArray(parsed) && typeof parsed[0] === 'string') {
-        return toDumpFromJSON(wire, true);
+function toDumpFromJSON_EN(wire: string): string {
+  let arr: any;
+  try { arr = JSON.parse(wire); } catch { return wire; }
+  const lines: string[] = [];
+
+  const TAG_ALIASES: Record<string, string> = {
+    'Col': 'Column', 'Btn': 'Button', 'Inp': 'Input', 'Img': 'Image',
+    'Txt': 'Text',   'Nav': 'NavBar', 'Chk': 'Checkbox',
+  };
+
+  function walk(node: any, depth: number): void {
+    if (!Array.isArray(node)) return;
+    const rawTag = String(node[0] ?? '');
+    const tag = TAG_ALIASES[rawTag] ?? rawTag;
+
+    const hasProps = typeof node[1] === 'object' && !Array.isArray(node[1]);
+    const props: Record<string, unknown> = hasProps ? node[1] : {};
+    const startIdx = hasProps ? 2 : 1;
+
+    const tokens: string[] = [];
+    for (const [k, v] of Object.entries(props)) {
+      if ((k === 'req' || k === 'required') && v === true) { tokens.push('required'); continue; }
+      if ((k === 'disabled') && v === true) { tokens.push('disabled'); continue; }
+      if (typeof v !== 'string' || !v) continue;
+      if (k === 't' || k === 'trigger' || k === 'onTap' || k === 'onSubmit' || k === 'onBack') {
+        tokens.push(`onTap=${v}`); continue;
       }
-    } catch {}
-    return toDumpFromXuD(wire);
+      if (k === 'bind' || k === 'value') { tokens.push(`bind=${v}`); continue; }
+      if (k === 'type') { tokens.push(v); continue; }
+    }
+
+    lines.push('  '.repeat(depth) + `[${tag}]` + (tokens.length ? ` ${tokens.join(' ')}` : ''));
+    for (let i = startIdx; i < node.length; i++) {
+      if (Array.isArray(node[i])) walk(node[i], depth + 1);
+    }
   }
-  return toDumpFromJSON(wire, false);
+
+  walk(arr, 0);
+  return lines.join('\n');
 }
 
 function toDumpFromJSX(wire: string): string {
@@ -146,107 +176,6 @@ function toDumpFromJSX(wire: string): string {
     lines.push('  '.repeat(depth) + `[${tag}]` + (props ? ` ${props}` : ''));
     if (!selfClose) depth++;
   }
-  return lines.join('\n');
-}
-
-function toDumpFromXuD(wire: string): string {
-  const lines: string[] = [];
-  for (const line of wire.split('\n')) {
-    const trimmed = line.trim();
-    if (!trimmed) continue;
-    const indent = line.match(/^[　]*/)?.[0]?.length ?? 0;
-    const parts = trimmed.split(/[\s　]+/).filter(Boolean);
-    if (parts.length === 0) continue;
-    const rawTag = parts[0];
-    const tag = TAG_MAP[rawTag] ?? rawTag;
-
-    const required = parts.some(p => p === '必') ? ' required' : '';
-    const disabled = parts.some(p => p === '禁' || p === '禁true') ? ' disabled' : '';
-
-    const tokens: string[] = [];
-    for (const p of parts.slice(1)) {
-      if (p === '必' || /^禁/.test(p)) continue;   // constraints (handled above)
-      if (/^空/.test(p)) continue;                  // placeholder: 空...
-      if (/^式/.test(p)) continue;                  // explicit style key: 式主/式次
-      if (VISUAL_TOKENS.has(p)) continue;           // known visual tokens
-      if (/^值(.+)$/.test(p)) {                     // state binding: 值xxx → bind=xxx
-        tokens.push(`bind=${p.slice(1)}`); continue;
-      }
-      if (/^触(.+)$/.test(p)) {                     // action trigger: 触submit → onTap=submit
-        tokens.push(`onTap=${p.slice(1)}`); continue;
-      }
-      tokens.push(p);  // keep ASCII handlers + Chinese type/label tokens
-    }
-
-    const interactiveTags = new Set(['Button', 'Link', 'Btn']);
-    if (interactiveTags.has(tag)) {
-      const hasOnTap = tokens.some(t => t.startsWith('onTap='));
-      if (!hasOnTap) {
-        const asciiIdx = tokens.findIndex(t => /^[a-zA-Z]\w*$/.test(t));
-        if (asciiIdx >= 0) {
-          tokens[asciiIdx] = `onTap=${tokens[asciiIdx]}`;
-        }
-      }
-    }
-
-    lines.push('  '.repeat(indent) + `[${tag}]` +
-      (tokens.length ? ` ${tokens.join(' ')}` : '') + required + disabled);
-  }
-  return lines.join('\n');
-}
-
-function toDumpFromJSON(wire: string, chinese: boolean): string {
-  let arr: any;
-  try { arr = JSON.parse(wire); } catch { return wire; }
-  const lines: string[] = [];
-
-  const ACTION_KEYS = new Set(['t', 'trigger', 'onTap', 'onSubmit', 'onBack', 'onClose', '触']);
-  const BIND_KEYS   = new Set(['bind', 'value', '值']);
-  const TYPE_KEYS   = new Set(['type', '类', '式']);
-  const REQ_KEYS    = new Set(['req', 'required', '必']);
-  const DIS_KEYS    = new Set(['disabled', '禁']);
-
-  function walk(node: any, depth: number): void {
-    if (!Array.isArray(node)) return;
-    const rawTag = String(node[0] ?? '');
-    // Common short-form aliases in JSON-EN wire format
-    const TAG_ALIASES: Record<string, string> = {
-      'Col': 'Column', 'Btn': 'Button', 'Inp': 'Input', 'Img': 'Image',
-      'Txt': 'Text',   'Nav': 'NavBar', 'Chk': 'Checkbox',
-    };
-    const tag = chinese
-      ? (TAG_MAP[rawTag] ?? rawTag)
-      : (ENGLISH_TAGS.has(rawTag) ? rawTag :
-          TAG_ALIASES[rawTag] ??
-          (Object.entries(TAG_MAP).find(([, en]) => en === rawTag)?.[1] ?? rawTag));
-
-    const hasProps = typeof node[1] === 'object' && !Array.isArray(node[1]);
-    const props: Record<string, unknown> = hasProps ? node[1] : {};
-    const startIdx = hasProps ? 2 : 1;
-
-    const tokens: string[] = [];
-    for (const [k, v] of Object.entries(props)) {
-      if (REQ_KEYS.has(k) && v === true) { tokens.push('required'); continue; }
-      if (DIS_KEYS.has(k) && v === true) { tokens.push('disabled'); continue; }
-      if (typeof v !== 'string' || !v) continue;
-      if (ACTION_KEYS.has(k)) { tokens.push(`onTap=${v}`); continue; }
-      if (BIND_KEYS.has(k))   { tokens.push(`bind=${v}`); continue; }
-      if (TYPE_KEYS.has(k) && !VISUAL_TOKENS.has(v)) { tokens.push(v); continue; }
-      // skip visual/label values
-    }
-
-    for (let i = startIdx; i < node.length; i++) {
-      if (typeof node[i] === 'string' && node[i].trim()) {
-        tokens.push(node[i].trim());
-      }
-    }
-    lines.push('  '.repeat(depth) + `[${tag}]` + (tokens.length ? ` ${tokens.join(' ')}` : ''));
-    for (let i = startIdx; i < node.length; i++) {
-      if (Array.isArray(node[i])) walk(node[i], depth + 1);
-    }
-  }
-
-  walk(arr, 0);
   return lines.join('\n');
 }
 
