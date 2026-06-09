@@ -1,7 +1,7 @@
 域
 　文 主标题 邀请成员
-　入 邮箱 必 空请输入对方邮箱 値邀请邮箱
-　选 値邀请角色 选项roles
-　入 空添加附言... 値邀请内容
+　入 邮箱 必 空请输入对方邮箱 值inviteEmail
+　选 值inviteRole 选项roles
+　入 空添加附言... 值inviteMessage
 　按 主 sendInvite 发送邀请
 　按 cancelInvite 取消

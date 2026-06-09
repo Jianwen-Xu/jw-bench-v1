@@ -2,9 +2,9 @@
 　列
 　　文 主标题 选择支付方式
 　　排
-　　　选框 値微信 微信支付
+　　　选框 值payWechat 微信支付
 　　排
-　　　选框 値支付宝 支付宝
+　　　选框 值payAlipay 支付宝
 　　排
-　　　选框 値银行卡 银行卡
+　　　选框 值payCard 银行卡
 　　按 主 confirmPayment 确认支付

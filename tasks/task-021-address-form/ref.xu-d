@@ -1,7 +1,7 @@
 域
 　文 添加新地址
-　入 空收件人姓名 値收件人
-　入 数字 空手机号 値手机号
-　选 値省份 选项provinces
-　入 空详细地址 値地址
+　入 空收件人姓名 值recipient
+　入 数字 空手机号 值phone
+　选 值province 选项provinces
+　入 空详细地址 值address
 　按 主 saveAddress 保存地址

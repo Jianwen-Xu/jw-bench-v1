@@ -5,7 +5,7 @@
 　　按 次 qqLogin QQ登录
 　　按 次 weiboLogin 微博登录
 　文 或使用账号密码
-　入 邮箱 空邮箱 値登录邮箱
-　入 密码 空密码 値登录密码
+　入 邮箱 空邮箱 值loginEmail
+　入 密码 空密码 值loginPassword
 　按 主 loginSubmit 登录
 　链 goRegister 注册账号

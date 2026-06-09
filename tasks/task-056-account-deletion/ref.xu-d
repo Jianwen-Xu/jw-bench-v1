@@ -3,7 +3,7 @@
 　　标 危险 ⚠
 　　文 主标题 注销账户
 　　文 正文 此操作不可撤销。
-　　入 空输入'确认删除'以继续 値确认删除
+　　入 空输入'确认删除'以继续 值confirmDelete
 　　排
 　　　按 主 confirmDeletion 确认注销
 　　　按 轻 cancelDeletion 取消

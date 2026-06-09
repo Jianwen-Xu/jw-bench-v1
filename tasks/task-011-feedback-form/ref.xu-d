@@ -1,7 +1,7 @@
 域
 　文 意见反馈
-　选 値类型 选项feedbackTypes
-　入 空请详细描述您的问题或建议... 値内容
-　入 空手机号或邮箱（选填） 値联系方式
+　选 值type 选项feedbackTypes
+　入 空请详细描述您的问题或建议... 值content
+　入 空手机号或邮箱（选填） 值contact
 　按 主 submitFeedback 提交反馈
 　按 cancel 取消

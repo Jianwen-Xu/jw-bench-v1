@@ -1,7 +1,7 @@
 域
 　文 主标题 联系我们
-　入 空姓名 値联系人
-　入 邮箱 空邮箱 値联系邮箱
-　入 数字 空电话 値联系手机
-　入 空留言内容 値联系内容
+　入 空姓名 值contactName
+　入 邮箱 空邮箱 值contactEmail
+　入 数字 空电话 值contactPhone
+　入 空留言内容 值contactMessage
 　按 主 sendMessage 发送

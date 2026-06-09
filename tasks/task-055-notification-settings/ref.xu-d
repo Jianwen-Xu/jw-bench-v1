@@ -4,11 +4,11 @@
 　　列
 　　　排
 　　　　文 评论回复
-　　　　切 値评论通知
+　　　　切 值notifComment
 　　　排
 　　　　文 新粉丝
-　　　　切 値关注通知
+　　　　切 值notifFollower
 　　　排
 　　　　文 系统公告
-　　　　切 値系统通知
+　　　　切 值notifSystem
 　按 主 saveNotifSettings 保存设置
