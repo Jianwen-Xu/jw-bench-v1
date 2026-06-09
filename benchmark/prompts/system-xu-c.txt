@@ -19,6 +19,20 @@
 | 标 | Badge | 式（信息/成功/警告/危险） 值（bind）（label 为子文本） |
 | 提 | Toast | 式（信息/成功/警告/⚠️错误） 值（bind） 时（duration） |
 | 头像 | Avatar | 大（小/中/大） 形（圆/方） 源（src） |
+| 框 | Modal | 式（中/全/底） 题（title） 闭（onClose action） |
+| 表 | Table | 源（dataSource bind） 选（onSelect action） |
+| 滑 | Slider | 值（bind） 小（min） 大（max） 禁（disabled） |
+| 进 | Progress | 值（bind） 式（条/环/圆） 总（total） |
+| 点 | Radio | 值（bind） 组（group） 禁（disabled） |
+| 隔 | Divider | 式（横/竖） 字（label） |
+| 转 | Spinner | 大（小/中/大） 式（圆/条/点） |
+| 折 | Accordion | 题（title） 展（expanded bool） |
+| 轮 | Carousel | 源（items bind） 时（interval） 轮（autoplay） |
+| 签 | Chip | 式（信息/成功/警告/危险） 闭（closable） 选（bind）（label 为子文本） |
+| 评 | Rating | 值（bind） 大（max） 禁（disabled） |
+| 下 | Dropdown | 值（bind） 源（options） 空（placeholder） |
+| 浮 | FAB | 式（主/次/轻） 触（action） 大（小/中/大） 形（圆/方） |
+| 骨 | Skeleton | 式（文/图/卡/圆） 宽（width） 高（height） |
 
 ## 格式
 ["标签", {属性键: 属性值}, ...子节点]

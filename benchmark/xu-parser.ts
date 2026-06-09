@@ -314,7 +314,7 @@ export function detectFormat(wire: string): WireFormat {
   const hasJSXTags = /<\/?[A-Z][a-zA-Z]*[^>]*>/.test(wire);
   if (hasJSXTags) return 'jsx';
 
-  const hasChineseTags = /["']?[列排卡域文图按入选框切链栏标提头像]/m.test(wire);
+  const hasChineseTags = /["']?[列排卡域文图按入选框切链栏标提头像框表滑进点隔转折轮签评下浮骨]/m.test(wire);
   const hasIndentedLines = /^[　 ]+[一-龥]/m.test(wire);
 
   if (hasIndentedLines) return 'xu-d';

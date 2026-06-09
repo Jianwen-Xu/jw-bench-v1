@@ -59,6 +59,20 @@ function loadRegistry(): CompEntry[] {
     '标': ['徽章', '标记', 'badge', '标签', 'tag', 'decorative', '装饰', '状态', '角标'],
     '提': ['提示', 'toast', '通知', '消息', 'snackbar', 'feedback', '反馈', '提醒'],
     '头像': ['头像', 'avatar', '头像框', 'display', '展示', '个人'],
+    '框': ['弹窗', '模态', 'modal', 'dialog', '弹出', 'container', '弹出框', '对话框', '遮罩'],
+    '表': ['表格', '列表', 'table', 'list', 'container', '数据表格', '表格容器'],
+    '滑': ['滑块', '滑动条', 'slider', '拖动', 'range', 'interactive', '滑动选择'],
+    '进': ['进度', '进度条', 'progress', 'loading', 'display', '加载', '百分比'],
+    '点': ['单选', 'radio', '选项', '单选按钮', 'radio group', 'interactive', '单选组'],
+    '隔': ['分割线', '分隔', 'divider', 'separator', 'decorative', '分割符'],
+    '转': ['加载', '旋转', 'spinner', 'loading indicator', 'feedback', '等待', '转圈'],
+    '折': ['折叠', '手风琴', 'accordion', 'collapsible', '展开', 'container', '折叠面板'],
+    '轮': ['轮播', '滑动', 'carousel', 'swiper', '图片轮播', 'container', '自动播放'],
+    '签': ['标签', '徽章', 'chip', 'tag label', 'interactive', '小标签', '可关闭标签'],
+    '评': ['评分', '星级', 'rating', 'star', 'stars', 'interactive', '评价打分'],
+    '下': ['下拉菜单', 'dropdown', 'popover', '菜单', '弹出菜单', 'interactive', '选项菜单'],
+    '浮': ['悬浮按钮', 'fab', 'floating action', '悬停', 'interactive', '浮动按钮'],
+    '骨': ['骨架屏', '占位符', 'skeleton', 'loading placeholder', 'display', '加载占位'],
   };
 
   const summaryMap: Record<string, string> = {
@@ -78,6 +92,20 @@ function loadRegistry(): CompEntry[] {
     '标': '徽章标签，支持信息/成功/警告/危险四种颜色',
     '提': 'Toast 提示，显示成功/错误/警告/信息通知',
     '头像': '头像展示，支持大小和圆角控制',
+    '框': '模态弹窗，支持居中/全屏/底部三种样式，带标题和关闭回调',
+    '表': '数据表格/列表容器，支持数据源绑定和行选择事件',
+    '滑': '数值滑块，支持最小/最大值和步进选择',
+    '进': '进度指示器，支持条/环/圆三种样式，显示完成百分比',
+    '点': '单选按钮，绑定到分组状态实现多选一',
+    '隔': '视觉分割线，支持横/竖方向，可带标签文字',
+    '转': '加载旋转指示器，支持圆/条/点三种动效',
+    '折': '手风琴折叠面板，支持标题和展开状态',
+    '轮': '轮播图容器，支持自动播放和切换间隔',
+    '签': '小标签/Chip，支持关闭和选中状态',
+    '评': '星级评分组件，支持自定义最大星级',
+    '下': '下拉菜单/弹出式选择器，支持数据源绑定',
+    '浮': '悬浮操作按钮，固定在页面右下角，支持主/次/轻样式',
+    '骨': '骨架屏占位符，支持文本/图片/卡片/圆形四种形状',
   };
 
   const exampleMap: Record<string, string[]> = {
@@ -97,6 +125,20 @@ function loadRegistry(): CompEntry[] {
     '选': ['选 値country 选项countries'],
     '提': ['提 成功 値success_toast'],
     '排': ['排\n　文 左侧\n　文 右侧'],
+    '框': ['框 中 确认操作 闭onClose\n　文 确认删除？\n　按 主 confirm 确认'],
+    '表': ['表 源itemList 选onSelect\n　文 标题 项目一'],
+    '滑': ['滑 値volume 小0 大100'],
+    '进': ['进 値percent 式条 总100'],
+    '点': ['点 値gender 组genderGroup'],
+    '隔': ['隔 横 或'],
+    '转': ['转 中 圆'],
+    '折': ['折 题常见问题 展'],
+    '轮': ['轮 源carouselItems 时3000 轮'],
+    '签': ['签 信息 闭 标签'],
+    '评': ['评 値rating 大5'],
+    '下': ['下 値菜单 源menuItems 空请选择'],
+    '浮': ['浮 主 触add 中 圆'],
+    '骨': ['骨 式文 宽200 高20'],
   };
 
   _registry = [];

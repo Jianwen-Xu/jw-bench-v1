@@ -133,5 +133,139 @@
              "enum_map": {"圆":"circle","方":"square"}},
       "源": {"type": "string", "alias_en": "src"}
     }
+  },
+  "框": {
+    "name": "Modal", "alias_en": "Modal", "kind": "container",
+    "props_order": ["式", "题", "闭"],
+    "props": {
+      "式": {"type": "enum", "values": ["中","全","底"], "alias_en": "size",
+             "enum_map": {"中":"center","全":"full","底":"bottom"}},
+      "题": {"type": "string", "alias_en": "title"},
+      "闭": {"type": "actionId", "alias_en": "onClose"}
+    }
+  },
+  "表": {
+    "name": "Table", "alias_en": "Table", "kind": "container",
+    "props_order": ["源", "选"],
+    "props": {
+      "源": {"type": "stateRef", "alias_en": "dataSource"},
+      "选": {"type": "actionId", "alias_en": "onSelect"}
+    }
+  },
+  "滑": {
+    "name": "Slider", "alias_en": "Slider", "kind": "interactive",
+    "props_order": ["值", "小", "大", "禁"],
+    "props": {
+      "值": {"type": "stateRef", "alias_en": "bind"},
+      "小": {"type": "number", "alias_en": "min"},
+      "大": {"type": "number", "alias_en": "max"},
+      "禁": {"type": "bool", "alias_en": "disabled"}
+    }
+  },
+  "进": {
+    "name": "Progress", "alias_en": "Progress", "kind": "display",
+    "props_order": ["值", "式", "总"],
+    "props": {
+      "值": {"type": "stateRef", "alias_en": "bind"},
+      "式": {"type": "enum", "values": ["条","环","圆"], "alias_en": "variant",
+             "enum_map": {"条":"bar","环":"ring","圆":"circle"}},
+      "总": {"type": "number", "alias_en": "total"}
+    }
+  },
+  "点": {
+    "name": "Radio", "alias_en": "Radio", "kind": "interactive",
+    "props_order": ["值", "组", "禁"],
+    "props": {
+      "值": {"type": "stateRef", "alias_en": "bind"},
+      "组": {"type": "stateRef", "alias_en": "group"},
+      "禁": {"type": "bool", "alias_en": "disabled"}
+    }
+  },
+  "隔": {
+    "name": "Divider", "alias_en": "Divider", "kind": "decorative",
+    "props_order": ["式", "字"],
+    "props": {
+      "式": {"type": "enum", "values": ["横","竖"], "alias_en": "direction",
+             "enum_map": {"横":"horizontal","竖":"vertical"}},
+      "字": {"type": "string", "alias_en": "label"}
+    }
+  },
+  "转": {
+    "name": "Spinner", "alias_en": "Spinner", "kind": "feedback",
+    "props_order": ["大", "式"],
+    "props": {
+      "大": {"type": "enum", "values": ["小","中","大"], "alias_en": "size",
+             "enum_map": {"小":"s","中":"m","大":"l"}},
+      "式": {"type": "enum", "values": ["圆","条","点"], "alias_en": "variant",
+             "enum_map": {"圆":"circle","条":"bar","点":"dots"}}
+    }
+  },
+  "折": {
+    "name": "Accordion", "alias_en": "Accordion", "kind": "container",
+    "props_order": ["题", "展"],
+    "props": {
+      "题": {"type": "string", "alias_en": "title"},
+      "展": {"type": "bool", "alias_en": "expanded"}
+    }
+  },
+  "轮": {
+    "name": "Carousel", "alias_en": "Carousel", "kind": "container",
+    "props_order": ["源", "时", "轮"],
+    "props": {
+      "源": {"type": "stateRef", "alias_en": "items"},
+      "时": {"type": "number", "alias_en": "interval"},
+      "轮": {"type": "bool", "alias_en": "autoplay"}
+    }
+  },
+  "签": {
+    "name": "Chip", "alias_en": "Chip", "kind": "interactive",
+    "props_order": ["式", "闭", "选"],
+    "props": {
+      "式": {"type": "enum", "values": ["信息","成功","警告","危险"], "alias_en": "variant",
+             "enum_map": {"信息":"info","成功":"success","警告":"warning","危险":"danger"}},
+      "闭": {"type": "bool", "alias_en": "closable"},
+      "选": {"type": "stateRef", "alias_en": "bind"}
+    }
+  },
+  "评": {
+    "name": "Rating", "alias_en": "Rating", "kind": "interactive",
+    "props_order": ["值", "大", "禁"],
+    "props": {
+      "值": {"type": "stateRef", "alias_en": "bind"},
+      "大": {"type": "number", "alias_en": "max"},
+      "禁": {"type": "bool", "alias_en": "disabled"}
+    }
+  },
+  "下": {
+    "name": "Dropdown", "alias_en": "Dropdown", "kind": "interactive",
+    "props_order": ["值", "源", "空"],
+    "props": {
+      "值": {"type": "stateRef", "alias_en": "bind"},
+      "源": {"type": "stateRef", "alias_en": "options"},
+      "空": {"type": "string", "alias_en": "placeholder"}
+    }
+  },
+  "浮": {
+    "name": "FAB", "alias_en": "FAB", "kind": "interactive",
+    "props_order": ["式", "触", "大", "形"],
+    "props": {
+      "式": {"type": "enum", "values": ["主","次","轻"], "alias_en": "variant",
+             "enum_map": {"主":"primary","次":"secondary","轻":"ghost"}},
+      "触": {"type": "actionId", "alias_en": "onTap"},
+      "大": {"type": "enum", "values": ["小","中","大"], "alias_en": "size",
+             "enum_map": {"小":"s","中":"m","大":"l"}},
+      "形": {"type": "enum", "values": ["圆","方"], "alias_en": "shape",
+             "enum_map": {"圆":"circle","方":"square"}}
+    }
+  },
+  "骨": {
+    "name": "Skeleton", "alias_en": "Skeleton", "kind": "display",
+    "props_order": ["式", "宽", "高"],
+    "props": {
+      "式": {"type": "enum", "values": ["文","图","卡","圆"], "alias_en": "variant",
+             "enum_map": {"文":"text","图":"image","卡":"card","圆":"circle"}},
+      "宽": {"type": "number", "alias_en": "width"},
+      "高": {"type": "number", "alias_en": "height"}
+    }
   }
 }
