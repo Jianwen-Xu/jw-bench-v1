@@ -1,9 +1,9 @@
 列
 　文 通知中心
-　提 成功 值toastSuccess 操作成功
+　提 成功 値成功提示 操作成功
 　按 主 toastSuccess 显示成功提示
-　提 错误 值toastError 操作失败
+　提 错误 値错误提示 操作失败
 　按 主 toastError 显示错误提示
-　提 警告 值toastWarning 请确认信息
+　提 警告 値警告提示 请确认信息
 　按 主 toastWarning 显示警告提示
 　文 点击按钮查看对应提示

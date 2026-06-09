@@ -1,6 +1,6 @@
 域
 　文 主标题 重置密码
 　文 请输入注册邮箱以接收重置链接。
-　入 邮箱 必 空注册邮箱 值resetEmail
+　入 邮箱 必 空注册邮箱 値重置邮箱
 　按 主 sendResetLink 发送重置链接
 　链 backToLogin 返回登录

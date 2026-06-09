@@ -1,7 +1,7 @@
 域
-　入 文 必 空请输入用户名 值username
-　入 邮箱 必 空请输入邮箱 值email
-　入 密码 必 空请设置密码 值password
-　选 值country 选项countries
+　入 文 必 空请输入用户名 値用户名
+　入 邮箱 必 空请输入邮箱 値邮箱
+　入 密码 必 空请设置密码 値密码
+　选 値国家 选项countries
 　按 主 register 注册
 　链 login 已有账号？登录

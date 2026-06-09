@@ -1,7 +1,7 @@
 域
 　文 主标题 二次验证
 　文 请输入6位验证码
-　入 数字 空6位验证码 值verificationCode
+　入 数字 空6位验证码 値验证码
 　按 主 verifyCode 验证
 　链 resendCode 重新发送
 　文 说明 60秒后可重新发送
