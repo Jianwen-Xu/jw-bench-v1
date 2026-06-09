@@ -20,6 +20,7 @@ import {
   MODELS, PILOT_CONFIG, FULL_CONFIG, getActiveModels, Format, Scenario,
   DEEPSEEK_API_KEY,
 } from './config';
+import { REGISTRY_TOOLS, dispatchTool } from './registry';
 import { validateXU } from './validators/xu';
 import { validateJSX } from './validators/jsx';
 import { judgeEquivalence, runJudgeCalibration, type CalibrationResult } from './judge';
@@ -172,6 +173,7 @@ async function callDeepSeek(
   modelId: string,
   systemPrompt: string,
   userPrompt: string,
+  tools?: any[],
 ): Promise<CallResult> {
   const t0 = Date.now();
   const { default: OpenAI } = await import('openai');
@@ -179,19 +181,49 @@ async function callDeepSeek(
     apiKey: DEEPSEEK_API_KEY,
     baseURL: 'https://api.deepseek.com',
   });
-  const r = await ds.chat.completions.create({
-    model: modelId,
-    temperature: 0,
-    messages: [
-      { role: 'system', content: systemPrompt },
-      { role: 'user',   content: userPrompt   },
-    ],
-  });
+
+  const messages: any[] = [
+    { role: 'system', content: systemPrompt },
+    { role: 'user',   content: userPrompt   },
+  ];
+
+  let inputTokens = 0;
+  let outputTokens = 0;
+  let outputText = '';
+
+  // Tool-calling loop (max 3 rounds)
+  for (let round = 0; round < 3; round++) {
+    const params: any = { model: modelId, temperature: 0, messages };
+    if (tools) params.tools = tools;
+
+    const r = await ds.chat.completions.create(params);
+    inputTokens += r.usage?.prompt_tokens ?? 0;
+    outputTokens += r.usage?.completion_tokens ?? 0;
+
+    const msg = r.choices[0]?.message;
+    if (!msg) break;
+
+    // Check for tool calls
+    if (tools && msg.tool_calls?.length) {
+      messages.push(msg); // assistant message with tool_calls
+      for (const tc of msg.tool_calls) {
+        if (tc.type !== 'function') continue;
+        const result = dispatchTool(tc.function.name, JSON.parse(tc.function.arguments || '{}'));
+        messages.push({ role: 'tool', content: result, tool_call_id: tc.id });
+      }
+      continue; // next round
+    }
+
+    // Text response
+    outputText = msg.content ?? '';
+    break;
+  }
+
   return {
-    text:         r.choices[0]?.message?.content ?? '',
-    inputTokens:  r.usage?.prompt_tokens     ?? 0,
-    outputTokens: r.usage?.completion_tokens ?? 0,
-    latencyMs:    Date.now() - t0,
+    text: outputText,
+    inputTokens,
+    outputTokens,
+    latencyMs: Date.now() - t0,
   };
 }
 
@@ -207,17 +239,25 @@ async function callModel(
   if (cfg.apiFamily === 'opencode') {
     return callOpenCodeCLI(cfg.id, systemPrompt, userPrompt);
   }
-  return callDeepSeek(cfg.id, systemPrompt, userPrompt);
+  const tools = cfg.useRegistry ? REGISTRY_TOOLS : undefined;
+  return callDeepSeek(cfg.id, systemPrompt, userPrompt, tools);
 }
 
 // ──────────────────────────────────────────────
 // Helpers
 // ──────────────────────────────────────────────
-function loadSystemPrompt(format: Format): string {
-  return fs.readFileSync(
+function loadSystemPrompt(format: Format, useRegistry = false): string {
+  const prompt = fs.readFileSync(
     path.join(__dirname, 'prompts', `system-${format}.txt`),
     'utf-8',
   );
+  if (!useRegistry) return prompt;
+
+  // Strip component table — model will discover via find_components
+  const registryNote = '使用 find_components 工具在需要时查询组件信息。不要猜测不熟悉的组件属性。\n\n';
+  // Remove the component table section (between "## 可用组件" and next "##")
+  const stripped = prompt.replace(/## 可用组件[\s\S]*?(?=\n## )/m, '').trim();
+  return registryNote + stripped;
 }
 
 function loadTask(taskId: string): {
@@ -375,7 +415,7 @@ async function runBatch(
       const cell = cells[idx];
       const { modelKey, format, scenario, taskId, rep } = cell;
       const modelCfg = MODELS[modelKey];
-      const sysPrompt = loadSystemPrompt(format);
+      const sysPrompt = loadSystemPrompt(format, modelCfg.useRegistry);
       const task = loadTask(taskId);
 
       process.stdout.write(

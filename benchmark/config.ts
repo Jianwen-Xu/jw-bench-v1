@@ -14,6 +14,7 @@ export interface ModelConfig {
   outputPricePer1kTokens: number;
   judgeModelKey: string;
   enabled: boolean;
+  useRegistry?: boolean;
 }
 
 export const MODELS: Record<string, ModelConfig> = {
@@ -56,6 +57,17 @@ export const MODELS: Record<string, ModelConfig> = {
     outputPricePer1kTokens: 0.0011,
     judgeModelKey: 'opencode-deepseek-v4-flash',
     enabled: true,
+  },
+  'opencode-deepseek-v4-flash-registry': {
+    id: 'deepseek-chat',
+    apiFamily: 'deepseek',
+    chineseAffinity: 'deepseek',
+    size: 'light',
+    inputPricePer1kTokens: 0.00027,
+    outputPricePer1kTokens: 0.0011,
+    judgeModelKey: 'opencode-deepseek-v4-flash',
+    enabled: false,
+    useRegistry: true,
   },
 };
 
