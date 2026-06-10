@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995228416-c1eib",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-003-login-form",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 629,
+  "outputTokens": 103,
+  "latencyMs": 1949,
+  "costUsd": 0.00028313,
+  "errors": [],
+  "rawOutput": "<Form onSubmit=\"submit\">\n  <Column>\n    <Input type=\"email\" bind=\"email\" required placeholder=\"请输入邮箱\" />\n    <Input type=\"password\" bind=\"password\" required placeholder=\"请输入密码\" />\n    <Checkbox bind=\"remember\">记住我</Checkbox>\n    <Button variant=\"primary\" onTap=\"submit\">登录</Button>\n    <Link onTap=\"forgot\" variant=\"subtle\">忘记密码？</Link>\n  </Column>\n</Form>"
+}

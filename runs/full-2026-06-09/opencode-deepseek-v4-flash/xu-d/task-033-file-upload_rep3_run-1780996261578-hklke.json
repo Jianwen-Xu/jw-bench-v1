@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996261578-hklke",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-033-file-upload",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 1091,
+  "outputTokens": 70,
+  "latencyMs": 1700,
+  "costUsd": 0.00037157,
+  "errors": [],
+  "rawOutput": "卡\n　列\n　　文 标题 上传文件\n　　按 主 selectFile 选择文件\n　　排\n　　　文 正文 报告.pdf\n　　　文 说明 2.5 MB\n　　　标 成功 已上传\n　　　链 delete 删除\n　　按 主 submitFiles 提交"
+}

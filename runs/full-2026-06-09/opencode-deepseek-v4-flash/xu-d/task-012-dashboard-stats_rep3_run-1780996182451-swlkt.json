@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996182451-swlkt",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-012-dashboard-stats",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1140,
+  "outputTokens": 132,
+  "latencyMs": 1996,
+  "costUsd": 0.000453,
+  "errors": [],
+  "rawOutput": "列\n　文 标题 数据概览\n　排\n　　卡\n　　　文 标题 1,234\n　　　文 正文 日活用户\n　　　标 成功 +12%\n　　卡\n　　　文 标题 856\n　　　文 正文 总订单\n　　　标 成功 +5%\n　　卡\n　　　文 标题 ¥5,678\n　　　文 正文 营收\n　　　标 成功 +8%\n　　卡\n　　　文 标题 98.5%\n　　　文 正文 完成率\n　　　标 成功 +3%"
+}

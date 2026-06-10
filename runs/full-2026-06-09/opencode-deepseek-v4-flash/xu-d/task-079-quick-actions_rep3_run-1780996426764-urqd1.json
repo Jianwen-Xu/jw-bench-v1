@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996426764-urqd1",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-079-quick-actions",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1050,
+  "outputTokens": 120,
+  "latencyMs": 1888,
+  "costUsd": 0.0004155,
+  "errors": [],
+  "rawOutput": "列\n　文 标题 快捷操作\n　排\n　　卡\n　　　列\n　　　　图 小 方 源新建图标\n　　　　文 说明 新建\n　　卡\n　　　列\n　　　　图 小 方 源搜索图标\n　　　　文 说明 搜索\n　　卡\n　　　列\n　　　　图 小 方 源分享图标\n　　　　文 说明 分享\n　　卡\n　　　列\n　　　　图 小 方 源设置图标\n　　　　文 说明 设置"
+}

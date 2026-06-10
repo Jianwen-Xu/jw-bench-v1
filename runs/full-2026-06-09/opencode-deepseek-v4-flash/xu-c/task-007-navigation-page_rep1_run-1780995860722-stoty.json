@@ -1,0 +1,23 @@
+{
+  "runId": "run-1780995860722-stoty",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-007-navigation-page",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 914,
+  "outputTokens": 97,
+  "latencyMs": 2348,
+  "costUsd": 0.00035348000000000004,
+  "errors": [
+    "missing: [Text] inside [NavBar]"
+  ],
+  "rawOutput": "[\"列\",\n  [\"栏\", {\"题\":\"我的应用\", \"返\":null},\n    [\"头像\", {\"大\":\"小\", \"形\":\"圆\", \"源\":\"用户头像URL\"}]\n  ],\n  [\"列\",\n    [\"链\", {\"触\":\"home\"}, \"首页\"],\n    [\"链\", {\"触\":\"profile\"}, \"个人中心\"],\n    [\"链\", {\"触\":\"settings\"}, \"设置\"]\n  ],\n  [\"文\", \"©2026 My App\"]\n]"
+}

@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996223290-m3p75",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-023-image-gallery",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1048,
+  "outputTokens": 63,
+  "latencyMs": 1706,
+  "costUsd": 0.00035226,
+  "errors": [],
+  "rawOutput": "列\n　文 标题 相册\n　排\n　　列\n　　　图 中 方\n　　　文 说明\n　　列\n　　　图 中 方\n　　　文 说明\n　　列\n　　　图 中 方\n　　　文 说明"
+}

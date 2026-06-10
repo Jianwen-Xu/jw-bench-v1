@@ -1,0 +1,23 @@
+{
+  "runId": "run-1780996187150-dwv6w",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-014-filter-panel",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 1145,
+  "outputTokens": 91,
+  "latencyMs": 1973,
+  "costUsd": 0.00040925,
+  "errors": [
+    "missing: [Toggle] bind=showActive"
+  ],
+  "rawOutput": "卡\n　列\n　　文 标题 筛选条件\n　　入 文 空输入关键词 値keyword\n　　选 値category 选项categories\n　　切 仅显示有效 値showActive\n　　排\n　　　文 正文 排序方式\n　　　选 値sortBy 选项sortOptions\n　　排\n　　　按 主 applyFilter 应用\n　　　按 次 resetFilter 重置"
+}

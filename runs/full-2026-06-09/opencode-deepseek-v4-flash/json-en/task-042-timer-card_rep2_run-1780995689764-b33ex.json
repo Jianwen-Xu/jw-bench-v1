@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995689764-b33ex",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-042-timer-card",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 551,
+  "outputTokens": 174,
+  "latencyMs": 2208,
+  "costUsd": 0.00034017000000000004,
+  "errors": [],
+  "rawOutput": "[\"Card\", [\"Col\",\n  [\"Text\", {\"v\":\"heading\"}, \"倒计时\"],\n  [\"Row\",\n    [\"Col\", [\"Text\", {\"v\":\"heading\"}, \"00\"], [\"Text\", {\"v\":\"caption\"}, \"天\"]],\n    [\"Col\", [\"Text\", {\"v\":\"heading\"}, \"00\"], [\"Text\", {\"v\":\"caption\"}, \"时\"]],\n    [\"Col\", [\"Text\", {\"v\":\"heading\"}, \"00\"], [\"Text\", {\"v\":\"caption\"}, \"分\"]],\n    [\"Col\", [\"Text\", {\"v\":\"heading\"}, \"00\"], [\"Text\", {\"v\":\"caption\"}, \"秒\"]]\n  ],\n  [\"Row\",\n    [\"Btn\", {\"v\":\"p\",\"t\":\"startTimer\"}, \"开始\"],\n    [\"Btn\", {\"v\":\"g\",\"t\":\"resetTimer\"}, \"重置\"]\n  ]\n]]"
+}

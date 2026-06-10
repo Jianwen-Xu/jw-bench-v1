@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995256072-sbmxc",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-010-search-filter",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 627,
+  "outputTokens": 63,
+  "latencyMs": 1626,
+  "costUsd": 0.00023859,
+  "errors": [],
+  "rawOutput": "<Row>\n  <Input placeholder=\"搜索关键词...\" bind=\"query\" />\n  <Select bind=\"category\" options=\"categories\" />\n  <Button variant=\"primary\" onTap=\"search\">搜索</Button>\n  <Button variant=\"secondary\" onTap=\"reset\">重置</Button>\n</Row>"
+}

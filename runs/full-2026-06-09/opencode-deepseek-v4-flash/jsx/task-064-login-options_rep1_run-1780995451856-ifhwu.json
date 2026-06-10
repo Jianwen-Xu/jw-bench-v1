@@ -1,0 +1,24 @@
+{
+  "runId": "run-1780995451856-ifhwu",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-064-login-options",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 633,
+  "outputTokens": 170,
+  "latencyMs": 2214,
+  "costUsd": 0.00035791,
+  "errors": [
+    "missing: [Input] bind=loginEmail email",
+    "missing: [Input] bind=loginPassword password"
+  ],
+  "rawOutput": "<Column>\n  <Text variant=\"heading\">欢迎回来</Text>\n  <Row>\n    <Button variant=\"secondary\" onTap=\"wechatLogin\">微信</Button>\n    <Button variant=\"secondary\" onTap=\"qqLogin\">QQ</Button>\n    <Button variant=\"secondary\" onTap=\"weiboLogin\">微博</Button>\n  </Row>\n  <Text variant=\"body\">或使用账号密码</Text>\n  <Form onSubmit=\"loginSubmit\">\n    <Input type=\"email\" bind=\"email\" placeholder=\"邮箱\" required />\n    <Input type=\"password\" bind=\"password\" placeholder=\"密码\" required />\n    <Button variant=\"primary\" onTap=\"loginSubmit\">登录</Button>\n  </Form>\n  <Link onTap=\"goRegister\">注册账号</Link>\n</Column>"
+}

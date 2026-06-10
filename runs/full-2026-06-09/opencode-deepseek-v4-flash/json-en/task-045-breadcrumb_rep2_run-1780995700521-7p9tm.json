@@ -1,0 +1,25 @@
+{
+  "runId": "run-1780995700521-7p9tm",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-045-breadcrumb",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 533,
+  "outputTokens": 53,
+  "latencyMs": 1694,
+  "costUsd": 0.00020221,
+  "errors": [
+    "missing: [Text]",
+    "missing: [Text]",
+    "missing: [Text]"
+  ],
+  "rawOutput": "[\"Row\",\n  [\"Link\",{\"t\":\"navHome\",\"v\":\"default\"},\"首页\"],\n  \" > \",\n  [\"Link\",{\"t\":\"navCategory\",\"v\":\"default\"},\"分类\"],\n  \" > \",\n  \"当前页面\"\n]"
+}

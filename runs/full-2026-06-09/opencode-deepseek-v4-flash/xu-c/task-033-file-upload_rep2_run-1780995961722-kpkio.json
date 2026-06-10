@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995961722-kpkio",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-033-file-upload",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 888,
+  "outputTokens": 113,
+  "latencyMs": 2029,
+  "costUsd": 0.00036406,
+  "errors": [],
+  "rawOutput": "[\"卡\",\n  [\"列\",\n    [\"文\", {\"式\":\"标题\"}, \"上传文件\"],\n    [\"按\", {\"式\":\"主\",\"触\":\"selectFile\"}, \"选择文件\"],\n    [\"排\",\n      [\"文\", {}, \"报告.pdf\"],\n      [\"文\", {\"式\":\"说明\"}, \"2.5 MB\"],\n      [\"标\", {\"式\":\"成功\"}, \"已上传\"],\n      [\"链\", {\"触\":\"delete\"}, \"删除\"]\n    ],\n    [\"按\", {\"式\":\"主\",\"触\":\"submitFiles\"}, \"提交\"]\n  ]\n]"
+}

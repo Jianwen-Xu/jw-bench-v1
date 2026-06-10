@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995458921-mdl8o",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-066-saved-address",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 584,
+  "outputTokens": 131,
+  "latencyMs": 2009,
+  "costUsd": 0.00030178000000000003,
+  "errors": [],
+  "rawOutput": "<Card>\n  <Column>\n    <Row>\n      <Text variant=\"heading\">张三</Text>\n      <Badge variant=\"success\">默认</Badge>\n    </Row>\n    <Text variant=\"body\">北京市朝阳区建国路88号SOHO现代城A座1208室</Text>\n    <Text variant=\"body\">13800138000</Text>\n    <Row>\n      <Link onTap=\"editAddress\" variant=\"subtle\">编辑</Link>\n      <Link onTap=\"deleteAddress\" variant=\"subtle\">删除</Link>\n    </Row>\n  </Column>\n</Card>"
+}

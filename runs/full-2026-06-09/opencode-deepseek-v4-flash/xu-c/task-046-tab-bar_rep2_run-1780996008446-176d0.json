@@ -1,0 +1,23 @@
+{
+  "runId": "run-1780996008446-176d0",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-046-tab-bar",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 876,
+  "outputTokens": 72,
+  "latencyMs": 1837,
+  "costUsd": 0.00031572,
+  "errors": [
+    "missing: [Text]"
+  ],
+  "rawOutput": "[\"列\",\n  [\"排\",\n    [\"按\", {\"式\":\"主\",\"触\":\"tabAll\"}, \"全部\"],\n    [\"按\", {\"式\":\"次\",\"触\":\"tabPending\"}, \"待处理\"],\n    [\"按\", {\"式\":\"次\",\"触\":\"tabDone\"}, \"已完成\"]\n  ],\n  [\"卡\", {}, \"当前标签内容\"]\n]"
+}

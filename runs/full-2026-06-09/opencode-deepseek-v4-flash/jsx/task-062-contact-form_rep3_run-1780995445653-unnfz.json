@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995445653-unnfz",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-062-contact-form",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 622,
+  "outputTokens": 105,
+  "latencyMs": 1962,
+  "costUsd": 0.00028344000000000004,
+  "errors": [],
+  "rawOutput": "<Form>\n  <Column>\n    <Text variant=\"heading\">联系我们</Text>\n    <Input bind=\"contactName\" placeholder=\"姓名\" required />\n    <Input type=\"email\" bind=\"contactEmail\" placeholder=\"邮箱\" required />\n    <Input type=\"number\" bind=\"contactPhone\" placeholder=\"电话\" />\n    <Input bind=\"contactMessage\" placeholder=\"留言\" required />\n    <Button variant=\"primary\" onTap=\"sendMessage\">发送</Button>\n  </Column>\n</Form>"
+}

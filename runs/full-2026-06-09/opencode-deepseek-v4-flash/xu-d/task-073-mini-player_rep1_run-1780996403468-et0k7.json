@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996403468-et0k7",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-073-mini-player",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1069,
+  "outputTokens": 60,
+  "latencyMs": 1743,
+  "costUsd": 0.00035463,
+  "errors": [],
+  "rawOutput": "卡\n　排\n　　图 中 方 源专辑封面\n　　列\n　　　文 标题 歌名\n　　　文 说明 歌手\n　　　排\n　　　　按 主 playMusic 播放\n　　　　按 轻 nextTrack 下一首"
+}

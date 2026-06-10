@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996305669-vb203",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-046-tab-bar",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1079,
+  "outputTokens": 31,
+  "latencyMs": 1392,
+  "costUsd": 0.00032543,
+  "errors": [],
+  "rawOutput": "排\n　按 主 tabAll 全部\n　按 次 tabPending 待处理\n　按 次 tabDone 已完成\n卡"
+}

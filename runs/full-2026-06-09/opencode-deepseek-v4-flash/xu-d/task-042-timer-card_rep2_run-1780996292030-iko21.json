@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996292030-iko21",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-042-timer-card",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 1079,
+  "outputTokens": 122,
+  "latencyMs": 2141,
+  "costUsd": 0.00042553,
+  "errors": [],
+  "rawOutput": "卡\n　列\n　　文 标题 倒计时\n　　排\n　　　列\n　　　　文 标题 値days\n　　　　文 说明 天\n　　　列\n　　　　文 标题 値hours\n　　　　文 说明 时\n　　　列\n　　　　文 标题 値minutes\n　　　　文 说明 分\n　　　列\n　　　　文 标题 値seconds\n　　　　文 说明 秒\n　　排\n　　　按 主 startTimer 开始\n　　　按 轻 resetTimer 重置"
+}

@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995969013-7r3ly",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-035-weather-widget",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 861,
+  "outputTokens": 85,
+  "latencyMs": 1938,
+  "costUsd": 0.00032596999999999997,
+  "errors": [],
+  "rawOutput": "[\"卡\", [\"排\",\n  [\"图\", {\"大\":\"中\",\"形\":\"方\",\"源\":\"weather_icon\"}],\n  [\"列\",\n    [\"文\", {\"式\":\"标题\"}, \"26°C\"],\n    [\"文\", {}, \"北京\"],\n    [\"文\", {\"式\":\"说明\"}, \"湿度：45%\"],\n    [\"文\", {\"式\":\"说明\"}, \"风速：3级\"]\n  ]\n]]"
+}

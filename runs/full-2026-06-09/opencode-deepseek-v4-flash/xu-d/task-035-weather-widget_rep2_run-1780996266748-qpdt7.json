@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996266748-qpdt7",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-035-weather-widget",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1064,
+  "outputTokens": 58,
+  "latencyMs": 1821,
+  "costUsd": 0.00035108,
+  "errors": [],
+  "rawOutput": "卡\n　排\n　　图 中 方 源weather_icon\n　　列\n　　　文 标题 26°C\n　　　文 正文 北京\n　　　文 说明 湿度：45%\n　　　文 说明 风速：3级"
+}

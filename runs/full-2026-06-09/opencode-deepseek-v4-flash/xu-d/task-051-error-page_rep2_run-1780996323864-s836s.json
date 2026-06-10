@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996323864-s836s",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-051-error-page",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1064,
+  "outputTokens": 46,
+  "latencyMs": 1724,
+  "costUsd": 0.00033788,
+  "errors": [],
+  "rawOutput": "卡\n　列\n　　文 标题 404\n　　文 正文 页面未找到\n　　文 说明 描述\n　　按 主 reloadPage 重新加载\n　　链 backToHome 返回首页"
+}

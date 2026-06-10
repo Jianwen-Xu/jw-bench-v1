@@ -1,0 +1,23 @@
+{
+  "runId": "run-1780995256630-85noo",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-011-feedback-form",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 0,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 676,
+  "outputTokens": 122,
+  "latencyMs": 2080,
+  "costUsd": 0.00031672,
+  "errors": [
+    "M4: Invalid enum value 'default' for <Button variant>"
+  ],
+  "rawOutput": "<Form>\n  <Column>\n    <Text variant=\"title\">意见反馈</Text>\n    <Select bind=\"type\" options=\"feedbackTypes\" />\n    <Input placeholder=\"请详细描述您的问题或建议...\" bind=\"content\" />\n    <Input type=\"text\" placeholder=\"手机号或邮箱（选填）\" bind=\"contact\" />\n    <Row>\n      <Button variant=\"primary\" onTap=\"submitFeedback\">提交反馈</Button>\n      <Button variant=\"default\" onTap=\"cancel\">取消</Button>\n    </Row>\n  </Column>\n</Form>"
+}

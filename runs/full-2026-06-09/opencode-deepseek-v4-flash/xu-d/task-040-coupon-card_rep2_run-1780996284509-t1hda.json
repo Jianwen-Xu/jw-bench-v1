@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996284509-t1hda",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-040-coupon-card",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1084,
+  "outputTokens": 72,
+  "latencyMs": 1885,
+  "costUsd": 0.00037188,
+  "errors": [],
+  "rawOutput": "卡\n　列\n　　排\n　　　标 成功 满减券\n　　　文 价格 满100减20\n　　文 说明 有效期\n　　文 节标题 CODE2026\n　　排\n　　　按 次 copyCoupon 复制优惠码\n　　　按 主 useCoupon 立即使用"
+}

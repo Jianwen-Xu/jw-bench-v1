@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995708731-9m6tw",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-047-search-results",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 538,
+  "outputTokens": 317,
+  "latencyMs": 3158,
+  "costUsd": 0.00049396,
+  "errors": [],
+  "rawOutput": "[\"Col\",\n  [\"Text\", {\"v\":\"caption\"}, \"共找到 12 条结果\"],\n  [\"Card\",\n    [\"Row\",\n      [\"Img\", {\"size\":\"m\", \"src\":\"https://picsum.photos/100/100?random=1\"}],\n      [\"Col\",\n        [\"Text\", {\"v\":\"heading\"}, \"结果标题1\"],\n        [\"Text\", {\"v\":\"body\"}, \"这是第一条结果的摘要描述。\"],\n        [\"Badge\", {\"v\":\"info\"}, \"标签1\"]\n      ]\n    ]\n  ],\n  [\"Card\",\n    [\"Row\",\n      [\"Img\", {\"size\":\"m\", \"src\":\"https://picsum.photos/100/100?random=2\"}],\n      [\"Col\",\n        [\"Text\", {\"v\":\"heading\"}, \"结果标题2\"],\n        [\"Text\", {\"v\":\"body\"}, \"这是第二条结果的摘要描述。\"],\n        [\"Badge\", {\"v\":\"info\"}, \"标签2\"]\n      ]\n    ]\n  ],\n  [\"Card\",\n    [\"Row\",\n      [\"Img\", {\"size\":\"m\", \"src\":\"https://picsum.photos/100/100?random=3\"}],\n      [\"Col\",\n        [\"Text\", {\"v\":\"heading\"}, \"结果标题3\"],\n        [\"Text\", {\"v\":\"body\"}, \"这是第三条结果的摘要描述。\"],\n        [\"Badge\", {\"v\":\"info\"}, \"标签3\"]\n      ]\n    ]\n  ],\n  [\"Link\", {\"t\":\"loadMore\", \"v\":\"default\"}, \"加载更多\"]\n]"
+}

@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996238153-b564t",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-027-booking-form",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1111,
+  "outputTokens": 86,
+  "latencyMs": 1956,
+  "costUsd": 0.00039457,
+  "errors": [],
+  "rawOutput": "列\n　文 标题 预约服务\n　域 触submitBooking\n　　选 値serviceType 选项services\n　　入 文 空选择日期 値bookingDate\n　　入 文 空选择时间 値bookingTime\n　　入 文 空备注 値notes\n　　排\n　　　按 主 submitBooking 提交预约\n　　　按 次 cancel 取消"
+}

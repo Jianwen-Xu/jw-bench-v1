@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995696729-z93ht",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-044-side-menu",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 561,
+  "outputTokens": 112,
+  "latencyMs": 2075,
+  "costUsd": 0.00027466999999999997,
+  "errors": [],
+  "rawOutput": "[\"Card\",[\"Col\",\n  [\"Row\",[\"Badge\",{\"v\":\"info\"},\"🏠\"],[\"Link\",{\"t\":\"goHome\",\"v\":\"default\"},\"首页\"]],\n  [\"Row\",[\"Badge\",{\"v\":\"success\"},\"📊\"],[\"Link\",{\"t\":\"goStats\",\"v\":\"default\"},\"数据统计\"]],\n  [\"Row\",[\"Badge\",{\"v\":\"warning\"},\"⚙️\"],[\"Link\",{\"t\":\"goSettings\",\"v\":\"default\"},\"系统设置\"]]\n]]"
+}

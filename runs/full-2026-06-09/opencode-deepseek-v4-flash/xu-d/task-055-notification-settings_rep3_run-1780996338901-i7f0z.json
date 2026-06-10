@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996338901-i7f0z",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-055-notification-settings",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1082,
+  "outputTokens": 88,
+  "latencyMs": 1998,
+  "costUsd": 0.00038894,
+  "errors": [],
+  "rawOutput": "列\n　文 标题 通知设置\n　卡\n　　排\n　　　文 正文 评论回复\n　　　切 値notifComment\n　　排\n　　　文 正文 新粉丝\n　　　切 値notifFollower\n　　排\n　　　文 正文 系统公告\n　　　切 値notifSystem\n　按 主 saveNotifSettings 保存设置"
+}

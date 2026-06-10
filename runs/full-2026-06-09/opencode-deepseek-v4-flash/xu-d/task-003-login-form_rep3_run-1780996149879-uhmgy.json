@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996149879-uhmgy",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-003-login-form",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 1093,
+  "outputTokens": 57,
+  "latencyMs": 2250,
+  "costUsd": 0.00035780999999999996,
+  "errors": [],
+  "rawOutput": "域 触submit\n　入 邮箱 必 空请输入邮箱 値email\n　入 密码 必 空请输入密码 値password\n　选框 値remember 记住我\n　按 主 submit 登录\n　链 forgot 忘记密码？"
+}

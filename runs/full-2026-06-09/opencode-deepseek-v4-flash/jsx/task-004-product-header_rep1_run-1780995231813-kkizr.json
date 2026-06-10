@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995231813-kkizr",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-004-product-header",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 644,
+  "outputTokens": 83,
+  "latencyMs": 1900,
+  "costUsd": 0.00026518,
+  "errors": [],
+  "rawOutput": "<Row>\n  <Image size=\"large\" shape=\"square\" />\n  <Column>\n    <Text variant=\"title\" bind=\"title\" />\n    <Text variant=\"price\" bind=\"price\" />\n    <Badge variant=\"success\" bind=\"stock\" />\n    <Button variant=\"primary\" onTap=\"add_cart\">加入购物车</Button>\n  </Column>\n</Row>"
+}

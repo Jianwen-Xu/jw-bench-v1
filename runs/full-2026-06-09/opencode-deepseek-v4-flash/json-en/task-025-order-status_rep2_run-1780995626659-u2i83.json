@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995626659-u2i83",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-025-order-status",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 565,
+  "outputTokens": 162,
+  "latencyMs": 12683,
+  "costUsd": 0.00033075,
+  "errors": [],
+  "rawOutput": "[\"Col\",\n  [\"Text\", {\"v\":\"heading\"}, \"订单状态\"],\n  [\"Row\",\n    [\"Badge\", {\"v\":\"success\"}, \"✓\"],\n    [\"Text\", {\"v\":\"body\"}, \"已下单\"]\n  ],\n  [\"Row\",\n    [\"Badge\", {\"v\":\"success\"}, \"✓\"],\n    [\"Text\", {\"v\":\"body\"}, \"已确认\"]\n  ],\n  [\"Row\",\n    [\"Badge\", {\"v\":\"warning\"}, \"●\"],\n    [\"Text\", {\"v\":\"body\"}, \"配送中\"]\n  ],\n  [\"Row\",\n    [\"Badge\", {\"v\":\"info\"}, \"○\"],\n    [\"Text\", {\"v\":\"body\"}, \"已完成\"]\n  ],\n  [\"Btn\", {\"v\":\"p\",\"t\":\"viewDetail\"}, \"查看详情\"]\n]"
+}

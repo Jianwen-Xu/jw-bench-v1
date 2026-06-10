@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996209915-rjl0y",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-020-shopping-cart-item",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 1066,
+  "outputTokens": 54,
+  "latencyMs": 1853,
+  "costUsd": 0.00034722,
+  "errors": [],
+  "rawOutput": "卡\n　排\n　　图 中 方 値image\n　　列\n　　　文 标题 値name\n　　　文 价格 値price\n　　　入 数字 値quantity\n　　　按 次 removeItem 删除"
+}

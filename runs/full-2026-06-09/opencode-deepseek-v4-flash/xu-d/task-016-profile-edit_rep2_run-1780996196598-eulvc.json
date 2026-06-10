@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996196598-eulvc",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-016-profile-edit",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1131,
+  "outputTokens": 81,
+  "latencyMs": 1835,
+  "costUsd": 0.00039447000000000006,
+  "errors": [],
+  "rawOutput": "列\n　文 标题 编辑资料\n　域 触saveProfile\n　　头像 中\n　　入 文 空请输入昵称 値nickname\n　　入 文 空介绍一下自己... 値bio\n　　选 値gender 选项genders\n　　排\n　　　按 主 saveProfile 保存\n　　　按 次 cancelEdit 取消"
+}

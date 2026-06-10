@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996363622-2wqsc",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-062-contact-form",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 1086,
+  "outputTokens": 84,
+  "latencyMs": 1773,
+  "costUsd": 0.00038562,
+  "errors": [],
+  "rawOutput": "列\n　文 标题 联系我们\n　域 触sendMessage\n　　入 文 必 空请输入姓名 値contactName\n　　入 邮箱 必 空请输入邮箱 値contactEmail\n　　入 数字 必 空请输入电话 値contactPhone\n　　入 文 必 空请输入留言 値contactMessage\n　　按 主 sendMessage 发送"
+}

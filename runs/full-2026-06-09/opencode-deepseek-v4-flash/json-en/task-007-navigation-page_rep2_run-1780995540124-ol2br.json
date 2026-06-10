@@ -1,0 +1,23 @@
+{
+  "runId": "run-1780995540124-ol2br",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-007-navigation-page",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 589,
+  "outputTokens": 118,
+  "latencyMs": 2026,
+  "costUsd": 0.00028883,
+  "errors": [
+    "missing: [Text] inside [NavBar]"
+  ],
+  "rawOutput": "[\"Col\",\n  [\"NavBar\", {\"title\":\"我的应用\", \"back\":null},\n    [\"Avatar\", {\"size\":\"s\", \"shape\":\"circle\", \"src\":\"/avatar.png\"}]\n  ],\n  [\"Col\",\n    [\"Link\", {\"t\":\"home\", \"v\":\"default\"}, \"首页\"],\n    [\"Link\", {\"t\":\"profile\", \"v\":\"default\"}, \"个人中心\"],\n    [\"Link\", {\"t\":\"settings\", \"v\":\"default\"}, \"设置\"],\n    [\"Text\", {\"v\":\"caption\"}, \"©2026 My App\"]\n  ]\n]"
+}

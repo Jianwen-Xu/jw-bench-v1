@@ -1,0 +1,23 @@
+{
+  "runId": "run-1780996020353-fxleb",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-049-cookie-consent",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 874,
+  "outputTokens": 125,
+  "latencyMs": 2517,
+  "costUsd": 0.00037348000000000004,
+  "errors": [
+    "missing: [Button] onTap=acceptNecessary"
+  ],
+  "rawOutput": "[\"卡\", [\"列\",\n  [\"排\",\n    [\"图\", {\"大\":\"中\", \"源\":\"cookie-icon.png\"}],\n    [\"文\", {\"式\":\"标题\"}, \"Cookie 声明\"]\n  ],\n  [\"文\", \"我们使用 Cookie 来提升您的浏览体验、分析网站流量并为您提供个性化内容。请选择您的偏好。\"],\n  [\"排\",\n    [\"按\", {\"式\":\"主\", \"触\":\"acceptAll\"}, \"接受所有\"],\n    [\"按\", {\"式\":\"次\"}, \"仅必要\"],\n    [\"链\", {\"触\":\"cookieSettings\"}, \"设置\"]\n  ]\n]]"
+}

@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995341670-ug69e",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-034-event-card",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 629,
+  "outputTokens": 139,
+  "latencyMs": 2017,
+  "costUsd": 0.00032273,
+  "errors": [],
+  "rawOutput": "<Card>\n  <Column>\n    <Text variant=\"heading\">2026技术创新大会</Text>\n    <Row>\n      <Text variant=\"body\">日期</Text>\n      <Text variant=\"body\">2026-03-15</Text>\n    </Row>\n    <Row>\n      <Text variant=\"body\">地点</Text>\n      <Text variant=\"body\">北京国际会议中心</Text>\n    </Row>\n    <Badge variant=\"info\">科技</Badge>\n    <Text variant=\"price\">¥299</Text>\n    <Button variant=\"primary\" onTap=\"registerEvent\">立即报名</Button>\n  </Column>\n</Card>"
+}

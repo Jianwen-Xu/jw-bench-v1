@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995656073-zrust",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-033-file-upload",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 563,
+  "outputTokens": 112,
+  "latencyMs": 2407,
+  "costUsd": 0.00027521,
+  "errors": [],
+  "rawOutput": "[\"Card\",[\"Col\",[\"Text\",{\"v\":\"heading\"},\"上传文件\"],[\"Btn\",{\"v\":\"p\",\"t\":\"selectFile\"},\"选择文件\"],[\"Row\",[\"Text\",{\"v\":\"body\"},\"报告.pdf\"],[\"Text\",{\"v\":\"caption\"},\"2.5 MB\"],[\"Badge\",{\"v\":\"success\"},\"已上传\"],[\"Link\",{\"t\":\"delete\",\"v\":\"subtle\"},\"删除\"]],[\"Btn\",{\"v\":\"p\",\"t\":\"submitFiles\"},\"提交\"]]]"
+}

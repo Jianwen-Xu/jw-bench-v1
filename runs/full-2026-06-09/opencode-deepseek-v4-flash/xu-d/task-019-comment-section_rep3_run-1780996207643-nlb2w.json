@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996207643-nlb2w",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-019-comment-section",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1072,
+  "outputTokens": 134,
+  "latencyMs": 2053,
+  "costUsd": 0.00043684,
+  "errors": [],
+  "rawOutput": "列\n　文 标题 最新评论\n　排\n　　头像 中 圆\n　　列\n　　　文 标题 用户名\n　　　文 正文 评论文本\n　　　文 说明 时间\n　排\n　　头像 中 圆\n　　列\n　　　文 标题 用户名\n　　　文 正文 评论文本\n　　　文 说明 时间\n　排\n　　头像 中 圆\n　　列\n　　　文 标题 用户名\n　　　文 正文 评论文本\n　　　文 说明 时间\n　链 loadMore 加载更多"
+}

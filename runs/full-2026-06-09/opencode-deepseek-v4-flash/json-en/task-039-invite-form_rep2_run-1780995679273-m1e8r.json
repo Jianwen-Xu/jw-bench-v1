@@ -1,0 +1,23 @@
+{
+  "runId": "run-1780995679273-m1e8r",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-039-invite-form",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 577,
+  "outputTokens": 120,
+  "latencyMs": 2121,
+  "costUsd": 0.00028779,
+  "errors": [
+    "missing: [Button] onTap=cancelInvite"
+  ],
+  "rawOutput": "[\"Form\",{\"t\":\"sendInvite\"},[\"Col\",[\"Text\",{\"v\":\"heading\"},\"邀请成员\"],[\"Input\",{\"type\":\"email\",\"req\":true,\"ph\":\"请输入对方邮箱\",\"bind\":\"inviteEmail\"}],[\"Select\",{\"bind\":\"inviteRole\",\"opts\":\"roles\"}],[\"Input\",{\"bind\":\"inviteMessage\",\"ph\":\"附言\"}],[\"Row\",[\"Btn\",{\"v\":\"p\",\"t\":\"sendInvite\"},\"发送邀请\"],[\"Btn\",{\"v\":\"s\",\"t\":\"cancel\"},\"取消\"]]]]"
+}

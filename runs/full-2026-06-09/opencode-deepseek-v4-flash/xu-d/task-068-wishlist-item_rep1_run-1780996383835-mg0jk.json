@@ -1,0 +1,23 @@
+{
+  "runId": "run-1780996383835-mg0jk",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-068-wishlist-item",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 1063,
+  "outputTokens": 63,
+  "latencyMs": 1718,
+  "costUsd": 0.00035631000000000004,
+  "errors": [
+    "missing: [Link] onTap=removeWishlist"
+  ],
+  "rawOutput": "卡\n　排\n　　图 中 方\n　　列\n　　　文 标题 商品名\n　　　文 价格 价格\n　　　标 成功 有货\n　　列\n　　　按 主 addToCart 加入购物车\n　　　链 remove 移除"
+}

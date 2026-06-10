@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995642154-l2wwn",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-030-subscription-card",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 548,
+  "outputTokens": 130,
+  "latencyMs": 2218,
+  "costUsd": 0.00029096,
+  "errors": [],
+  "rawOutput": "[\"Card\",\n  [\"Col\",\n    [\"Text\", {\"v\":\"heading\"}, \"年度会员\"],\n    [\"Text\", {\"v\":\"price\"}, \"¥199/年\"],\n    [\"Text\", {\"v\":\"body\"}, \"权益1：无限次课程回放\"],\n    [\"Text\", {\"v\":\"body\"}, \"权益2：专属社群答疑\"],\n    [\"Text\", {\"v\":\"body\"}, \"权益3：每月直播讲座\"],\n    [\"Btn\", {\"v\":\"p\", \"t\":\"subscribeNow\"}, \"立即订阅\"],\n    [\"Link\", {\"t\":\"learnMore\", \"v\":\"subtle\"}, \"了解详情\"]\n  ]\n]"
+}

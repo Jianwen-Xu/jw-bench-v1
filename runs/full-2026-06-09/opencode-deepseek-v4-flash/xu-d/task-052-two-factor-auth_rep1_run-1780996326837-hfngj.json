@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996326837-hfngj",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-052-two-factor-auth",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1100,
+  "outputTokens": 75,
+  "latencyMs": 2223,
+  "costUsd": 0.0003795,
+  "errors": [],
+  "rawOutput": "域 触verifyCode\n　列\n　　文 标题 二次验证\n　　文 正文 请输入您手机上收到的6位验证码\n　　入 数字 空6位验证码 値verificationCode\n　　按 主 verifyCode 验证\n　　链 resendCode 重新发送\n　　文 说明 60秒后可重新发送"
+}

@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995310950-xn3fe",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-025-order-status",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 629,
+  "outputTokens": 167,
+  "latencyMs": 2061,
+  "costUsd": 0.00035353,
+  "errors": [],
+  "rawOutput": "<Column>\n  <Text variant=\"heading\">订单状态</Text>\n  <Row>\n    <Badge variant=\"success\">✓</Badge>\n    <Text variant=\"body\">已下单</Text>\n  </Row>\n  <Row>\n    <Badge variant=\"success\">✓</Badge>\n    <Text variant=\"body\">已确认</Text>\n  </Row>\n  <Row>\n    <Badge variant=\"warning\">●</Badge>\n    <Text variant=\"body\">配送中</Text>\n  </Row>\n  <Row>\n    <Badge variant=\"info\">○</Badge>\n    <Text variant=\"body\">已完成</Text>\n  </Row>\n  <Button variant=\"primary\" onTap=\"viewDetail\">查看详情</Button>\n</Column>"
+}

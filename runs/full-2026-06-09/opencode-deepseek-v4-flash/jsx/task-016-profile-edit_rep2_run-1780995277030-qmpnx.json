@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995277030-qmpnx",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-016-profile-edit",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 667,
+  "outputTokens": 113,
+  "latencyMs": 2200,
+  "costUsd": 0.00030439,
+  "errors": [],
+  "rawOutput": "<Form>\n  <Column>\n    <Text variant=\"title\">编辑资料</Text>\n    <Avatar size=\"medium\" />\n    <Input placeholder=\"请输入昵称\" bind=\"nickname\" />\n    <Input placeholder=\"介绍一下自己...\" bind=\"bio\" />\n    <Select bind=\"gender\" options=\"genders\" />\n    <Row>\n      <Button variant=\"primary\" onTap=\"saveProfile\">保存</Button>\n      <Button onTap=\"cancelEdit\">取消</Button>\n    </Row>\n  </Column>\n</Form>"
+}

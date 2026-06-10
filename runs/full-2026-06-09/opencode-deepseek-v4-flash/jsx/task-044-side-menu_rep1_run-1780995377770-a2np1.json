@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995377770-a2np1",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-044-side-menu",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 625,
+  "outputTokens": 122,
+  "latencyMs": 1902,
+  "costUsd": 0.00030295000000000007,
+  "errors": [],
+  "rawOutput": "<Card>\n  <Column>\n    <Row>\n      <Badge variant=\"info\">🏠</Badge>\n      <Link onTap=\"goHome\">首页</Link>\n    </Row>\n    <Row>\n      <Badge variant=\"success\">📊</Badge>\n      <Link onTap=\"goStats\">数据统计</Link>\n    </Row>\n    <Row>\n      <Badge variant=\"warning\">⚙️</Badge>\n      <Link onTap=\"goSettings\">系统设置</Link>\n    </Row>\n  </Column>\n</Card>"
+}

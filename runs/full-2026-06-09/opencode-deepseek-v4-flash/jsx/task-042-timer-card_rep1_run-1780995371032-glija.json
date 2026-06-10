@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995371032-glija",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-042-timer-card",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 615,
+  "outputTokens": 197,
+  "latencyMs": 2312,
+  "costUsd": 0.00038275000000000006,
+  "errors": [],
+  "rawOutput": "<Card>\n  <Column>\n    <Text variant=\"heading\">倒计时</Text>\n    <Row>\n      <Column>\n        <Text variant=\"heading\">00</Text>\n        <Text variant=\"caption\">天</Text>\n      </Column>\n      <Column>\n        <Text variant=\"heading\">00</Text>\n        <Text variant=\"caption\">时</Text>\n      </Column>\n      <Column>\n        <Text variant=\"heading\">00</Text>\n        <Text variant=\"caption\">分</Text>\n      </Column>\n      <Column>\n        <Text variant=\"heading\">00</Text>\n        <Text variant=\"caption\">秒</Text>\n      </Column>\n    </Row>\n    <Row>\n      <Button variant=\"primary\" onTap=\"startTimer\">开始</Button>\n      <Button variant=\"ghost\" onTap=\"resetTimer\">重置</Button>\n    </Row>\n  </Column>\n</Card>"
+}

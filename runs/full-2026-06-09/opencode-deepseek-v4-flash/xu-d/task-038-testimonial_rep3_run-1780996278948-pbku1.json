@@ -1,0 +1,23 @@
+{
+  "runId": "run-1780996278948-pbku1",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-038-testimonial",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 1052,
+  "outputTokens": 50,
+  "latencyMs": 2160,
+  "costUsd": 0.00033904000000000003,
+  "errors": [
+    "missing: [Text] (third Text in Reference)"
+  ],
+  "rawOutput": "卡\n　列\n　　排\n　　　头像 中 圆\n　　　列\n　　　　文 标题 用户名\n　　　　文 说明 角色\n　　文 正文 引用文字\n　　标 成功 ★★★★★"
+}

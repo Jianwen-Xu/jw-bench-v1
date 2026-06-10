@@ -1,0 +1,23 @@
+{
+  "runId": "run-1780996202044-fujy0",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-018-pricing-table",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 1124,
+  "outputTokens": 144,
+  "latencyMs": 2113,
+  "costUsd": 0.00046188000000000007,
+  "errors": [
+    "missing: [Text] inside second [Card]"
+  ],
+  "rawOutput": "列\n　文 标题 选择方案\n　排\n　　卡\n　　　列\n　　　　文 标题 免费版\n　　　　文 价格 ¥0\n　　　　文 正文 特点\n　　　　按 轻 selectFree 选择免费版\n　　卡\n　　　列\n　　　　文 标题 专业版\n　　　　文 价格 ¥99\n　　　　文 正文 特点\n　　　　按 主 selectPro 选择专业版\n　　卡\n　　　列\n　　　　文 标题 企业版\n　　　　文 价格 ¥499\n　　　　文 正文 特点\n　　　　按 次 selectEnterprise 选择企业版"
+}

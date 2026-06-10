@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996114413-fzbr1",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-074-qr-code-card",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 870,
+  "outputTokens": 95,
+  "latencyMs": 2076,
+  "costUsd": 0.0003394,
+  "errors": [],
+  "rawOutput": "[\"卡\", [\"列\",\n  [\"图\", {\"大\":\"中\",\"形\":\"方\",\"源\":\"qrcode\"}],\n  [\"文\", {\"式\":\"标题\"}, \"扫码下载\"],\n  [\"文\", {\"式\":\"说明\"}, \"说明\"],\n  [\"排\",\n    [\"按\", {\"式\":\"次\",\"触\":\"saveQRCode\"}, \"保存图片\"],\n    [\"按\", {\"式\":\"主\",\"触\":\"shareQRCode\"}, \"分享\"]\n  ]\n]]"
+}

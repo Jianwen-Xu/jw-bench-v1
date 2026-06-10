@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995455328-15dfl",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-065-account-switcher",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 601,
+  "outputTokens": 88,
+  "latencyMs": 1868,
+  "costUsd": 0.00025907,
+  "errors": [],
+  "rawOutput": "<Card>\n  <Row>\n    <Avatar size=\"medium\" shape=\"circle\" />\n    <Column>\n      <Text variant=\"heading\">用户名</Text>\n      <Text variant=\"caption\">邮箱</Text>\n    </Column>\n  </Row>\n  <Button variant=\"primary\" onTap=\"switchAccount\">切换账号</Button>\n  <Link onTap=\"addAccount\">添加账号</Link>\n</Card>"
+}

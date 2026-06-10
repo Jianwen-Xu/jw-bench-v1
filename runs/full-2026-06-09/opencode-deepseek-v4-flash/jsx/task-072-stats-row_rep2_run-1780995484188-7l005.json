@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995484188-7l005",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-072-stats-row",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 607,
+  "outputTokens": 164,
+  "latencyMs": 2145,
+  "costUsd": 0.00034428999999999997,
+  "errors": [],
+  "rawOutput": "<Row>\n  <Column>\n    <Text variant=\"heading\" bind=\"totalUsers\">12,345</Text>\n    <Text variant=\"caption\">总用户</Text>\n    <Badge variant=\"success\">+15%</Badge>\n  </Column>\n  <Column>\n    <Text variant=\"heading\" bind=\"totalOrders\">8,901</Text>\n    <Text variant=\"caption\">总订单</Text>\n    <Badge variant=\"success\">+8%</Badge>\n  </Column>\n  <Column>\n    <Text variant=\"heading\" bind=\"totalRevenue\">¥156万</Text>\n    <Text variant=\"caption\">总收入</Text>\n    <Badge variant=\"success\">+23%</Badge>\n  </Column>\n</Row>"
+}

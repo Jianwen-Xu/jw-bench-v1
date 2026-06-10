@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995495625-18p1b",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-075-referral-banner",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 600,
+  "outputTokens": 99,
+  "latencyMs": 1897,
+  "costUsd": 0.0002709,
+  "errors": [],
+  "rawOutput": "<Card>\n  <Row>\n    <Image size=\"medium\" shape=\"square\" />\n    <Column>\n      <Text variant=\"heading\">邀请有礼</Text>\n      <Text variant=\"caption\">邀请好友注册，双方均可获得奖励</Text>\n      <Badge variant=\"success\">邀请码：ABC</Badge>\n      <Button variant=\"primary\" onTap=\"referNow\">立即邀请</Button>\n    </Column>\n  </Row>\n</Card>"
+}

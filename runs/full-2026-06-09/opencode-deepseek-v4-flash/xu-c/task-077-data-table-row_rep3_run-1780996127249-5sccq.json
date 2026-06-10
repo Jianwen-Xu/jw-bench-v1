@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996127249-5sccq",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-077-data-table-row",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 846,
+  "outputTokens": 71,
+  "latencyMs": 1955,
+  "costUsd": 0.00030652,
+  "errors": [],
+  "rawOutput": "[\"卡\", [\"排\",\n  [\"文\", {\"式\":\"标题\"}, \"姓名\"],\n  [\"文\", {}, \"年龄\"],\n  [\"文\", {}, \"部门\"],\n  [\"标\", {\"式\":\"成功\"}, \"在职\"],\n  [\"链\", {\"触\":\"edit\"}, \"编辑\"],\n  [\"链\", {\"触\":\"delete\"}, \"删除\"]\n]]"
+}

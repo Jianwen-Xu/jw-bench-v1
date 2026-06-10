@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996016113-lfncr",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-048-user-menu",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 880,
+  "outputTokens": 117,
+  "latencyMs": 2123,
+  "costUsd": 0.0003663,
+  "errors": [],
+  "rawOutput": "[\"卡\", [\"列\",\n  [\"排\",\n    [\"头像\", {\"大\":\"中\",\"形\":\"圆\"}],\n    [\"列\",\n      [\"文\", {\"式\":\"标题\"}, \"用户名\"],\n      [\"文\", {\"式\":\"说明\"}, \"角色\"]\n    ]\n  ],\n  [\"链\", {\"触\":\"goProfile\"}, \"个人资料\"],\n  [\"链\", {\"触\":\"goAccountSettings\"}, \"账户设置\"],\n  [\"链\", {\"触\":\"goMessages\"}, \"消息中心\"],\n  [\"链\", {\"式\":\"淡\",\"触\":\"logout\"}, \"退出登录\"]\n]]"
+}

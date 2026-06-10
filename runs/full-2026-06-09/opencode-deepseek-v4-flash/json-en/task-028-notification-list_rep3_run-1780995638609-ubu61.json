@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995638609-ubu61",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-028-notification-list",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 588,
+  "outputTokens": 210,
+  "latencyMs": 2433,
+  "costUsd": 0.00038976,
+  "errors": [],
+  "rawOutput": "[\"Col\",\n  [\"Text\", {\"v\":\"heading\"}, \"消息通知\"],\n  [\"Row\",\n    [\"Badge\", {\"v\":\"info\"}, \"系统\"],\n    [\"Text\", {\"v\":\"body\"}, \"订单已发货\"],\n    [\"Text\", {\"v\":\"caption\"}, \"时间\"],\n    [\"Link\", {\"t\":\"viewNotif\"}, \"详情\"]\n  ],\n  [\"Row\",\n    [\"Badge\", {\"v\":\"success\"}, \"活动\"],\n    [\"Text\", {\"v\":\"body\"}, \"优惠券可用\"],\n    [\"Text\", {\"v\":\"caption\"}, \"时间\"],\n    [\"Link\", {\"t\":\"viewNotif\"}, \"详情\"]\n  ],\n  [\"Row\",\n    [\"Badge\", {\"v\":\"warning\"}, \"提醒\"],\n    [\"Text\", {\"v\":\"body\"}, \"会员即将过期\"],\n    [\"Text\", {\"v\":\"caption\"}, \"时间\"],\n    [\"Link\", {\"t\":\"viewNotif\"}, \"详情\"]\n  ],\n  [\"Link\", {\"t\":\"markAllRead\"}, \"全部已读\"]\n]"
+}

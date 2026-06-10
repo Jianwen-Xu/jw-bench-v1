@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996398563-frgfb",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-071-feature-list",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1047,
+  "outputTokens": 117,
+  "latencyMs": 3035,
+  "costUsd": 0.00041139000000000003,
+  "errors": [],
+  "rawOutput": "列\n　文 标题 核心功能\n　排\n　　图 小 方 値icon1\n　　列\n　　　文 标题 功能名1\n　　　文 正文 描述1\n　排\n　　图 小 方 値icon2\n　　列\n　　　文 标题 功能名2\n　　　文 正文 描述2\n　排\n　　图 小 方 値icon3\n　　列\n　　　文 标题 功能名3\n　　　文 正文 描述3"
+}

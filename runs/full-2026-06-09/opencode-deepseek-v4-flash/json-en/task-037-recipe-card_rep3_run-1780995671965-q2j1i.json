@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995671965-q2j1i",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-037-recipe-card",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 537,
+  "outputTokens": 124,
+  "latencyMs": 2004,
+  "costUsd": 0.00028139,
+  "errors": [],
+  "rawOutput": "[\"Card\", [\"Col\",\n  [\"Img\", {\"size\":\"l\", \"src\":\"https://example.com/tomato-egg.jpg\", \"shape\":\"square\"}],\n  [\"Text\", {\"v\":\"heading\"}, \"番茄炒蛋\"],\n  [\"Row\",\n    [\"Badge\", {\"v\":\"info\"}, \"简单\"],\n    [\"Text\", {\"v\":\"body\"}, \"15分钟\"]\n  ],\n  [\"Text\", {\"v\":\"body\"}, \"食材：番茄、鸡蛋、葱、盐、糖\"],\n  [\"Link\", {\"v\":\"default\", \"t\":\"viewRecipe\"}, \"查看完整做法\"]\n]]"
+}

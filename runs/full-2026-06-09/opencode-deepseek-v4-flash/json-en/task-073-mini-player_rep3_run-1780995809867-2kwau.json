@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995809867-2kwau",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-073-mini-player",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 541,
+  "outputTokens": 98,
+  "latencyMs": 1937,
+  "costUsd": 0.00025387000000000006,
+  "errors": [],
+  "rawOutput": "[\"Card\", [\"Row\",\n  [\"Img\", {\"size\":\"m\",\"shape\":\"square\",\"src\":\"cover.jpg\"}],\n  [\"Col\",\n    [\"Text\", {\"v\":\"heading\"}, \"歌名\"],\n    [\"Text\", {\"v\":\"caption\"}, \"歌手\"],\n    [\"Row\",\n      [\"Btn\", {\"v\":\"p\",\"t\":\"playMusic\"}, \"播放\"],\n      [\"Btn\", {\"v\":\"g\",\"t\":\"nextTrack\"}, \"下一首\"]\n    ]\n  ]\n]]"
+}

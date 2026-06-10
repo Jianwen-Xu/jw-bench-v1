@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995587841-yjes4",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-019-comment-section",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 544,
+  "outputTokens": 289,
+  "latencyMs": 3142,
+  "costUsd": 0.00046478000000000003,
+  "errors": [],
+  "rawOutput": "[\"Col\",\n  [\"Text\", {\"v\":\"title\"}, \"最新评论\"],\n  [\"Row\",\n    [\"Avatar\", {\"size\":\"m\",\"shape\":\"circle\",\"src\":\"https://i.pravatar.cc/40?img=1\"}],\n    [\"Col\",\n      [\"Text\", {\"v\":\"heading\"}, \"用户A\"],\n      [\"Text\", {\"v\":\"body\"}, \"这个设计真不错！\"],\n      [\"Text\", {\"v\":\"caption\"}, \"2小时前\"]\n    ]\n  ],\n  [\"Row\",\n    [\"Avatar\", {\"size\":\"m\",\"shape\":\"circle\",\"src\":\"https://i.pravatar.cc/40?img=2\"}],\n    [\"Col\",\n      [\"Text\", {\"v\":\"heading\"}, \"用户B\"],\n      [\"Text\", {\"v\":\"body\"}, \"学习了，感谢分享。\"],\n      [\"Text\", {\"v\":\"caption\"}, \"1小时前\"]\n    ]\n  ],\n  [\"Row\",\n    [\"Avatar\", {\"size\":\"m\",\"shape\":\"circle\",\"src\":\"https://i.pravatar.cc/40?img=3\"}],\n    [\"Col\",\n      [\"Text\", {\"v\":\"heading\"}, \"用户C\"],\n      [\"Text\", {\"v\":\"body\"}, \"期待更多内容！\"],\n      [\"Text\", {\"v\":\"caption\"}, \"30分钟前\"]\n    ]\n  ],\n  [\"Link\", {\"t\":\"loadMore\",\"v\":\"default\"}, \"加载更多\"]\n]"
+}

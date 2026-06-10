@@ -1,0 +1,23 @@
+{
+  "runId": "run-1780995856727-xjz2k",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-006-registration-form",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 931,
+  "outputTokens": 123,
+  "latencyMs": 2061,
+  "costUsd": 0.00038667,
+  "errors": [
+    "missing: options=countries on [Select]"
+  ],
+  "rawOutput": "[\"域\", {\"触\":\"register\"}, [\"列\",\n  [\"入\", {\"类\":\"文\",\"值\":\"username\",\"必\":true,\"空\":\"请输入用户名\"}],\n  [\"入\", {\"类\":\"邮箱\",\"值\":\"email\",\"必\":true,\"空\":\"请输入邮箱\"}],\n  [\"入\", {\"类\":\"密码\",\"值\":\"password\",\"必\":true,\"空\":\"请设置密码\"}],\n  [\"选\", {\"值\":\"country\"}],\n  [\"按\", {\"式\":\"主\",\"触\":\"register\"}, \"注册\"],\n  [\"链\", {\"触\":\"login\"}, \"已有账号？登录\"]\n]]"
+}

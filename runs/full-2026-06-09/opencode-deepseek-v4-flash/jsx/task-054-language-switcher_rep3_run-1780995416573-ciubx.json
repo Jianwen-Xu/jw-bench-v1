@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995416573-ciubx",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-054-language-switcher",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 597,
+  "outputTokens": 92,
+  "latencyMs": 1681,
+  "costUsd": 0.00026239,
+  "errors": [],
+  "rawOutput": "<Column>\n  <Text variant=\"heading\">切换语言</Text>\n  <Row>\n    <Button variant=\"primary\" onTap=\"switchCN\">中文</Button>\n    <Button variant=\"ghost\" onTap=\"switchEN\">English</Button>\n    <Button variant=\"ghost\" onTap=\"switchJP\">日本語</Button>\n  </Row>\n  <Badge variant=\"success\">当前</Badge>\n</Column>"
+}

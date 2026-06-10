@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995558081-b36do",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-012-dashboard-stats",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 612,
+  "outputTokens": 228,
+  "latencyMs": 2613,
+  "costUsd": 0.00041604,
+  "errors": [],
+  "rawOutput": "[\"Col\",\n  [\"Text\", {\"v\":\"title\"}, \"数据概览\"],\n  [\"Row\",\n    [\"Card\", [\"Col\",\n      [\"Text\", {\"v\":\"heading\"}, \"1,234\"],\n      [\"Text\", {\"v\":\"body\"}, \"日活用户\"],\n      [\"Badge\", {\"v\":\"success\"}, \"+12%\"]\n    ]],\n    [\"Card\", [\"Col\",\n      [\"Text\", {\"v\":\"heading\"}, \"856\"],\n      [\"Text\", {\"v\":\"body\"}, \"总订单\"],\n      [\"Badge\", {\"v\":\"success\"}, \"+5%\"]\n    ]],\n    [\"Card\", [\"Col\",\n      [\"Text\", {\"v\":\"heading\"}, \"¥5,678\"],\n      [\"Text\", {\"v\":\"body\"}, \"营收\"],\n      [\"Badge\", {\"v\":\"success\"}, \"+8%\"]\n    ]],\n    [\"Card\", [\"Col\",\n      [\"Text\", {\"v\":\"heading\"}, \"98.5%\"],\n      [\"Text\", {\"v\":\"body\"}, \"完成率\"],\n      [\"Badge\", {\"v\":\"success\"}, \"+3%\"]\n    ]]\n  ]\n]"
+}

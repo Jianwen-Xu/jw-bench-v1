@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995320606-emy9y",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-028-notification-list",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 652,
+  "outputTokens": 211,
+  "latencyMs": 2336,
+  "costUsd": 0.00040814,
+  "errors": [],
+  "rawOutput": "<Column>\n  <Text variant=\"heading\">消息通知</Text>\n  <Row>\n    <Badge variant=\"info\">系统</Badge>\n    <Text variant=\"body\">订单已发货</Text>\n    <Text variant=\"caption\">时间</Text>\n    <Link onTap=\"viewNotif\">详情</Link>\n  </Row>\n  <Row>\n    <Badge variant=\"success\">活动</Badge>\n    <Text variant=\"body\">优惠券可用</Text>\n    <Text variant=\"caption\">时间</Text>\n    <Link onTap=\"viewNotif\">详情</Link>\n  </Row>\n  <Row>\n    <Badge variant=\"warning\">提醒</Badge>\n    <Text variant=\"body\">会员即将过期</Text>\n    <Text variant=\"caption\">时间</Text>\n    <Link onTap=\"viewNotif\">详情</Link>\n  </Row>\n  <Link onTap=\"markAllRead\">全部已读</Link>\n</Column>"
+}

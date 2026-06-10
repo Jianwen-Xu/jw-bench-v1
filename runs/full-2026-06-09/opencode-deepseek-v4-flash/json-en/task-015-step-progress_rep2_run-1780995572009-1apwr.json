@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995572009-1apwr",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-015-step-progress",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 631,
+  "outputTokens": 193,
+  "latencyMs": 2675,
+  "costUsd": 0.00038267,
+  "errors": [],
+  "rawOutput": "[\"Col\",\n  [\"Text\", {\"v\":\"title\"}, \"注册进度\"],\n  [\"Row\",\n    [\"Col\",\n      [\"Badge\", {\"v\":\"success\"}, \"1\"],\n      [\"Text\", {\"v\":\"body\"}, \"填写信息\"]\n    ],\n    [\"Col\",\n      [\"Badge\", {\"v\":\"success\"}, \"2\"],\n      [\"Text\", {\"v\":\"body\"}, \"验证邮箱\"]\n    ],\n    [\"Col\",\n      [\"Badge\", {\"v\":\"info\"}, \"3\"],\n      [\"Text\", {\"v\":\"body\"}, \"设置密码\"]\n    ],\n    [\"Col\",\n      [\"Badge\", {\"v\":\"default\"}, \"4\"],\n      [\"Text\", {\"v\":\"body\"}, \"完成\"]\n    ]\n  ],\n  [\"Row\",\n    [\"Btn\", {\"v\":\"s\", \"t\":\"prevStep\"}, \"上一步\"],\n    [\"Btn\", {\"v\":\"p\", \"t\":\"nextStep\"}, \"下一步\"]\n  ]\n]"
+}

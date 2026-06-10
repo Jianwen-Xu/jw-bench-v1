@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996302456-4fjmb",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-045-breadcrumb",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1061,
+  "outputTokens": 37,
+  "latencyMs": 1519,
+  "costUsd": 0.00032717,
+  "errors": [],
+  "rawOutput": "排\n　链 触navHome 首页\n　文 正文 >\n　链 触navCategory 分类\n　文 正文 >\n　文 正文 当前页面"
+}

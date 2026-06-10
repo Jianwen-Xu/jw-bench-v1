@@ -1,0 +1,23 @@
+{
+  "runId": "run-1780995243870-ptakx",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-007-navigation-page",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 653,
+  "outputTokens": 97,
+  "latencyMs": 1914,
+  "costUsd": 0.00028301,
+  "errors": [
+    "missing: [Text] inside [Avatar] in Reference"
+  ],
+  "rawOutput": "<Column>\n  <NavBar title=\"我的应用\" onBack=\"back\">\n    <Avatar size=\"small\" shape=\"circle\" />\n  </NavBar>\n  <Column>\n    <Link onTap=\"home\">首页</Link>\n    <Link onTap=\"profile\">个人中心</Link>\n    <Link onTap=\"settings\">设置</Link>\n    <Text variant=\"caption\">©2026 My App</Text>\n  </Column>\n</Column>"
+}

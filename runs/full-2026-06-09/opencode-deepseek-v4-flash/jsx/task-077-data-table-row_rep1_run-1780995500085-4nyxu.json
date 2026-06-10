@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995500085-4nyxu",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-077-data-table-row",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 585,
+  "outputTokens": 101,
+  "latencyMs": 1621,
+  "costUsd": 0.00026905,
+  "errors": [],
+  "rawOutput": "<Card>\n  <Row>\n    <Text variant=\"heading\" bind=\"name\">姓名</Text>\n    <Text variant=\"body\" bind=\"age\">年龄</Text>\n    <Text variant=\"body\" bind=\"department\">部门</Text>\n    <Badge variant=\"success\">在职</Badge>\n    <Link onTap=\"edit\">编辑</Link>\n    <Link onTap=\"delete\" variant=\"subtle\">删除</Link>\n  </Row>\n</Card>"
+}

@@ -1,0 +1,23 @@
+{
+  "runId": "run-1780995668361-rfxwe",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-036-movie-card",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 543,
+  "outputTokens": 97,
+  "latencyMs": 2099,
+  "costUsd": 0.00025330999999999997,
+  "errors": [
+    "missing: [Text] inside [Row]"
+  ],
+  "rawOutput": "[\"Card\",[\"Col\",\n  [\"Img\",{\"size\":\"l\",\"src\":\"https://example.com/interstellar.jpg\"}],\n  [\"Text\",{\"v\":\"heading\"},\"星际穿越\"],\n  [\"Row\",\n    [\"Badge\",{\"v\":\"success\"},\"9.3\"],\n    \"2014\",\n    [\"Badge\",{\"v\":\"info\"},\"科幻\"]\n  ],\n  [\"Btn\",{\"v\":\"p\",\"t\":\"buyTicket\"},\"购票\"]\n]]"
+}

@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995589508-r2j01",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-019-comment-section",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 544,
+  "outputTokens": 291,
+  "latencyMs": 3177,
+  "costUsd": 0.00046698000000000003,
+  "errors": [],
+  "rawOutput": "[\"Col\",\n  [\"Text\", {\"v\":\"title\"}, \"最新评论\"],\n  [\"Row\",\n    [\"Avatar\", {\"size\":\"m\",\"shape\":\"circle\",\"src\":\"https://i.pravatar.cc/40?img=1\"}],\n    [\"Col\",\n      [\"Text\", {\"v\":\"heading\"}, \"用户A\"],\n      [\"Text\", {\"v\":\"body\"}, \"这是一个很好的产品！\"],\n      [\"Text\", {\"v\":\"caption\"}, \"2小时前\"]\n    ]\n  ],\n  [\"Row\",\n    [\"Avatar\", {\"size\":\"m\",\"shape\":\"circle\",\"src\":\"https://i.pravatar.cc/40?img=2\"}],\n    [\"Col\",\n      [\"Text\", {\"v\":\"heading\"}, \"用户B\"],\n      [\"Text\", {\"v\":\"body\"}, \"非常满意，推荐购买。\"],\n      [\"Text\", {\"v\":\"caption\"}, \"1天前\"]\n    ]\n  ],\n  [\"Row\",\n    [\"Avatar\", {\"size\":\"m\",\"shape\":\"circle\",\"src\":\"https://i.pravatar.cc/40?img=3\"}],\n    [\"Col\",\n      [\"Text\", {\"v\":\"heading\"}, \"用户C\"],\n      [\"Text\", {\"v\":\"body\"}, \"物流很快，包装完好。\"],\n      [\"Text\", {\"v\":\"caption\"}, \"3天前\"]\n    ]\n  ],\n  [\"Link\", {\"v\":\"default\",\"t\":\"loadMore\"}, \"加载更多\"]\n]"
+}

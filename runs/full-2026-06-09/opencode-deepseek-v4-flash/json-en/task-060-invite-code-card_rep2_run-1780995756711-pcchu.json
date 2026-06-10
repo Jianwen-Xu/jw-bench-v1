@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995756711-pcchu",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-060-invite-code-card",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 553,
+  "outputTokens": 132,
+  "latencyMs": 2112,
+  "costUsd": 0.00029451,
+  "errors": [],
+  "rawOutput": "[\"Card\",[\"Col\",\n  [\"Text\",{\"v\":\"heading\"},\"邀请好友\"],\n  [\"Text\",{\"v\":\"body\"},\"分享邀请码给好友，双方均可获得奖励\"],\n  [\"Text\",{\"v\":\"heading\"},\"ABCD1234\"],\n  [\"Badge\",{\"v\":\"success\"},\"有效\"],\n  [\"Text\",{\"v\":\"caption\"},\"有效期至 2025-12-31\"],\n  [\"Row\",\n    [\"Btn\",{\"v\":\"s\",\"t\":\"copyInviteLink\"},\"复制链接\"],\n    [\"Btn\",{\"v\":\"p\",\"t\":\"shareInvite\"},\"分享\"]\n  ]\n]]"
+}

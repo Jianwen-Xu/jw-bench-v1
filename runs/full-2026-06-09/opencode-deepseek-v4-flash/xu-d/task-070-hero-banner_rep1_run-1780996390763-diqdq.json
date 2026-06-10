@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996390763-diqdq",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-070-hero-banner",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1052,
+  "outputTokens": 45,
+  "latencyMs": 1766,
+  "costUsd": 0.00033354,
+  "errors": [],
+  "rawOutput": "卡\n　排\n　　图 大 方\n　　列\n　　　文 标题 夏季大促\n　　　文 正文 副标题\n　　　按 主 shopNow 立即抢购"
+}

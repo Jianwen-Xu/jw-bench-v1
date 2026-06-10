@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995579454-p67nv",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-017-article-card",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 550,
+  "outputTokens": 76,
+  "latencyMs": 1786,
+  "costUsd": 0.0002321,
+  "errors": [],
+  "rawOutput": "[\"Card\",[\"Col\",[\"Img\",{\"size\":\"l\",\"src\":\"cover.jpg\"}],[\"Text\",{\"v\":\"heading\"},\"探索未来科技\"],[\"Text\",{\"v\":\"body\"},\"摘要文字\"],[\"Badge\",{\"v\":\"info\"},\"科技\"],[\"Link\",{\"t\":\"readMore\",\"v\":\"default\"},\"阅读更多\"]]]"
+}

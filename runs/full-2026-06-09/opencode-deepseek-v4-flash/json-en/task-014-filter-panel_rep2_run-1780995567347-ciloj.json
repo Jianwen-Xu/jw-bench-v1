@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995567347-ciloj",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-014-filter-panel",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 617,
+  "outputTokens": 140,
+  "latencyMs": 2300,
+  "costUsd": 0.00032059000000000005,
+  "errors": [],
+  "rawOutput": "[\"Card\", [\"Col\",\n  [\"Text\", {\"v\":\"title\"}, \"筛选条件\"],\n  [\"Input\", {\"ph\":\"输入关键词\", \"bind\":\"keyword\"}],\n  [\"Select\", {\"bind\":\"category\", \"opts\":\"categories\"}],\n  [\"Toggle\", {\"bind\":\"showActive\"}, \"仅显示有效\"],\n  [\"Text\", {\"v\":\"body\"}, \"排序方式\"],\n  [\"Select\", {\"bind\":\"sortBy\", \"opts\":\"sortOptions\"}],\n  [\"Row\",\n    [\"Btn\", {\"v\":\"p\", \"t\":\"applyFilter\"}, \"应用\"],\n    [\"Btn\", {\"v\":\"s\", \"t\":\"resetFilter\"}, \"重置\"]\n  ]\n]]"
+}

@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995712482-ow7so",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-048-user-menu",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 555,
+  "outputTokens": 118,
+  "latencyMs": 2076,
+  "costUsd": 0.00027965,
+  "errors": [],
+  "rawOutput": "[\"Card\", [\"Col\",\n  [\"Row\",\n    [\"Avatar\", {\"size\":\"m\",\"shape\":\"circle\"}],\n    [\"Col\",\n      [\"Text\", {\"v\":\"heading\"}, \"用户名\"],\n      [\"Text\", {\"v\":\"caption\"}, \"角色\"]\n    ]\n  ],\n  [\"Link\", {\"t\":\"goProfile\"}, \"个人资料\"],\n  [\"Link\", {\"t\":\"goAccountSettings\"}, \"账户设置\"],\n  [\"Link\", {\"t\":\"goMessages\"}, \"消息中心\"],\n  [\"Link\", {\"v\":\"subtle\",\"t\":\"logout\"}, \"退出登录\"]\n]]"
+}

@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996174355-efqxe",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-010-search-filter",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1091,
+  "outputTokens": 39,
+  "latencyMs": 1738,
+  "costUsd": 0.00033747,
+  "errors": [],
+  "rawOutput": "排\n　入 文 空搜索关键词... 値query\n　选 値category 选项categories\n　按 主 search 搜索\n　按 次 reset 重置"
+}

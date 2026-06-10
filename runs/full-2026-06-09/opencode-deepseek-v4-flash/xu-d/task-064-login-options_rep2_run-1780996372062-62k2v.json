@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996372062-62k2v",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-064-login-options",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 1097,
+  "outputTokens": 96,
+  "latencyMs": 2462,
+  "costUsd": 0.00040178999999999996,
+  "errors": [],
+  "rawOutput": "列\n　文 标题 欢迎回来\n　排\n　　按 次 wechatLogin 微信\n　　按 次 qqLogin QQ\n　　按 次 weiboLogin 微博\n　文 正文 或使用账号密码\n　入 邮箱 必 空请输入邮箱 値email\n　入 密码 必 空请输入密码 値password\n　按 主 loginSubmit 登录\n　链 goRegister 注册账号"
+}

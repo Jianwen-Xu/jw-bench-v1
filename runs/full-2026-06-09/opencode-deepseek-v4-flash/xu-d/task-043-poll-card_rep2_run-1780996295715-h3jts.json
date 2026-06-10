@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996295715-h3jts",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-043-poll-card",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1068,
+  "outputTokens": 58,
+  "latencyMs": 1578,
+  "costUsd": 0.00035216,
+  "errors": [],
+  "rawOutput": "卡\n　列\n　　文 标题 您最喜欢哪个框架？\n　　列\n　　　按 次 voteReact React\n　　　按 次 voteVue Vue\n　　　按 次 voteAngular Angular\n　　文 说明 共 256 人参与"
+}

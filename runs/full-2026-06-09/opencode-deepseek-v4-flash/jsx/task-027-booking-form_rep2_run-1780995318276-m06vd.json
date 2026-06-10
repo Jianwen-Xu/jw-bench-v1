@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995318276-m06vd",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-027-booking-form",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 647,
+  "outputTokens": 140,
+  "latencyMs": 2091,
+  "costUsd": 0.00032869,
+  "errors": [],
+  "rawOutput": "<Form onSubmit=\"submitBooking\">\n  <Column>\n    <Text variant=\"heading\">预约服务</Text>\n    <Select bind=\"serviceType\" options=\"services\" required />\n    <Input type=\"text\" placeholder=\"选择日期\" bind=\"bookingDate\" required />\n    <Input type=\"text\" placeholder=\"选择时间\" bind=\"bookingTime\" required />\n    <Input type=\"text\" placeholder=\"备注\" bind=\"notes\" />\n    <Row>\n      <Button variant=\"primary\" onTap=\"submitBooking\">提交预约</Button>\n      <Button variant=\"secondary\" onTap=\"cancel\">取消</Button>\n    </Row>\n  </Column>\n</Form>"
+}

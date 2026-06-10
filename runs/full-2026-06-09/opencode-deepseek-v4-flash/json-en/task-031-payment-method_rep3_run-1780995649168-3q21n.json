@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995649168-3q21n",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-031-payment-method",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 552,
+  "outputTokens": 120,
+  "latencyMs": 1904,
+  "costUsd": 0.00028104000000000003,
+  "errors": [],
+  "rawOutput": "[\"Card\",[\"Col\",[\"Text\",{\"v\":\"heading\"},\"选择支付方式\"],[\"Row\",[\"Checkbox\",{\"bind\":\"payWechat\"}],[\"Text\",{\"v\":\"body\"},\"微信支付\"]],[\"Row\",[\"Checkbox\",{\"bind\":\"payAlipay\"}],[\"Text\",{\"v\":\"body\"},\"支付宝\"]],[\"Row\",[\"Checkbox\",{\"bind\":\"payCard\"}],[\"Text\",{\"v\":\"body\"},\"银行卡\"]],[\"Btn\",{\"v\":\"p\",\"t\":\"confirmPayment\"},\"确认支付\"]]]"
+}

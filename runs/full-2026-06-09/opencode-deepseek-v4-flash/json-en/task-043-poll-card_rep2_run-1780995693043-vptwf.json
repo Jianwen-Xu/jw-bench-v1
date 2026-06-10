@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995693043-vptwf",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-043-poll-card",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 540,
+  "outputTokens": 95,
+  "latencyMs": 1846,
+  "costUsd": 0.0002503,
+  "errors": [],
+  "rawOutput": "[\"Card\", [\"Col\",\n  [\"Text\", {\"v\":\"heading\"}, \"您最喜欢哪个框架？\"],\n  [\"Btn\", {\"v\":\"s\",\"t\":\"voteReact\"}, \"React\"],\n  [\"Btn\", {\"v\":\"s\",\"t\":\"voteVue\"}, \"Vue\"],\n  [\"Btn\", {\"v\":\"s\",\"t\":\"voteAngular\"}, \"Angular\"],\n  [\"Text\", {\"v\":\"caption\"}, \"共 256 人参与\"]\n]]"
+}

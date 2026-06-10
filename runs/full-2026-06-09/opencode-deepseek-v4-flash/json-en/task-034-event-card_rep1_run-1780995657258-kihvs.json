@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995657258-kihvs",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-034-event-card",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 565,
+  "outputTokens": 134,
+  "latencyMs": 2200,
+  "costUsd": 0.00029995,
+  "errors": [],
+  "rawOutput": "[\"Card\", [\"Col\",\n  [\"Text\", {\"v\":\"heading\"}, \"2026技术创新大会\"],\n  [\"Row\",\n    [\"Text\", {\"v\":\"body\"}, \"日期\"],\n    [\"Text\", {\"v\":\"body\"}, \"2026-03-15\"]\n  ],\n  [\"Row\",\n    [\"Text\", {\"v\":\"body\"}, \"地点\"],\n    [\"Text\", {\"v\":\"body\"}, \"北京国际会议中心\"]\n  ],\n  [\"Badge\", {\"v\":\"info\"}, \"科技\"],\n  [\"Text\", {\"v\":\"price\"}, \"¥299\"],\n  [\"Btn\", {\"v\":\"p\",\"t\":\"registerEvent\"}, \"立即报名\"]\n]]"
+}

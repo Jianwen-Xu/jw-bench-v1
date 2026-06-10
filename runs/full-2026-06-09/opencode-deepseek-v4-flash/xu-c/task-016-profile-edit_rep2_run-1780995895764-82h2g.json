@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995895764-82h2g",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-016-profile-edit",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 928,
+  "outputTokens": 118,
+  "latencyMs": 2041,
+  "costUsd": 0.00038036000000000005,
+  "errors": [],
+  "rawOutput": "[\"域\", [\"列\",\n  [\"文\", {\"式\":\"标题\"}, \"编辑资料\"],\n  [\"头像\", {\"大\":\"中\"}],\n  [\"入\", {\"空\":\"请输入昵称\", \"值\":\"nickname\"}],\n  [\"入\", {\"空\":\"介绍一下自己...\", \"值\":\"bio\"}],\n  [\"选\", {\"值\":\"gender\", \"选项\":\"genders\"}],\n  [\"排\",\n    [\"按\", {\"式\":\"主\", \"触\":\"saveProfile\"}, \"保存\"],\n    [\"按\", {\"触\":\"cancelEdit\"}, \"取消\"]\n  ]\n]]"
+}

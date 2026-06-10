@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995653035-k5i5j",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-032-social-post",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 560,
+  "outputTokens": 120,
+  "latencyMs": 2050,
+  "costUsd": 0.0002832,
+  "errors": [],
+  "rawOutput": "[\"Card\", [\"Col\",\n  [\"Row\",\n    [\"Avatar\", {\"size\":\"m\",\"shape\":\"circle\"}],\n    [\"Col\",\n      [\"Text\", {\"v\":\"heading\"}, \"用户名\"],\n      [\"Text\", {\"v\":\"caption\"}, \"时间\"]\n    ]\n  ],\n  [\"Text\", {\"v\":\"body\"}, \"正文内容\"],\n  [\"Row\",\n    [\"Btn\", {\"v\":\"g\",\"t\":\"like\"}, \"点赞\"],\n    [\"Btn\", {\"v\":\"g\",\"t\":\"comment\"}, \"评论\"],\n    [\"Link\", {\"t\":\"share\"}, \"分享\"]\n  ]\n]]"
+}

@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995600207-6uk6n",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-022-faq-card",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 564,
+  "outputTokens": 114,
+  "latencyMs": 2102,
+  "costUsd": 0.00027768000000000004,
+  "errors": [],
+  "rawOutput": "[\"Card\",[\"Col\",\n  [\"Text\",{\"v\":\"heading\"},\"如何重置密码？\"],\n  [\"Text\",{\"v\":\"body\"},\"请前往设置页面，点击“忘记密码”，按照提示输入注册邮箱即可收到重置链接。\"],\n  [\"Row\",\n    [\"Btn\",{\"v\":\"p\",\"t\":\"helpfulYes\"},\"有帮助\"],\n    [\"Btn\",{\"v\":\"g\",\"t\":\"helpfulNo\"},\"没有帮助\"]\n  ],\n  [\"Text\",{\"v\":\"caption\"},\"共 128 人认为有帮助\"]\n]]"
+}

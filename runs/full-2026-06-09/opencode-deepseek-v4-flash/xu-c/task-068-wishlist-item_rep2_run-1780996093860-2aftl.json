@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996093860-2aftl",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-068-wishlist-item",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 860,
+  "outputTokens": 105,
+  "latencyMs": 2001,
+  "costUsd": 0.0003477,
+  "errors": [],
+  "rawOutput": "[\"卡\", [\"排\",\n  [\"图\", {\"大\":\"中\", \"源\":\"src\"}],\n  [\"列\",\n    [\"文\", {\"式\":\"标题\"}, \"商品名\"],\n    [\"文\", {\"式\":\"价格\"}, \"价格\"],\n    [\"标\", {\"式\":\"成功\"}, \"有货\"],\n    [\"排\",\n      [\"按\", {\"式\":\"主\", \"触\":\"addToCart\"}, \"加入购物车\"],\n      [\"链\", {\"触\":\"remove\"}, \"移除\"]\n    ]\n  ]\n]]"
+}

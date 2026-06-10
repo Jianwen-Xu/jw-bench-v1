@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996027941-wp82a",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-051-error-page",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 861,
+  "outputTokens": 79,
+  "latencyMs": 2029,
+  "costUsd": 0.00031937000000000003,
+  "errors": [],
+  "rawOutput": "[\"卡\", [\"列\",\n  [\"文\", {\"式\":\"标题\"}, \"404\"],\n  [\"文\", {\"式\":\"正文\"}, \"页面未找到\"],\n  [\"文\", {\"式\":\"说明\"}, \"描述\"],\n  [\"按\", {\"式\":\"主\",\"触\":\"reloadPage\"}, \"重新加载\"],\n  [\"链\", {\"触\":\"backToHome\"}, \"返回首页\"]\n]]"
+}

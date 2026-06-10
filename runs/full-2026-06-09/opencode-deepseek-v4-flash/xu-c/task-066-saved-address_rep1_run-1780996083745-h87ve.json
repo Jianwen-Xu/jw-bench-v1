@@ -1,0 +1,24 @@
+{
+  "runId": "run-1780996083745-h87ve",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-066-saved-address",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 845,
+  "outputTokens": 85,
+  "latencyMs": 2103,
+  "costUsd": 0.00032165,
+  "errors": [
+    "missing: [object Object]",
+    "missing: [object Object]"
+  ],
+  "rawOutput": "[\"卡\", [\"列\",\n  [\"排\",\n    [\"文\", {\"式\":\"标题\"}, \"收件人\"],\n    [\"标\", {\"式\":\"成功\"}, \"默认\"]\n  ],\n  [\"文\", {}, \"地址\"],\n  [\"文\", {}, \"电话\"],\n  [\"排\",\n    [\"链\", {\"触\":\"edit\"}, \"编辑\"],\n    [\"链\", {\"触\":\"delete\"}, \"删除\"]\n  ]\n]]"
+}

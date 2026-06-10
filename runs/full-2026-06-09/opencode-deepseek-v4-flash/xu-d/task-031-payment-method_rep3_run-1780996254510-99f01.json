@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996254510-99f01",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-031-payment-method",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1080,
+  "outputTokens": 66,
+  "latencyMs": 2143,
+  "costUsd": 0.0003642,
+  "errors": [],
+  "rawOutput": "卡\n　文 标题 选择支付方式\n　列\n　　排\n　　　选框 値payWechat 微信支付\n　　排\n　　　选框 値payAlipay 支付宝\n　　排\n　　　选框 値payCard 银行卡\n　按 主 confirmPayment 确认支付"
+}

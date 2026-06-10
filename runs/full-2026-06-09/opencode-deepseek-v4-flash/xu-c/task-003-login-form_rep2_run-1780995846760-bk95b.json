@@ -1,0 +1,25 @@
+{
+  "runId": "run-1780995846760-bk95b",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-003-login-form",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 890,
+  "outputTokens": 88,
+  "latencyMs": 1881,
+  "costUsd": 0.0003371,
+  "errors": [
+    "missing: bind=邮箱 on Input email",
+    "missing: bind=密码 on Input password",
+    "missing: bind=记住 on Checkbox"
+  ],
+  "rawOutput": "[\"域\",{\"触\":\"submit\"},[\"列\",[\"入\",{\"类\":\"邮箱\",\"必\":true,\"空\":\"请输入邮箱\"}],[\"入\",{\"类\":\"密码\",\"必\":true,\"空\":\"请输入密码\"}],[\"选框\",\"记住我\"],[\"按\",{\"式\":\"主\",\"触\":\"submit\"},\"登录\"],[\"链\",{\"触\":\"forgot\",\"式\":\"淡\"},\"忘记密码？\"]]]"
+}

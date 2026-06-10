@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996171014-sku1s",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-009-checkout-summary",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1159,
+  "outputTokens": 100,
+  "latencyMs": 1919,
+  "costUsd": 0.00042292999999999996,
+  "errors": [],
+  "rawOutput": "卡\n　列\n　　文 标题 订单摘要\n　　排\n　　　图 小 方 商品A图片\n　　　文 正文 商品A\n　　排\n　　　图 小 方 商品B图片\n　　　文 正文 商品B\n　　文 说明 小计：¥200\n　　文 说明 运费：¥10\n　　文 价格 总计：¥210\n　　按 主 checkout 去结算"
+}

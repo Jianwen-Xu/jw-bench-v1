@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995509981-dnz0h",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-079-quick-actions",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 586,
+  "outputTokens": 166,
+  "latencyMs": 2165,
+  "costUsd": 0.00034082000000000003,
+  "errors": [],
+  "rawOutput": "<Column>\n  <Text variant=\"heading\">快捷操作</Text>\n  <Row>\n    <Card>\n      <Column>\n        <Image size=\"small\" />\n        <Text variant=\"caption\">新建</Text>\n      </Column>\n    </Card>\n    <Card>\n      <Column>\n        <Image size=\"small\" />\n        <Text variant=\"caption\">搜索</Text>\n      </Column>\n    </Card>\n    <Card>\n      <Column>\n        <Image size=\"small\" />\n        <Text variant=\"caption\">分享</Text>\n      </Column>\n    </Card>\n    <Card>\n      <Column>\n        <Image size=\"small\" />\n        <Text variant=\"caption\">设置</Text>\n      </Column>\n    </Card>\n  </Row>\n</Column>"
+}

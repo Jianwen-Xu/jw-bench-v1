@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995534948-7x3rw",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-006-registration-form",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 606,
+  "outputTokens": 148,
+  "latencyMs": 2151,
+  "costUsd": 0.00032642000000000006,
+  "errors": [],
+  "rawOutput": "[\"Form\", {\"t\":\"register\"}, [\"Col\",\n  [\"Input\", {\"bind\":\"username\", \"req\":true, \"ph\":\"请输入用户名\"}],\n  [\"Input\", {\"type\":\"email\", \"bind\":\"email\", \"req\":true, \"ph\":\"请输入邮箱\"}],\n  [\"Input\", {\"type\":\"password\", \"bind\":\"password\", \"req\":true, \"ph\":\"请设置密码\"}],\n  [\"Select\", {\"bind\":\"country\", \"opts\":[\"中国\",\"美国\",\"日本\",\"英国\"]}],\n  [\"Btn\", {\"v\":\"p\", \"t\":\"register\"}, \"注册\"],\n  [\"Link\", {\"t\":\"login\", \"v\":\"subtle\"}, \"已有账号？登录\"]\n]]"
+}

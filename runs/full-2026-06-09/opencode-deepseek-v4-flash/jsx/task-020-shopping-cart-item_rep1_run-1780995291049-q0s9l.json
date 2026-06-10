@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995291049-q0s9l",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-020-shopping-cart-item",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 602,
+  "outputTokens": 86,
+  "latencyMs": 1837,
+  "costUsd": 0.00025714,
+  "errors": [],
+  "rawOutput": "<Card>\n  <Row>\n    <Image size=\"medium\" shape=\"square\" />\n    <Column>\n      <Text variant=\"heading\">商品名</Text>\n      <Text variant=\"price\">单价</Text>\n      <Input type=\"number\" bind=\"quantity\" />\n      <Button variant=\"secondary\" onTap=\"removeItem\">删除</Button>\n    </Column>\n  </Row>\n</Card>"
+}

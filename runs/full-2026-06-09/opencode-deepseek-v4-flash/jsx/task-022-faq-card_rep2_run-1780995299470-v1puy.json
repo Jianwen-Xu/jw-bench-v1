@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995299470-v1puy",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-022-faq-card",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 628,
+  "outputTokens": 121,
+  "latencyMs": 2018,
+  "costUsd": 0.00030266,
+  "errors": [],
+  "rawOutput": "<Card>\n  <Column>\n    <Text variant=\"heading\">如何重置密码？</Text>\n    <Text variant=\"body\">请前往设置页面，点击\"修改密码\"，输入旧密码并设置新密码即可完成重置。</Text>\n    <Row>\n      <Button variant=\"primary\" onTap=\"helpfulYes\">有帮助</Button>\n      <Button variant=\"ghost\" onTap=\"helpfulNo\">没有帮助</Button>\n    </Row>\n    <Text variant=\"caption\">共 128 人认为有帮助</Text>\n  </Column>\n</Card>"
+}

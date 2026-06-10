@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995521220-zssmt",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-002-confirm-dialog",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 551,
+  "outputTokens": 80,
+  "latencyMs": 1809,
+  "costUsd": 0.00023677000000000003,
+  "errors": [],
+  "rawOutput": "[\"Card\", [\"Col\",\n  [\"Text\", {\"v\":\"title\"}, \"确认删除？\"],\n  [\"Text\", {\"v\":\"body\"}, \"此操作不可撤销，数据将被永久删除。\"],\n  [\"Row\",\n    [\"Btn\", {\"v\":\"s\",\"t\":\"cancel\"}, \"取消\"],\n    [\"Btn\", {\"v\":\"p\",\"t\":\"del\"}, \"删除\"]\n  ]\n]]"
+}

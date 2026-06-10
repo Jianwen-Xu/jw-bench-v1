@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995770718-xzftp",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-064-login-options",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 569,
+  "outputTokens": 170,
+  "latencyMs": 2339,
+  "costUsd": 0.00034062999999999997,
+  "errors": [],
+  "rawOutput": "[\"Col\",\n  [\"Text\", {\"v\":\"heading\"}, \"欢迎回来\"],\n  [\"Row\",\n    [\"Btn\", {\"v\":\"s\",\"t\":\"wechatLogin\"}, \"微信\"],\n    [\"Btn\", {\"v\":\"s\",\"t\":\"qqLogin\"}, \"QQ\"],\n    [\"Btn\", {\"v\":\"s\",\"t\":\"weiboLogin\"}, \"微博\"]\n  ],\n  [\"Text\", {\"v\":\"body\"}, \"或使用账号密码\"],\n  [\"Input\", {\"type\":\"email\",\"bind\":\"email\",\"req\":true,\"ph\":\"邮箱\"}],\n  [\"Input\", {\"type\":\"password\",\"bind\":\"password\",\"req\":true,\"ph\":\"密码\"}],\n  [\"Btn\", {\"v\":\"p\",\"t\":\"loginSubmit\"}, \"登录\"],\n  [\"Link\", {\"t\":\"goRegister\",\"v\":\"default\"}, \"注册账号\"]\n]"
+}

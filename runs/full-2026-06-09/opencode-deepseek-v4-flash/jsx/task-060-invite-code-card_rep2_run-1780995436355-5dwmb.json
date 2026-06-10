@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995436355-5dwmb",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-060-invite-code-card",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 617,
+  "outputTokens": 139,
+  "latencyMs": 2172,
+  "costUsd": 0.0003194900000000001,
+  "errors": [],
+  "rawOutput": "<Card>\n  <Column>\n    <Text variant=\"heading\">邀请好友</Text>\n    <Text variant=\"body\">使用以下邀请码邀请好友注册，双方均可获得奖励。</Text>\n    <Text variant=\"heading\">ABCD1234</Text>\n    <Badge variant=\"success\">有效</Badge>\n    <Text variant=\"caption\">有效期至 2025-12-31</Text>\n    <Row>\n      <Button variant=\"secondary\" onTap=\"copyInviteLink\">复制链接</Button>\n      <Button variant=\"primary\" onTap=\"shareInvite\">分享</Button>\n    </Row>\n  </Column>\n</Card>"
+}

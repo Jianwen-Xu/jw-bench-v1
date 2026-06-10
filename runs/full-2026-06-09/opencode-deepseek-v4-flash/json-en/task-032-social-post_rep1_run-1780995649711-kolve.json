@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995649711-kolve",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-032-social-post",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 560,
+  "outputTokens": 129,
+  "latencyMs": 1919,
+  "costUsd": 0.0002931,
+  "errors": [],
+  "rawOutput": "[\"Card\", [\"Col\",\n  [\"Row\",\n    [\"Avatar\", {\"size\":\"m\",\"shape\":\"circle\",\"src\":\"avatar_url\"}],\n    [\"Col\",\n      [\"Text\", {\"v\":\"heading\"}, \"用户名\"],\n      [\"Text\", {\"v\":\"caption\"}, \"时间\"]\n    ]\n  ],\n  [\"Text\", {\"v\":\"body\"}, \"正文内容\"],\n  [\"Row\",\n    [\"Btn\", {\"v\":\"g\",\"t\":\"like\"}, \"点赞\"],\n    [\"Btn\", {\"v\":\"g\",\"t\":\"comment\"}, \"评论\"],\n    [\"Link\", {\"t\":\"share\",\"v\":\"default\"}, \"分享\"]\n  ]\n]]"
+}

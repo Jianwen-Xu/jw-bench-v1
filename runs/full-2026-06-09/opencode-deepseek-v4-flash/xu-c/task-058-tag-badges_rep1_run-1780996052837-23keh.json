@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996052837-23keh",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-058-tag-badges",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 868,
+  "outputTokens": 112,
+  "latencyMs": 1925,
+  "costUsd": 0.00035756,
+  "errors": [],
+  "rawOutput": "[\"列\",\n  [\"文\", {\"式\":\"标题\"}, \"热门标签\"],\n  [\"排\",\n    [\"标\", {\"式\":\"信息\"}, \"前端开发\"],\n    [\"标\", {\"式\":\"成功\"}, \"React\"],\n    [\"标\", {\"式\":\"警告\"}, \"TypeScript\"],\n    [\"标\", {\"式\":\"危险\"}, \"Node.js\"],\n    [\"标\", {\"式\":\"信息\"}, \"CSS\"],\n    [\"标\", {\"式\":\"成功\"}, \"JavaScript\"]\n  ],\n  [\"链\", {\"触\":\"viewMoreTags\"}, \"查看更多\"]\n]"
+}

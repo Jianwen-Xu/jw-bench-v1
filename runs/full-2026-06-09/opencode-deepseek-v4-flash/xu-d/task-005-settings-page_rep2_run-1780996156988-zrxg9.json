@@ -1,0 +1,26 @@
+{
+  "runId": "run-1780996156988-zrxg9",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-005-settings-page",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 1150,
+  "outputTokens": 86,
+  "latencyMs": 1993,
+  "costUsd": 0.00040510000000000003,
+  "errors": [
+    "missing: [Text] in first Card",
+    "missing: [Text] in second Card",
+    "missing: [Text] in third Card",
+    "missing: [Text] in each Row of second Card"
+  ],
+  "rawOutput": "列\n　卡\n　　列\n　　　头像 中\n　　　入 文 空请输入姓名 値name\n　　　按 主 save_profile 保存\n　卡\n　　列\n　　　切 値email_notif\n　　　切 値sms_notif\n　　　切 値push_notif\n　卡\n　　列\n　　　按 次 deactivate 注销账户"
+}

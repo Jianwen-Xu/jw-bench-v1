@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995336160-xenpo",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-032-social-post",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 624,
+  "outputTokens": 130,
+  "latencyMs": 2002,
+  "costUsd": 0.00031148,
+  "errors": [],
+  "rawOutput": "<Card>\n  <Column>\n    <Row>\n      <Avatar size=\"medium\" shape=\"circle\" />\n      <Column>\n        <Text variant=\"heading\">用户名</Text>\n        <Text variant=\"caption\">时间</Text>\n      </Column>\n    </Row>\n    <Text variant=\"body\">正文内容</Text>\n    <Row>\n      <Button variant=\"ghost\" onTap=\"like\">点赞</Button>\n      <Button variant=\"ghost\" onTap=\"comment\">评论</Button>\n      <Link onTap=\"share\">分享</Link>\n    </Row>\n  </Column>\n</Card>"
+}

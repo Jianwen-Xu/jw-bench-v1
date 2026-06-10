@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995937213-u388m",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-027-booking-form",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 908,
+  "outputTokens": 133,
+  "latencyMs": 2129,
+  "costUsd": 0.00039146000000000005,
+  "errors": [],
+  "rawOutput": "[\"域\", {\"触\":\"submitBooking\"}, [\"列\",\n  [\"文\", {\"式\":\"标题\"}, \"预约服务\"],\n  [\"选\", {\"值\":\"serviceType\", \"选项\":\"services\"}],\n  [\"入\", {\"空\":\"选择日期\", \"值\":\"bookingDate\"}],\n  [\"入\", {\"空\":\"选择时间\", \"值\":\"bookingTime\"}],\n  [\"入\", {\"空\":\"备注\", \"值\":\"notes\"}],\n  [\"排\",\n    [\"按\", {\"式\":\"主\", \"触\":\"submitBooking\"}, \"提交预约\"],\n    [\"按\", {\"式\":\"次\", \"触\":\"cancel\"}, \"取消\"]\n  ]\n]]"
+}

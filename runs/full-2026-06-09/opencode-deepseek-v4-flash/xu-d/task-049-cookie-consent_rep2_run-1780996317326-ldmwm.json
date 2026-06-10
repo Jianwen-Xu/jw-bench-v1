@@ -1,0 +1,23 @@
+{
+  "runId": "run-1780996317326-ldmwm",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-049-cookie-consent",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 1077,
+  "outputTokens": 82,
+  "latencyMs": 2227,
+  "costUsd": 0.00038099,
+  "errors": [
+    "missing: [Button] onTap=acceptNecessary"
+  ],
+  "rawOutput": "卡\n　列\n　　排\n　　　图 中 方 cookie-icon.png\n　　　文 标题 Cookie 声明\n　　文 正文 我们使用 Cookie 来提升您的浏览体验、分析网站流量并为您提供个性化内容。\n　　排\n　　　按 主 acceptAll 接受所有\n　　　按 次 仅必要\n　　　链 cookieSettings 设置"
+}

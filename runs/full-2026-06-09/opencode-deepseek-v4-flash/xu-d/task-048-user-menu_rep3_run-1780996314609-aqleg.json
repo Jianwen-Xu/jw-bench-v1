@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996314609-aqleg",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-048-user-menu",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1083,
+  "outputTokens": 75,
+  "latencyMs": 1919,
+  "costUsd": 0.00037491,
+  "errors": [],
+  "rawOutput": "卡\n　列\n　　排\n　　　头像 中 圆\n　　　列\n　　　文 标题 用户名\n　　　文 说明 角色\n　　链 触goProfile 个人资料\n　　链 触goAccountSettings 账户设置\n　　链 触goMessages 消息中心\n　　链 触logout 退出登录"
+}

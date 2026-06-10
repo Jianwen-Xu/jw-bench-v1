@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995785668-70vpy",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-067-order-history",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 546,
+  "outputTokens": 334,
+  "latencyMs": 3642,
+  "costUsd": 0.00051482,
+  "errors": [],
+  "rawOutput": "[\"Col\",\n  [\"Text\", {\"v\":\"heading\"}, \"订单记录\"],\n  [\"Card\", [\"Col\",\n    [\"Text\", {\"v\":\"body\"}, \"订单号: #1001\"],\n    [\"Text\", {\"v\":\"caption\"}, \"2025-01-15\"],\n    [\"Text\", {\"v\":\"body\"}, \"商品A\"],\n    [\"Text\", {\"v\":\"price\"}, \"¥199\"],\n    [\"Badge\", {\"v\":\"success\"}, \"已完成\"],\n    [\"Link\", {\"v\":\"default\", \"t\":\"view_detail_1001\"}, \"查看详情\"]\n  ]],\n  [\"Card\", [\"Col\",\n    [\"Text\", {\"v\":\"body\"}, \"订单号: #1002\"],\n    [\"Text\", {\"v\":\"caption\"}, \"2025-01-16\"],\n    [\"Text\", {\"v\":\"body\"}, \"商品B\"],\n    [\"Text\", {\"v\":\"price\"}, \"¥299\"],\n    [\"Badge\", {\"v\":\"warning\"}, \"待发货\"],\n    [\"Link\", {\"v\":\"default\", \"t\":\"view_detail_1002\"}, \"查看详情\"]\n  ]],\n  [\"Card\", [\"Col\",\n    [\"Text\", {\"v\":\"body\"}, \"订单号: #1003\"],\n    [\"Text\", {\"v\":\"caption\"}, \"2025-01-17\"],\n    [\"Text\", {\"v\":\"body\"}, \"商品C\"],\n    [\"Text\", {\"v\":\"price\"}, \"¥399\"],\n    [\"Badge\", {\"v\":\"info\"}, \"已发货\"],\n    [\"Link\", {\"v\":\"default\", \"t\":\"view_detail_1003\"}, \"查看详情\"]\n  ]]\n]"
+}

@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995327924-cdf8j",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-030-subscription-card",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 612,
+  "outputTokens": 123,
+  "latencyMs": 2249,
+  "costUsd": 0.00030054,
+  "errors": [],
+  "rawOutput": "<Card>\n  <Column>\n    <Text variant=\"heading\">年度会员</Text>\n    <Text variant=\"price\">¥199/年</Text>\n    <Text variant=\"body\">权益一：无限次课程学习</Text>\n    <Text variant=\"body\">权益二：专属社群交流</Text>\n    <Text variant=\"body\">权益三：优先获得新内容通知</Text>\n    <Button variant=\"primary\" onTap=\"subscribeNow\">立即订阅</Button>\n    <Link onTap=\"learnMore\">了解详情</Link>\n  </Column>\n</Card>"
+}

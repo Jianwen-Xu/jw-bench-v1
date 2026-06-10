@@ -1,0 +1,23 @@
+{
+  "runId": "run-1780995574640-d7n59",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-016-profile-edit",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 603,
+  "outputTokens": 130,
+  "latencyMs": 2318,
+  "costUsd": 0.00030581,
+  "errors": [
+    "missing: [Avt] in Reference is missing in Candidate (Reference has [Avt], Candidate has [Avatar] — different component type)"
+  ],
+  "rawOutput": "[\"Form\", {\"t\":\"saveProfile\"}, [\"Col\",\n  [\"Text\", {\"v\":\"title\"}, \"编辑资料\"],\n  [\"Avatar\", {\"size\":\"m\"}],\n  [\"Input\", {\"ph\":\"请输入昵称\", \"bind\":\"nickname\"}],\n  [\"Input\", {\"ph\":\"介绍一下自己...\", \"bind\":\"bio\"}],\n  [\"Select\", {\"bind\":\"gender\", \"opts\":\"genders\"}],\n  [\"Row\",\n    [\"Btn\", {\"v\":\"p\", \"t\":\"saveProfile\"}, \"保存\"],\n    [\"Btn\", {\"v\":\"s\", \"t\":\"cancelEdit\"}, \"取消\"]\n  ]\n]]"
+}

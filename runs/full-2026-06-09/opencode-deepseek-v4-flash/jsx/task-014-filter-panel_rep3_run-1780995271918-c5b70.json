@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995271918-c5b70",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-014-filter-panel",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 681,
+  "outputTokens": 135,
+  "latencyMs": 2086,
+  "costUsd": 0.00033237000000000007,
+  "errors": [],
+  "rawOutput": "<Card>\n  <Column>\n    <Text variant=\"section-title\">筛选条件</Text>\n    <Input placeholder=\"输入关键词\" bind=\"keyword\" />\n    <Select bind=\"category\" options=\"categories\" />\n    <Toggle label=\"仅显示有效\" bind=\"showActive\" />\n    <Text variant=\"body\">排序方式</Text>\n    <Select bind=\"sortBy\" options=\"sortOptions\" />\n    <Row>\n      <Button variant=\"primary\" onTap=\"applyFilter\">应用</Button>\n      <Button variant=\"secondary\" onTap=\"resetFilter\">重置</Button>\n    </Row>\n  </Column>\n</Card>"
+}

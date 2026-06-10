@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995806262-b7b8s",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-072-stats-row",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 543,
+  "outputTokens": 147,
+  "latencyMs": 2156,
+  "costUsd": 0.00030830999999999995,
+  "errors": [],
+  "rawOutput": "[\"Row\",\n  [\"Col\",\n    [\"Text\",{\"v\":\"heading\"},\"12,345\"],\n    [\"Text\",{\"v\":\"caption\"},\"总用户\"],\n    [\"Badge\",{\"v\":\"success\"},\"+15%\"]\n  ],\n  [\"Col\",\n    [\"Text\",{\"v\":\"heading\"},\"8,901\"],\n    [\"Text\",{\"v\":\"caption\"},\"总订单\"],\n    [\"Badge\",{\"v\":\"success\"},\"+8%\"]\n  ],\n  [\"Col\",\n    [\"Text\",{\"v\":\"heading\"},\"¥156万\"],\n    [\"Text\",{\"v\":\"caption\"},\"总收入\"],\n    [\"Badge\",{\"v\":\"success\"},\"+23%\"]\n  ]\n]"
+}

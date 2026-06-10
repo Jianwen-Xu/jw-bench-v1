@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996340722-albe2",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-056-account-deletion",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 1088,
+  "outputTokens": 84,
+  "latencyMs": 2010,
+  "costUsd": 0.0003861600000000001,
+  "errors": [],
+  "rawOutput": "卡\n　列\n　　排\n　　　标 危险 ⚠\n　　　文 标题 注销账户\n　　文 正文 此操作不可撤销。您的所有数据将被永久删除。\n　　入 文 必 空输入确认删除 値confirmDelete\n　　排\n　　　按 主 confirmDeletion 确认注销\n　　　按 轻 cancelDeletion 取消"
+}

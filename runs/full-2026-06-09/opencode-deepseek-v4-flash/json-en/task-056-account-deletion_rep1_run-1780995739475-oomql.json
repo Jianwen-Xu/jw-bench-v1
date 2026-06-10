@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995739475-oomql",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-056-account-deletion",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 560,
+  "outputTokens": 123,
+  "latencyMs": 2258,
+  "costUsd": 0.00028649999999999997,
+  "errors": [],
+  "rawOutput": "[\"Card\", [\"Col\",\n  [\"Badge\", {\"v\":\"danger\"}, \"⚠\"],\n  [\"Text\", {\"v\":\"heading\"}, \"注销账户\"],\n  [\"Text\", {\"v\":\"body\"}, \"此操作不可撤销，所有数据将被永久删除。\"],\n  [\"Input\", {\"type\":\"text\", \"ph\":\"输入确认删除\", \"bind\":\"confirmDelete\"}],\n  [\"Row\",\n    [\"Btn\", {\"v\":\"p\", \"t\":\"confirmDeletion\"}, \"确认注销\"],\n    [\"Btn\", {\"v\":\"g\", \"t\":\"cancelDeletion\"}, \"取消\"]\n  ]\n]]"
+}

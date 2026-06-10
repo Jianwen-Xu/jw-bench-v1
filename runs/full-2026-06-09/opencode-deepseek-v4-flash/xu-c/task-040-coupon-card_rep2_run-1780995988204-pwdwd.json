@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995988204-pwdwd",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-040-coupon-card",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 881,
+  "outputTokens": 103,
+  "latencyMs": 1884,
+  "costUsd": 0.00035117,
+  "errors": [],
+  "rawOutput": "[\"卡\",[\"列\",\n  [\"标\",{\"式\":\"成功\"},\"满减券\"],\n  [\"文\",{\"式\":\"价格\"},\"满100减20\"],\n  [\"文\",{\"式\":\"说明\"},\"有效期\"],\n  [\"文\",{},\"CODE2026\"],\n  [\"排\",\n    [\"按\",{\"式\":\"次\",\"触\":\"copyCoupon\"},\"复制优惠码\"],\n    [\"按\",{\"式\":\"主\",\"触\":\"useCoupon\"},\"立即使用\"]\n  ]\n]]"
+}

@@ -1,0 +1,23 @@
+{
+  "runId": "run-1780995991183-i1gy8",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-041-task-item",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 0,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 866,
+  "outputTokens": 73,
+  "latencyMs": 2138,
+  "costUsd": 0.00031412000000000004,
+  "errors": [
+    "M4: Unknown prop '値' on '选框' at root[1][1]"
+  ],
+  "rawOutput": "[\"卡\",[\"排\",[\"选框\",{\"値\":\"taskDone\"}],[\"列\",[\"文\",{\"式\":\"标题\"},\"完成报告\"],[\"文\",{\"式\":\"说明\"},\"截止日期\"]],[\"标\",{\"式\":\"危险\"},\"高\"],[\"按\",{\"式\":\"轻\",\"触\":\"deleteTask\"},\"删除\"]]]"
+}

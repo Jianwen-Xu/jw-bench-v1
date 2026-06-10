@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996141599-qa2qs",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-001-user-card",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1058,
+  "outputTokens": 32,
+  "latencyMs": 1561,
+  "costUsd": 0.00032086,
+  "errors": [],
+  "rawOutput": "卡\n　排\n　　头像 中 圆\n　　列\n　　　文 主标题 用户姓名\n　　　标 信息 管理员"
+}

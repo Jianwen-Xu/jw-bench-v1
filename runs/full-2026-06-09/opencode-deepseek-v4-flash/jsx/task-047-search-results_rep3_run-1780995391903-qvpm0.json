@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995391903-qvpm0",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-047-search-results",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 602,
+  "outputTokens": 274,
+  "latencyMs": 2838,
+  "costUsd": 0.00046394000000000003,
+  "errors": [],
+  "rawOutput": "<Column>\n  <Text variant=\"caption\">共找到 12 条结果</Text>\n  <Card>\n    <Row>\n      <Image size=\"medium\" shape=\"square\" />\n      <Column>\n        <Text variant=\"heading\">结果标题 1</Text>\n        <Text variant=\"body\">这是第一个搜索结果的摘要描述。</Text>\n        <Badge variant=\"info\">标签</Badge>\n      </Column>\n    </Row>\n  </Card>\n  <Card>\n    <Row>\n      <Image size=\"medium\" shape=\"square\" />\n      <Column>\n        <Text variant=\"heading\">结果标题 2</Text>\n        <Text variant=\"body\">这是第二个搜索结果的摘要描述。</Text>\n        <Badge variant=\"info\">标签</Badge>\n      </Column>\n    </Row>\n  </Card>\n  <Card>\n    <Row>\n      <Image size=\"medium\" shape=\"square\" />\n      <Column>\n        <Text variant=\"heading\">结果标题 3</Text>\n        <Text variant=\"body\">这是第三个搜索结果的摘要描述。</Text>\n        <Badge variant=\"info\">标签</Badge>\n      </Column>\n    </Row>\n  </Card>\n  <Link onTap=\"loadMore\">加载更多</Link>\n</Column>"
+}

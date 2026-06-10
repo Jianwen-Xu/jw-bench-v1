@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995329088-iitvo",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-030-subscription-card",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 612,
+  "outputTokens": 120,
+  "latencyMs": 2159,
+  "costUsd": 0.00029724,
+  "errors": [],
+  "rawOutput": "<Card>\n  <Column>\n    <Text variant=\"heading\">年度会员</Text>\n    <Text variant=\"price\">¥199/年</Text>\n    <Text variant=\"body\">权益一：无限次使用</Text>\n    <Text variant=\"body\">权益二：优先客服支持</Text>\n    <Text variant=\"body\">权益三：专属内容访问</Text>\n    <Button variant=\"primary\" onTap=\"subscribeNow\">立即订阅</Button>\n    <Link onTap=\"learnMore\">了解详情</Link>\n  </Column>\n</Card>"
+}

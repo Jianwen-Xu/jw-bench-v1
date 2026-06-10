@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995489953-g5w4r",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-074-qr-code-card",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 609,
+  "outputTokens": 100,
+  "latencyMs": 1844,
+  "costUsd": 0.00027443,
+  "errors": [],
+  "rawOutput": "<Card>\n  <Column>\n    <Image size=\"medium\" shape=\"square\" src=\"qrcode\" />\n    <Text variant=\"heading\">扫码下载</Text>\n    <Text variant=\"caption\">说明</Text>\n    <Row>\n      <Button variant=\"secondary\" onTap=\"saveQRCode\">保存图片</Button>\n      <Button variant=\"primary\" onTap=\"shareQRCode\">分享</Button>\n    </Row>\n  </Column>\n</Card>"
+}

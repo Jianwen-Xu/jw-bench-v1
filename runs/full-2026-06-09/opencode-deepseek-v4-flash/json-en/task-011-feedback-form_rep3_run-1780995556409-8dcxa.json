@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995556409-8dcxa",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-011-feedback-form",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 612,
+  "outputTokens": 136,
+  "latencyMs": 2337,
+  "costUsd": 0.00031484,
+  "errors": [],
+  "rawOutput": "[\"Form\",{\"t\":\"submitFeedback\"},[\"Col\",\n  [\"Text\",{\"v\":\"title\"},\"意见反馈\"],\n  [\"Select\",{\"bind\":\"type\",\"opts\":\"feedbackTypes\",\"req\":true}],\n  [\"Input\",{\"bind\":\"content\",\"ph\":\"请详细描述您的问题或建议...\",\"req\":true}],\n  [\"Input\",{\"bind\":\"contact\",\"type\":\"text\",\"ph\":\"手机号或邮箱（选填）\"}],\n  [\"Row\",\n    [\"Btn\",{\"v\":\"p\",\"t\":\"submitFeedback\"},\"提交反馈\"],\n    [\"Btn\",{\"v\":\"s\",\"t\":\"cancel\"},\"取消\"]\n  ]\n]]"
+}

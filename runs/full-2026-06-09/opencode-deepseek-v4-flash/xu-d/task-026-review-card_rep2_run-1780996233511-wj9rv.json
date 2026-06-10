@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996233511-wj9rv",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-026-review-card",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1051,
+  "outputTokens": 49,
+  "latencyMs": 1633,
+  "costUsd": 0.00033767000000000004,
+  "errors": [],
+  "rawOutput": "卡\n　排\n　　头像 中 圆\n　　列\n　　　文 标题 用户名\n　　　文 正文 评价内容\n　　　标 成功 5.0\n　　　文 说明 时间"
+}

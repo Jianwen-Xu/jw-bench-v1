@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996225929-po78i",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-024-team-members",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1058,
+  "outputTokens": 129,
+  "latencyMs": 2128,
+  "costUsd": 0.00042756000000000006,
+  "errors": [],
+  "rawOutput": "列\n　文 标题 我们的团队\n　排\n　　卡\n　　　列\n　　　　头像 大 圆\n　　　　文 标题 姓名\n　　　　文 正文 职位\n　　　　链 contactMember 联系\n　　卡\n　　　列\n　　　　头像 大 圆\n　　　　文 标题 姓名\n　　　　文 正文 职位\n　　　　链 contactMember 联系\n　　卡\n　　　列\n　　　　头像 大 圆\n　　　　文 标题 姓名\n　　　　文 正文 职位\n　　　　链 contactMember 联系"
+}

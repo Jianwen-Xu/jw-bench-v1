@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996241368-wk8oy",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-028-notification-list",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1116,
+  "outputTokens": 121,
+  "latencyMs": 2093,
+  "costUsd": 0.00043442,
+  "errors": [],
+  "rawOutput": "列\n　文 标题 消息通知\n　排\n　　标 信息 系统\n　　文 正文 订单已发货\n　　文 说明 时间\n　　链 viewNotif 详情\n　排\n　　标 成功 活动\n　　文 正文 优惠券可用\n　　文 说明 时间\n　　链 viewNotif 详情\n　排\n　　标 警告 提醒\n　　文 正文 会员即将过期\n　　文 说明 时间\n　　链 viewNotif 详情\n　链 markAllRead 全部已读"
+}

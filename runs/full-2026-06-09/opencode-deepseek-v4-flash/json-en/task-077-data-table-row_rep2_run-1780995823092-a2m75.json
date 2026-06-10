@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995823092-a2m75",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-077-data-table-row",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 521,
+  "outputTokens": 101,
+  "latencyMs": 2063,
+  "costUsd": 0.00025177,
+  "errors": [],
+  "rawOutput": "[\"Card\", [\"Row\",\n  [\"Text\", {\"v\": \"heading\"}, \"张三\"],\n  [\"Text\", {\"v\": \"body\"}, \"28岁\"],\n  [\"Text\", {\"v\": \"body\"}, \"技术部\"],\n  [\"Badge\", {\"v\": \"success\"}, \"在职\"],\n  [\"Link\", {\"v\": \"default\", \"t\": \"edit\"}, \"编辑\"],\n  [\"Link\", {\"v\": \"subtle\", \"t\": \"delete\"}, \"删除\"]\n]]"
+}

@@ -1,0 +1,23 @@
+{
+  "runId": "run-1780995634744-zun9c",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-027-booking-form",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 583,
+  "outputTokens": 140,
+  "latencyMs": 3013,
+  "costUsd": 0.00031141,
+  "errors": [
+    "missing: [Button] onTap=cancelBooking"
+  ],
+  "rawOutput": "[\"Form\",{\"t\":\"submitBooking\"},[\"Col\",\n  [\"Text\",{\"v\":\"heading\"},\"预约服务\"],\n  [\"Select\",{\"bind\":\"serviceType\",\"opts\":\"services\"}],\n  [\"Input\",{\"type\":\"text\",\"bind\":\"bookingDate\",\"ph\":\"选择日期\"}],\n  [\"Input\",{\"type\":\"text\",\"bind\":\"bookingTime\",\"ph\":\"选择时间\"}],\n  [\"Input\",{\"type\":\"text\",\"bind\":\"notes\",\"ph\":\"备注\"}],\n  [\"Row\",\n    [\"Btn\",{\"v\":\"p\",\"t\":\"submitBooking\"},\"提交预约\"],\n    [\"Btn\",{\"v\":\"s\",\"t\":\"cancel\"},\"取消\"]\n  ]\n]]"
+}

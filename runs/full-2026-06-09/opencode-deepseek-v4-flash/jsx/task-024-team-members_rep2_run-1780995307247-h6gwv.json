@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995307247-h6gwv",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-024-team-members",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 594,
+  "outputTokens": 218,
+  "latencyMs": 2420,
+  "costUsd": 0.00040018,
+  "errors": [],
+  "rawOutput": "<Column>\n  <Text variant=\"heading\">我们的团队</Text>\n  <Row>\n    <Card>\n      <Column>\n        <Avatar size=\"large\" shape=\"circle\" />\n        <Text variant=\"heading\">张三</Text>\n        <Text variant=\"body\">设计师</Text>\n        <Link onTap=\"contactMember\">联系</Link>\n      </Column>\n    </Card>\n    <Card>\n      <Column>\n        <Avatar size=\"large\" shape=\"circle\" />\n        <Text variant=\"heading\">李四</Text>\n        <Text variant=\"body\">工程师</Text>\n        <Link onTap=\"contactMember\">联系</Link>\n      </Column>\n    </Card>\n    <Card>\n      <Column>\n        <Avatar size=\"large\" shape=\"circle\" />\n        <Text variant=\"heading\">王五</Text>\n        <Text variant=\"body\">产品经理</Text>\n        <Link onTap=\"contactMember\">联系</Link>\n      </Column>\n    </Card>\n  </Row>\n</Column>"
+}

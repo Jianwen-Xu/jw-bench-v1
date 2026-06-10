@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996320516-abi5a",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-050-empty-state",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1073,
+  "outputTokens": 44,
+  "latencyMs": 1704,
+  "costUsd": 0.00033811000000000003,
+  "errors": [],
+  "rawOutput": "列\n　图 大 源empty-state\n　文 标题 暂无数据\n　文 正文 暂无数据\n　按 主 refreshData 刷新\n　链 goHomePage 返回首页"
+}

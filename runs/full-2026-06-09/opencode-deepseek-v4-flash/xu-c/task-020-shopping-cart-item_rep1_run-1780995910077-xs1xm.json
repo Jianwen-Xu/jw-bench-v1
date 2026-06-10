@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995910077-xs1xm",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-020-shopping-cart-item",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 863,
+  "outputTokens": 88,
+  "latencyMs": 1849,
+  "costUsd": 0.00032981,
+  "errors": [],
+  "rawOutput": "[\"卡\", [\"排\",\n  [\"图\", {\"大\":\"中\", \"源\":\"商品图片URL\"}],\n  [\"列\",\n    [\"文\", {\"式\":\"标题\"}, \"商品名\"],\n    [\"文\", {\"式\":\"价格\"}, \"单价\"],\n    [\"入\", {\"类\":\"数字\", \"值\":\"quantity\"}],\n    [\"按\", {\"式\":\"次\", \"触\":\"removeItem\"}, \"删除\"]\n  ]\n]]"
+}

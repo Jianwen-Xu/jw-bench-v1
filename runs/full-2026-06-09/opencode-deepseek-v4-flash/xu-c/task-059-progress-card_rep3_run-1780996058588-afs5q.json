@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996058588-afs5q",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-059-progress-card",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 861,
+  "outputTokens": 80,
+  "latencyMs": 1732,
+  "costUsd": 0.00032047000000000005,
+  "errors": [],
+  "rawOutput": "[\"卡\",[\"列\",[\"文\",{\"式\":\"标题\"},\"React 入门教程\"],[\"文\",{\"式\":\"正文\"},\"已完成 65%\"],[\"标\",{\"式\":\"成功\"},\"进行中\"],[\"文\",{\"式\":\"说明\"},\"13/20 课时\"],[\"按\",{\"式\":\"主\",\"触\":\"continueLearning\"},\"继续学习\"]]]"
+}

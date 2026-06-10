@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996162072-0sw9w",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-007-navigation-page",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1117,
+  "outputTokens": 53,
+  "latencyMs": 1568,
+  "costUsd": 0.00035989,
+  "errors": [],
+  "rawOutput": "列\n　栏\n　　头像\n　　文 标题 我的应用\n　列\n　　链 触home 首页\n　　链 触profile 个人中心\n　　链 触settings 设置\n　　文 说明 ©2026 My App"
+}

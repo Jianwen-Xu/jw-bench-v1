@@ -1,0 +1,23 @@
+{
+  "runId": "run-1780995285011-o4f9u",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-018-pricing-table",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 660,
+  "outputTokens": 255,
+  "latencyMs": 2747,
+  "costUsd": 0.0004587,
+  "errors": [
+    "missing: [Text] inside second [Card]"
+  ],
+  "rawOutput": "<Column>\n  <Text variant=\"heading\">选择方案</Text>\n  <Row>\n    <Card>\n      <Column>\n        <Text variant=\"section-title\">免费版</Text>\n        <Text variant=\"price\">¥0</Text>\n        <Text variant=\"body\">基础功能，适合个人使用</Text>\n        <Button variant=\"ghost\" onTap=\"selectFree\">选择免费版</Button>\n      </Column>\n    </Card>\n    <Card>\n      <Column>\n        <Text variant=\"section-title\">专业版</Text>\n        <Text variant=\"price\">¥99</Text>\n        <Text variant=\"body\">高级功能，适合团队协作</Text>\n        <Button variant=\"primary\" onTap=\"selectPro\">选择专业版</Button>\n      </Column>\n    </Card>\n    <Card>\n      <Column>\n        <Text variant=\"section-title\">企业版</Text>\n        <Text variant=\"price\">¥499</Text>\n        <Text variant=\"body\">全功能，定制化服务</Text>\n        <Button variant=\"secondary\" onTap=\"selectEnterprise\">选择企业版</Button>\n      </Column>\n    </Card>\n  </Row>\n</Column>"
+}

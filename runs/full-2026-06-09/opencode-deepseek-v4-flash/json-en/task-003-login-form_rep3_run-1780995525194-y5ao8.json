@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995525194-y5ao8",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-003-login-form",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 565,
+  "outputTokens": 108,
+  "latencyMs": 2093,
+  "costUsd": 0.00027134999999999995,
+  "errors": [],
+  "rawOutput": "[\"Form\", {\"t\":\"submit\"}, [\"Col\",\n  [\"Input\", {\"type\":\"email\",\"bind\":\"email\",\"req\":true,\"ph\":\"请输入邮箱\"}],\n  [\"Input\", {\"type\":\"password\",\"bind\":\"password\",\"req\":true,\"ph\":\"请输入密码\"}],\n  [\"Checkbox\", {\"bind\":\"remember\"},\"记住我\"],\n  [\"Btn\", {\"v\":\"p\",\"t\":\"submit\"},\"登录\"],\n  [\"Link\", {\"v\":\"subtle\",\"t\":\"forgot\"},\"忘记密码？\"]\n]]"
+}

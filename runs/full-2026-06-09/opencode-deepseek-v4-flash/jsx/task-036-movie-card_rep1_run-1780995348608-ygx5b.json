@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995348608-ygx5b",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-036-movie-card",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 607,
+  "outputTokens": 104,
+  "latencyMs": 1860,
+  "costUsd": 0.00027829000000000005,
+  "errors": [],
+  "rawOutput": "<Card>\n  <Column>\n    <Image size=\"large\" shape=\"square\" />\n    <Text variant=\"heading\">星际穿越</Text>\n    <Row>\n      <Badge variant=\"success\">9.3</Badge>\n      <Text variant=\"body\">2014</Text>\n      <Badge variant=\"info\">科幻</Badge>\n    </Row>\n    <Button variant=\"primary\" onTap=\"buyTicket\">购票</Button>\n  </Column>\n</Card>"
+}

@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996347531-lv7ht",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-058-tag-badges",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1071,
+  "outputTokens": 62,
+  "latencyMs": 1840,
+  "costUsd": 0.00035737,
+  "errors": [],
+  "rawOutput": "列\n　文 标题 热门标签\n　排\n　　标 信息 前端开发\n　　标 成功 React\n　　标 警告 TypeScript\n　　标 危险 Node.js\n　　标 信息 CSS\n　　标 成功 JavaScript\n　链 触viewMoreTags 查看更多"
+}

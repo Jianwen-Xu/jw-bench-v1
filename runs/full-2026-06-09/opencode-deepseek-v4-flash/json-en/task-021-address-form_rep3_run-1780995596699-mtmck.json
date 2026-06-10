@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995596699-mtmck",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-021-address-form",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 604,
+  "outputTokens": 114,
+  "latencyMs": 1856,
+  "costUsd": 0.00028848000000000003,
+  "errors": [],
+  "rawOutput": "[\"Form\",{\"t\":\"saveAddress\"},[\"Col\",\n  [\"Text\",{\"v\":\"title\"},\"添加新地址\"],\n  [\"Input\",{\"ph\":\"收件人\",\"bind\":\"recipient\"}],\n  [\"Input\",{\"type\":\"number\",\"ph\":\"手机号\",\"bind\":\"phone\"}],\n  [\"Select\",{\"bind\":\"province\",\"opts\":\"provinces\"}],\n  [\"Input\",{\"ph\":\"详细地址\",\"bind\":\"address\"}],\n  [\"Btn\",{\"v\":\"p\",\"t\":\"saveAddress\"},\"保存地址\"]\n]]"
+}

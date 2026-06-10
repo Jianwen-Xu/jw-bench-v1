@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995294482-xcgkv",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-021-address-form",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 668,
+  "outputTokens": 105,
+  "latencyMs": 1806,
+  "costUsd": 0.00029586,
+  "errors": [],
+  "rawOutput": "<Form>\n  <Column>\n    <Text variant=\"title\">添加新地址</Text>\n    <Input placeholder=\"收件人\" bind=\"recipient\" />\n    <Input type=\"number\" placeholder=\"手机号\" bind=\"phone\" />\n    <Select bind=\"province\" options=\"provinces\" />\n    <Input placeholder=\"详细地址\" bind=\"address\" />\n    <Button variant=\"primary\" onTap=\"saveAddress\">保存地址</Button>\n  </Column>\n</Form>"
+}

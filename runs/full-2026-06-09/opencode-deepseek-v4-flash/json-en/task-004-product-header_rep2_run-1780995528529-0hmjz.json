@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995528529-0hmjz",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-004-product-header",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 580,
+  "outputTokens": 105,
+  "latencyMs": 2366,
+  "costUsd": 0.0002721,
+  "errors": [],
+  "rawOutput": "[\"Row\",\n  [\"Img\", {\"size\":\"l\",\"src\":\"product.jpg\"}],\n  [\"Col\",\n    [\"Text\", {\"v\":\"title\",\"bind\":\"title\"}],\n    [\"Text\", {\"v\":\"price\",\"bind\":\"price\"}],\n    [\"Badge\", {\"v\":{\"$cond\":[{\"$gt\":[\"stock\",0]},\"success\",\"warning\"]},\"bind\":\"stock\"}],\n    [\"Btn\", {\"v\":\"p\",\"t\":\"add_cart\"},\"加入购物车\"]\n  ]\n]"
+}

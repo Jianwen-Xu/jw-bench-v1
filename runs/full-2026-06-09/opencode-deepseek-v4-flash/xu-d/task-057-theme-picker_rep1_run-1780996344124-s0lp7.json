@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996344124-s0lp7",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-057-theme-picker",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1061,
+  "outputTokens": 97,
+  "latencyMs": 1762,
+  "costUsd": 0.00039317000000000003,
+  "errors": [],
+  "rawOutput": "列\n　文 标题 选择主题\n　排\n　　卡\n　　　列\n　　　　文 标题 浅色\n　　　　文 说明 明亮界面\n　　卡\n　　　列\n　　　　文 标题 深色\n　　　　文 说明 暗色界面\n　　卡\n　　　列\n　　　　文 标题 自动\n　　　　文 说明 跟随系统\n　按 主 applyTheme 应用主题"
+}

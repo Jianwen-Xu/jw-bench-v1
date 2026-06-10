@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995440096-2qw9h",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-061-chat-bubble",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 582,
+  "outputTokens": 80,
+  "latencyMs": 1819,
+  "costUsd": 0.00024514000000000003,
+  "errors": [],
+  "rawOutput": "<Card>\n  <Row>\n    <Avatar size=\"medium\" shape=\"circle\" />\n    <Column>\n      <Text variant=\"heading\">用户名</Text>\n      <Text variant=\"body\">消息</Text>\n      <Text variant=\"caption\">时间</Text>\n      <Badge variant=\"danger\">2</Badge>\n    </Column>\n  </Row>\n</Card>"
+}

@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995837199-4724u",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-080-dashboard-overview",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 580,
+  "outputTokens": 259,
+  "latencyMs": 3080,
+  "costUsd": 0.0004415,
+  "errors": [],
+  "rawOutput": "[\"Col\",\n  [\"Text\", {\"v\":\"heading\"}, \"控制台\"],\n  [\"Row\",\n    [\"Card\", [\"Col\",\n      [\"Text\", {\"v\":\"heading\"}, \"1,234\"],\n      [\"Text\", {\"v\":\"body\"}, \"今日访问\"]\n    ]],\n    [\"Card\", [\"Col\",\n      [\"Text\", {\"v\":\"heading\"}, \"856\"],\n      [\"Text\", {\"v\":\"body\"}, \"活跃用户\"]\n    ]],\n    [\"Card\", [\"Col\",\n      [\"Text\", {\"v\":\"heading\"}, \"¥12.5万\"],\n      [\"Text\", {\"v\":\"body\"}, \"总收入\"]\n    ]]\n  ],\n  [\"Row\",\n    [\"Card\", [\"Col\",\n      [\"Img\", {\"size\":\"s\", \"src\":\"icon1.png\"}],\n      [\"Text\", {\"v\":\"body\"}, \"操作一\"]\n    ]],\n    [\"Card\", [\"Col\",\n      [\"Img\", {\"size\":\"s\", \"src\":\"icon2.png\"}],\n      [\"Text\", {\"v\":\"body\"}, \"操作二\"]\n    ]],\n    [\"Card\", [\"Col\",\n      [\"Img\", {\"size\":\"s\", \"src\":\"icon3.png\"}],\n      [\"Text\", {\"v\":\"body\"}, \"操作三\"]\n    ]]\n  ]\n]"
+}

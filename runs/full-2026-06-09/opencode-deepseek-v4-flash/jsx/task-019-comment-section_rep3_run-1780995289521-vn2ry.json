@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995289521-vn2ry",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-019-comment-section",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 608,
+  "outputTokens": 222,
+  "latencyMs": 2541,
+  "costUsd": 0.0004083600000000001,
+  "errors": [],
+  "rawOutput": "<Column>\n  <Text variant=\"section-title\">最新评论</Text>\n  <Row>\n    <Avatar size=\"medium\" shape=\"circle\" />\n    <Column>\n      <Text variant=\"heading\">用户名</Text>\n      <Text variant=\"body\">评论文本</Text>\n      <Text variant=\"caption\">时间</Text>\n    </Column>\n  </Row>\n  <Row>\n    <Avatar size=\"medium\" shape=\"circle\" />\n    <Column>\n      <Text variant=\"heading\">用户名</Text>\n      <Text variant=\"body\">评论文本</Text>\n      <Text variant=\"caption\">时间</Text>\n    </Column>\n  </Row>\n  <Row>\n    <Avatar size=\"medium\" shape=\"circle\" />\n    <Column>\n      <Text variant=\"heading\">用户名</Text>\n      <Text variant=\"body\">评论文本</Text>\n      <Text variant=\"caption\">时间</Text>\n    </Column>\n  </Row>\n  <Link onTap=\"loadMore\">加载更多</Link>\n</Column>"
+}

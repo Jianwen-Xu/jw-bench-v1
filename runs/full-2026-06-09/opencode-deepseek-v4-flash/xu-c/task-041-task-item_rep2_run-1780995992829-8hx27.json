@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995992829-8hx27",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-041-task-item",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 866,
+  "outputTokens": 81,
+  "latencyMs": 2342,
+  "costUsd": 0.00032292,
+  "errors": [],
+  "rawOutput": "[\"卡\",[\"排\",\n  [\"选框\",{\"值\":\"taskDone\"}],\n  [\"列\",\n    [\"文\",{\"式\":\"标题\"},\"完成报告\"],\n    [\"文\",{\"式\":\"说明\"},\"截止日期\"]\n  ],\n  [\"标\",{\"式\":\"危险\",\"值\":\"高\"}],\n  [\"按\",{\"式\":\"轻\",\"触\":\"deleteTask\"},\"删除\"]\n]]"
+}

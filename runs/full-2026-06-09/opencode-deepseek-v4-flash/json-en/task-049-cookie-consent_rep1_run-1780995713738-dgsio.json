@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995713738-dgsio",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-049-cookie-consent",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 549,
+  "outputTokens": 127,
+  "latencyMs": 2358,
+  "costUsd": 0.00028793000000000004,
+  "errors": [],
+  "rawOutput": "[\"Card\",[\"Col\",[\"Row\",[\"Img\",{\"size\":\"m\",\"src\":\"cookie-icon\"}],[\"Text\",{\"v\":\"heading\"},\"Cookie 声明\"]],[\"Text\",{\"v\":\"body\"},\"我们使用 Cookie 来提升您的体验。继续使用本网站即表示您同意我们的 Cookie 政策。\"],[\"Row\",[\"Btn\",{\"v\":\"p\",\"t\":\"acceptAll\"},\"接受所有\"],[\"Btn\",{\"v\":\"s\",\"t\":\"acceptNecessary\"},\"仅必要\"],[\"Link\",{\"t\":\"cookieSettings\",\"v\":\"subtle\"},\"设置\"]]]]"
+}

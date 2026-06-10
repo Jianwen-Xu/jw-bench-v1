@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996416841-74v5d",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-077-data-table-row",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 1049,
+  "outputTokens": 44,
+  "latencyMs": 1605,
+  "costUsd": 0.00033162999999999997,
+  "errors": [],
+  "rawOutput": "卡\n　排\n　　文 标题 姓名\n　　文 正文 年龄\n　　文 正文 部门\n　　标 成功 在职\n　　链 edit 编辑\n　　链 delete 删除"
+}

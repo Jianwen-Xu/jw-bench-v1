@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995598942-mr276",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-022-faq-card",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 564,
+  "outputTokens": 118,
+  "latencyMs": 2242,
+  "costUsd": 0.00028208,
+  "errors": [],
+  "rawOutput": "[\"Card\",[\"Col\",\n  [\"Text\",{\"v\":\"heading\"},\"如何重置密码？\"],\n  [\"Text\",{\"v\":\"body\"},\"请前往设置页面，点击“安全与隐私”，选择“修改密码”，按提示完成验证后即可重置。\"],\n  [\"Row\",\n    [\"Btn\",{\"v\":\"p\",\"t\":\"helpfulYes\"},\"有帮助\"],\n    [\"Btn\",{\"v\":\"g\",\"t\":\"helpfulNo\"},\"没有帮助\"]\n  ],\n  [\"Text\",{\"v\":\"caption\"},\"共 128 人认为有帮助\"]\n]]"
+}

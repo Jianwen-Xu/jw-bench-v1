@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995719809-ayazb",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-050-empty-state",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 545,
+  "outputTokens": 77,
+  "latencyMs": 1789,
+  "costUsd": 0.00023185,
+  "errors": [],
+  "rawOutput": "[\"Col\",\n  [\"Img\", {\"size\":\"l\",\"src\":\"empty-state\"}],\n  [\"Text\", {\"v\":\"heading\"}, \"暂无数据\"],\n  [\"Text\", {\"v\":\"body\"}, \"说明文字\"],\n  [\"Btn\", {\"v\":\"p\",\"t\":\"refreshData\"}, \"刷新\"],\n  [\"Link\", {\"t\":\"goHomePage\"}, \"返回首页\"]\n]"
+}

@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995563149-jl3pv",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-013-contact-card",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 581,
+  "outputTokens": 103,
+  "latencyMs": 1834,
+  "costUsd": 0.00027017,
+  "errors": [],
+  "rawOutput": "[\"Card\",[\"Col\",[\"Avatar\",{\"size\":\"m\",\"shape\":\"circle\",\"src\":\"https://via.placeholder.com/80\"}],[\"Text\",{\"v\":\"heading\"},\"张三\"],[\"Text\",{\"v\":\"body\"},\"高级工程师\"],[\"Row\",[\"Btn\",{\"v\":\"s\",\"t\":\"call\"},\"电话\"],[\"Btn\",{\"v\":\"s\",\"t\":\"message\"},\"消息\"],[\"Link\",{\"v\":\"default\",\"t\":\"email\"},\"邮件\"]]]]"
+}

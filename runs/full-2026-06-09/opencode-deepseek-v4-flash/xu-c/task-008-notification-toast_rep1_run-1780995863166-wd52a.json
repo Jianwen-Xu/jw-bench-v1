@@ -1,0 +1,23 @@
+{
+  "runId": "run-1780995863166-wd52a",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-008-notification-toast",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 0,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 974,
+  "outputTokens": 171,
+  "latencyMs": 2443,
+  "costUsd": 0.00045108,
+  "errors": [
+    "M4: Invalid enum value '危险' for '提.式' at root[4][1]"
+  ],
+  "rawOutput": "[\"列\",\n  [\"文\", {\"式\":\"标题\"}, \"通知中心\"],\n  [\"排\",\n    [\"提\", {\"式\":\"成功\", \"值\":\"toastSuccess\"}, \"操作成功\"],\n    [\"按\", {\"式\":\"主\", \"触\":\"toastSuccess\"}, \"触发成功提示\"]\n  ],\n  [\"排\",\n    [\"提\", {\"式\":\"警告\", \"值\":\"toastWarning\"}, \"请确认信息\"],\n    [\"按\", {\"式\":\"主\", \"触\":\"toastWarning\"}, \"触发警告提示\"]\n  ],\n  [\"排\",\n    [\"提\", {\"式\":\"危险\", \"值\":\"toastError\"}, \"操作失败\"],\n    [\"按\", {\"式\":\"主\", \"触\":\"toastError\"}, \"触发错误提示\"]\n  ],\n  [\"文\", {}, \"点击按钮查看对应提示\"]\n]"
+}

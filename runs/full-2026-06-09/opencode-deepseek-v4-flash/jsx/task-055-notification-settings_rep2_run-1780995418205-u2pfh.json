@@ -1,0 +1,26 @@
+{
+  "runId": "run-1780995418205-u2pfh",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-055-notification-settings",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 618,
+  "outputTokens": 113,
+  "latencyMs": 1918,
+  "costUsd": 0.00029116000000000005,
+  "errors": [
+    "missing: [Text] (first child of [Column])",
+    "missing: [Text] (first child of [Row] with Toggle bind=notifComment)",
+    "missing: [Text] (first child of [Row] with Toggle bind=notifFollower)",
+    "missing: [Text] (first child of [Row] with Toggle bind=notifSystem)"
+  ],
+  "rawOutput": "<NavBar title=\"通知设置\" />\n<Card>\n  <Column>\n    <Row>\n      <Toggle bind=\"notifComment\" label=\"评论回复\" />\n    </Row>\n    <Row>\n      <Toggle bind=\"notifFollower\" label=\"新粉丝\" />\n    </Row>\n    <Row>\n      <Toggle bind=\"notifSystem\" label=\"系统公告\" />\n    </Row>\n    <Button variant=\"primary\" onTap=\"saveNotifSettings\">保存设置</Button>\n  </Column>\n</Card>"
+}

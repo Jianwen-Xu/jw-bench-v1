@@ -1,0 +1,25 @@
+{
+  "runId": "run-1780995237727-dw095",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-005-settings-page",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 686,
+  "outputTokens": 202,
+  "latencyMs": 2444,
+  "costUsd": 0.00040742,
+  "errors": [
+    "missing: [Row] containing [Text] and [Toggle] bind=email_notif",
+    "missing: [Row] containing [Text] and [Toggle] bind=sms_notif",
+    "missing: [Row] containing [Text] and [Toggle] bind=push_notif"
+  ],
+  "rawOutput": "<Column>\n  <Card>\n    <Column>\n      <Text variant=\"section-title\">个人资料</Text>\n      <Avatar size=\"medium\" shape=\"circle\" />\n      <Input type=\"text\" bind=\"name\" placeholder=\"请输入姓名\" />\n      <Button variant=\"primary\" onTap=\"save_profile\">保存</Button>\n    </Column>\n  </Card>\n  <Card>\n    <Column>\n      <Text variant=\"section-title\">通知偏好</Text>\n      <Toggle bind=\"email_notif\" label=\"邮件通知\" />\n      <Toggle bind=\"sms_notif\" label=\"短信通知\" />\n      <Toggle bind=\"push_notif\" label=\"推送通知\" />\n    </Column>\n  </Card>\n  <Card>\n    <Column>\n      <Text variant=\"section-title\">账户操作</Text>\n      <Button variant=\"secondary\" onTap=\"deactivate\">注销账户</Button>\n    </Column>\n  </Card>\n</Column>"
+}

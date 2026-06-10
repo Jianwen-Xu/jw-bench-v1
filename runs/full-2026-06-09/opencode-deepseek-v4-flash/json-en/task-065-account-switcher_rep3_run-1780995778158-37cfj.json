@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995778158-37cfj",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-065-account-switcher",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 537,
+  "outputTokens": 96,
+  "latencyMs": 1932,
+  "costUsd": 0.00025058999999999997,
+  "errors": [],
+  "rawOutput": "[\"Card\",[\"Row\",[\"Avatar\",{\"size\":\"m\",\"shape\":\"circle\",\"src\":\"https://i.pravatar.cc/80\"}],[\"Col\",[\"Text\",{\"v\":\"heading\"},\"用户名\"],[\"Text\",{\"v\":\"caption\"},\"user@example.com\"]]],[\"Btn\",{\"v\":\"p\",\"t\":\"switchAccount\"},\"切换账号\"],[\"Link\",{\"t\":\"addAccount\",\"v\":\"default\"},\"添加账号\"]]"
+}

@@ -1,0 +1,26 @@
+{
+  "runId": "run-1780995532747-ms1iq",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-005-settings-page",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 622,
+  "outputTokens": 157,
+  "latencyMs": 2215,
+  "costUsd": 0.00034064000000000007,
+  "errors": [
+    "missing: [Text] in first Card",
+    "missing: [Text] in second Card",
+    "missing: [Text] in third Card",
+    "missing: [Text] in each Row of second Card"
+  ],
+  "rawOutput": "[\"Col\",\n  [\"Card\",\n    [\"Col\",\n      [\"Avatar\", {\"size\":\"m\",\"shape\":\"circle\",\"src\":\"\"}],\n      [\"Input\", {\"type\":\"text\",\"bind\":\"name\",\"ph\":\"请输入姓名\"}],\n      [\"Btn\", {\"v\":\"p\",\"t\":\"save_profile\"}, \"保存\"]\n    ]\n  ],\n  [\"Card\",\n    [\"Col\",\n      [\"Toggle\", {\"bind\":\"email_notif\"}, \"邮件通知\"],\n      [\"Toggle\", {\"bind\":\"sms_notif\"}, \"短信通知\"],\n      [\"Toggle\", {\"bind\":\"push_notif\"}, \"推送通知\"]\n    ]\n  ],\n  [\"Card\",\n    [\"Col\",\n      [\"Btn\", {\"v\":\"s\",\"t\":\"deactivate\"}, \"注销账户\"]\n    ]\n  ]\n]"
+}

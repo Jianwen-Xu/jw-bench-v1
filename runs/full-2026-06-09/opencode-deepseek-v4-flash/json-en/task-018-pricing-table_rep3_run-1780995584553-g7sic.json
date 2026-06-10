@@ -1,0 +1,23 @@
+{
+  "runId": "run-1780995584553-g7sic",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-018-pricing-table",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 596,
+  "outputTokens": 246,
+  "latencyMs": 2856,
+  "costUsd": 0.00043152,
+  "errors": [
+    "missing: [Text] inside second [Card]"
+  ],
+  "rawOutput": "[\"Col\",\n  [\"Text\", {\"v\":\"heading\"}, \"选择方案\"],\n  [\"Row\",\n    [\"Card\",\n      [\"Col\",\n        [\"Text\", {\"v\":\"heading\"}, \"免费版\"],\n        [\"Text\", {\"v\":\"price\"}, \"¥0\"],\n        [\"Text\", {\"v\":\"body\"}, \"基础功能，适合个人使用\"],\n        [\"Btn\", {\"v\":\"g\",\"t\":\"selectFree\"}, \"选择免费版\"]\n      ]\n    ],\n    [\"Card\",\n      [\"Col\",\n        [\"Text\", {\"v\":\"heading\"}, \"专业版\"],\n        [\"Text\", {\"v\":\"price\"}, \"¥99\"],\n        [\"Text\", {\"v\":\"body\"}, \"高级功能，适合团队协作\"],\n        [\"Btn\", {\"v\":\"p\",\"t\":\"selectPro\"}, \"选择专业版\"]\n      ]\n    ],\n    [\"Card\",\n      [\"Col\",\n        [\"Text\", {\"v\":\"heading\"}, \"企业版\"],\n        [\"Text\", {\"v\":\"price\"}, \"¥499\"],\n        [\"Text\", {\"v\":\"body\"}, \"全功能，定制化服务支持\"],\n        [\"Btn\", {\"v\":\"s\",\"t\":\"selectEnterprise\"}, \"选择企业版\"]\n      ]\n    ]\n  ]\n]"
+}

@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996245452-7dibq",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-029-toolbar",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1076,
+  "outputTokens": 42,
+  "latencyMs": 1513,
+  "costUsd": 0.00033672000000000004,
+  "errors": [],
+  "rawOutput": "排\n　入 文 空搜索... 値searchQuery\n　选 値filter 选项filterOptions\n　按 主 addNew 添加\n　按 次 exportData 导出"
+}

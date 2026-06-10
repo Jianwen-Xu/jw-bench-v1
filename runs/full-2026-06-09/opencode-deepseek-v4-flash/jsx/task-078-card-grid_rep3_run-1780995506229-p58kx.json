@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995506229-p58kx",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-078-card-grid",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 579,
+  "outputTokens": 176,
+  "latencyMs": 2188,
+  "costUsd": 0.00034993000000000003,
+  "errors": [],
+  "rawOutput": "<Column>\n  <Text variant=\"heading\">推荐内容</Text>\n  <Row>\n    <Card>\n      <Column>\n        <Image size=\"medium\" shape=\"square\" />\n        <Text variant=\"body\">标题</Text>\n        <Text variant=\"caption\">摘要</Text>\n      </Column>\n    </Card>\n    <Card>\n      <Column>\n        <Image size=\"medium\" shape=\"square\" />\n        <Text variant=\"body\">标题</Text>\n        <Text variant=\"caption\">摘要</Text>\n      </Column>\n    </Card>\n    <Card>\n      <Column>\n        <Image size=\"medium\" shape=\"square\" />\n        <Text variant=\"body\">标题</Text>\n        <Text variant=\"caption\">摘要</Text>\n      </Column>\n    </Card>\n  </Row>\n</Column>"
+}

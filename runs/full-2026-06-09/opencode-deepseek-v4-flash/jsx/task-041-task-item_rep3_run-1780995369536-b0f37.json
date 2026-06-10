@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995369536-b0f37",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-041-task-item",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 605,
+  "outputTokens": 92,
+  "latencyMs": 1748,
+  "costUsd": 0.00026455,
+  "errors": [],
+  "rawOutput": "<Card>\n  <Row>\n    <Checkbox bind=\"taskDone\">完成报告</Checkbox>\n    <Column>\n      <Text variant=\"heading\">完成报告</Text>\n      <Text variant=\"caption\">截止日期</Text>\n    </Column>\n    <Badge variant=\"danger\">高</Badge>\n    <Button variant=\"ghost\" onTap=\"deleteTask\">删除</Button>\n  </Row>\n</Card>"
+}

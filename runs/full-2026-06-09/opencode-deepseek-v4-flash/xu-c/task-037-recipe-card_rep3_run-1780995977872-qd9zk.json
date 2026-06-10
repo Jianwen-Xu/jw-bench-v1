@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995977872-qd9zk",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-037-recipe-card",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 862,
+  "outputTokens": 88,
+  "latencyMs": 1993,
+  "costUsd": 0.00032954,
+  "errors": [],
+  "rawOutput": "[\"卡\", [\"列\",\n  [\"图\", {\"大\":\"大\", \"源\":\"recipe_image\"}],\n  [\"文\", {\"式\":\"标题\"}, \"番茄炒蛋\"],\n  [\"排\",\n    [\"标\", {\"式\":\"信息\"}, \"简单\"],\n    [\"文\", {}, \"15分钟\"]\n  ],\n  [\"文\", {}, \"食材列表\"],\n  [\"链\", {\"触\":\"viewRecipe\"}, \"查看完整做法\"]\n]]"
+}

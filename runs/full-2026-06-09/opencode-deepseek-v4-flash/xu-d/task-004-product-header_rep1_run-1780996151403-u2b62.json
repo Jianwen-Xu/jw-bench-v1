@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996151403-u2b62",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-004-product-header",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1108,
+  "outputTokens": 50,
+  "latencyMs": 1744,
+  "costUsd": 0.00035415999999999996,
+  "errors": [],
+  "rawOutput": "排\n　图 大 方 値image\n　列\n　　文 标题 値title\n　　文 价格 値price\n　　标 成功 値stock\n　　按 主 add_cart 加入购物车"
+}

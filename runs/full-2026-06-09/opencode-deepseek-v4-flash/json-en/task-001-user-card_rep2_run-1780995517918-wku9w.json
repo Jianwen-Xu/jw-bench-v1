@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995517918-wku9w",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-001-user-card",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 530,
+  "outputTokens": 65,
+  "latencyMs": 1910,
+  "costUsd": 0.0002146,
+  "errors": [],
+  "rawOutput": "[\"Card\", [\"Row\",\n  [\"Avatar\", {\"size\":\"m\", \"shape\":\"circle\", \"src\":\"https://via.placeholder.com/80\"}],\n  [\"Col\",\n    [\"Text\", {\"v\":\"title\"}, \"张三\"],\n    [\"Badge\", {\"v\":\"info\"}, \"管理员\"]\n  ]\n]]"
+}

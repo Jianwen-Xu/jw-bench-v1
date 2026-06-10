@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996408414-0ptp0",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-074-qr-code-card",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1073,
+  "outputTokens": 57,
+  "latencyMs": 1716,
+  "costUsd": 0.00035241,
+  "errors": [],
+  "rawOutput": "卡\n　列\n　　图 中 方 源qrcode\n　　文 标题 扫码下载\n　　文 说明 说明\n　　排\n　　　按 次 saveQRCode 保存图片\n　　　按 主 shareQRCode 分享"
+}

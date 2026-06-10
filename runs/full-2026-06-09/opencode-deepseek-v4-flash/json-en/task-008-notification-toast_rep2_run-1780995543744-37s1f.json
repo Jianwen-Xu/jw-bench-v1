@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995543744-37s1f",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-008-notification-toast",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 649,
+  "outputTokens": 148,
+  "latencyMs": 2134,
+  "costUsd": 0.00033803,
+  "errors": [],
+  "rawOutput": "[\"Col\",\n  [\"Text\", {\"v\":\"title\"}, \"通知中心\"],\n  [\"Toast\", {\"v\":\"success\",\"bind\":\"toastSuccess\"}, \"操作成功\"],\n  [\"Btn\", {\"v\":\"p\",\"t\":\"toastSuccess\"}, \"成功提示\"],\n  [\"Toast\", {\"v\":\"error\",\"bind\":\"toastError\"}, \"操作失败\"],\n  [\"Btn\", {\"v\":\"p\",\"t\":\"toastError\"}, \"错误提示\"],\n  [\"Toast\", {\"v\":\"warning\",\"bind\":\"toastWarning\"}, \"请确认信息\"],\n  [\"Btn\", {\"v\":\"p\",\"t\":\"toastWarning\"}, \"警告提示\"],\n  [\"Text\", {\"v\":\"body\"}, \"点击按钮查看对应提示\"]\n]"
+}

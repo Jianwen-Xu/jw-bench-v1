@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995384580-6eys5",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-046-tab-bar",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 615,
+  "outputTokens": 79,
+  "latencyMs": 1918,
+  "costUsd": 0.00025295,
+  "errors": [],
+  "rawOutput": "<Row>\n  <Button variant=\"primary\" onTap=\"tabAll\">全部</Button>\n  <Button variant=\"ghost\" onTap=\"tabPending\">待处理</Button>\n  <Button variant=\"ghost\" onTap=\"tabDone\">已完成</Button>\n</Row>\n<Card>\n  <Text variant=\"body\">当前标签内容</Text>\n</Card>"
+}

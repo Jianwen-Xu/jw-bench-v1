@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995876053-nz3i5",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-011-feedback-form",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 937,
+  "outputTokens": 128,
+  "latencyMs": 2400,
+  "costUsd": 0.00039379,
+  "errors": [],
+  "rawOutput": "[\"域\", {\"触\":\"submitFeedback\"}, [\"列\",\n  [\"文\", {\"式\":\"标题\"}, \"意见反馈\"],\n  [\"选\", {\"值\":\"type\", \"选项\":\"feedbackTypes\"}],\n  [\"入\", {\"空\":\"请详细描述您的问题或建议...\", \"值\":\"content\"}],\n  [\"入\", {\"空\":\"手机号或邮箱（选填）\", \"值\":\"contact\"}],\n  [\"排\",\n    [\"按\", {\"式\":\"次\", \"触\":\"cancel\"}, \"取消\"],\n    [\"按\", {\"式\":\"主\", \"触\":\"submitFeedback\"}, \"提交反馈\"]\n  ]\n]]"
+}

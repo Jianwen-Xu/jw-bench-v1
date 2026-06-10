@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996390267-nltld",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-069-category-tags",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1035,
+  "outputTokens": 43,
+  "latencyMs": 1624,
+  "costUsd": 0.00032675,
+  "errors": [],
+  "rawOutput": "排\n　标 信息 全部\n　标 信息 科技\n　标 信息 生活\n　标 信息 教育\n　标 信息 娱乐\n　标 信息 体育"
+}

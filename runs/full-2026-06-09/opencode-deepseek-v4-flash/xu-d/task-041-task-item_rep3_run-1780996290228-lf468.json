@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996290228-lf468",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-041-task-item",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1069,
+  "outputTokens": 48,
+  "latencyMs": 1972,
+  "costUsd": 0.00034143,
+  "errors": [],
+  "rawOutput": "卡\n　排\n　　选框 値taskDone\n　　列\n　　　文 标题 完成报告\n　　　文 说明 截止日期\n　　标 危险 高\n　　按 轻 deleteTask 删除"
+}

@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996041447-z445h",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-055-notification-settings",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 879,
+  "outputTokens": 122,
+  "latencyMs": 1952,
+  "costUsd": 0.00037153,
+  "errors": [],
+  "rawOutput": "[\"列\",\n  [\"文\", {\"式\":\"标题\"}, \"通知设置\"],\n  [\"卡\",\n    [\"排\",\n      [\"文\", \"评论回复\"],\n      [\"切\", {\"值\":\"notifComment\"}]\n    ],\n    [\"排\",\n      [\"文\", \"新粉丝\"],\n      [\"切\", {\"值\":\"notifFollower\"}]\n    ],\n    [\"排\",\n      [\"文\", \"系统公告\"],\n      [\"切\", {\"值\":\"notifSystem\"}]\n    ]\n  ],\n  [\"按\", {\"式\":\"主\",\"触\":\"saveNotifSettings\"}, \"保存设置\"]\n]"
+}

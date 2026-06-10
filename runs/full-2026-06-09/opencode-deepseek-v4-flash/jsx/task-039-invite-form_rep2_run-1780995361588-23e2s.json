@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995361588-23e2s",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-039-invite-form",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 641,
+  "outputTokens": 124,
+  "latencyMs": 2061,
+  "costUsd": 0.00030947,
+  "errors": [],
+  "rawOutput": "<Form onSubmit=\"sendInvite\">\n  <Column>\n    <Text variant=\"heading\">邀请成员</Text>\n    <Input type=\"email\" required placeholder=\"请输入对方邮箱\" bind=\"inviteEmail\" />\n    <Select bind=\"inviteRole\" options=\"roles\" />\n    <Input bind=\"inviteMessage\" placeholder=\"附言\" />\n    <Row>\n      <Button variant=\"primary\" onTap=\"sendInvite\">发送邀请</Button>\n      <Button variant=\"secondary\" onTap=\"cancel\">取消</Button>\n    </Row>\n  </Column>\n</Form>"
+}

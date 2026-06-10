@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995607219-yrxu2",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-023-image-gallery",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 520,
+  "outputTokens": 140,
+  "latencyMs": 3643,
+  "costUsd": 0.0002944,
+  "errors": [],
+  "rawOutput": "[\"Col\",\n  [\"Text\", {\"v\":\"title\"}, \"相册\"],\n  [\"Row\",\n    [\"Col\",\n      [\"Img\", {\"size\":\"m\",\"shape\":\"square\",\"src\":\"image1.jpg\"}],\n      [\"Text\", {\"v\":\"caption\"}, \"说明1\"]\n    ],\n    [\"Col\",\n      [\"Img\", {\"size\":\"m\",\"shape\":\"square\",\"src\":\"image2.jpg\"}],\n      [\"Text\", {\"v\":\"caption\"}, \"说明2\"]\n    ],\n    [\"Col\",\n      [\"Img\", {\"size\":\"m\",\"shape\":\"square\",\"src\":\"image3.jpg\"}],\n      [\"Text\", {\"v\":\"caption\"}, \"说明3\"]\n    ]\n  ]\n]"
+}

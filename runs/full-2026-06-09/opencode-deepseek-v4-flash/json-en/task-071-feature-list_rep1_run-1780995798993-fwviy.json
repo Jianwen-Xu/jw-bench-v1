@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995798993-fwviy",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-071-feature-list",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 519,
+  "outputTokens": 188,
+  "latencyMs": 2538,
+  "costUsd": 0.00034693,
+  "errors": [],
+  "rawOutput": "[\"Col\",\n  [\"Text\", {\"v\":\"heading\"}, \"核心功能\"],\n  [\"Row\",\n    [\"Img\", {\"size\":\"s\",\"shape\":\"square\",\"src\":\"icon1\"}],\n    [\"Col\",\n      [\"Text\", {\"v\":\"heading\"}, \"功能一\"],\n      [\"Text\", {\"v\":\"body\"}, \"描述一\"]\n    ]\n  ],\n  [\"Row\",\n    [\"Img\", {\"size\":\"s\",\"shape\":\"square\",\"src\":\"icon2\"}],\n    [\"Col\",\n      [\"Text\", {\"v\":\"heading\"}, \"功能二\"],\n      [\"Text\", {\"v\":\"body\"}, \"描述二\"]\n    ]\n  ],\n  [\"Row\",\n    [\"Img\", {\"size\":\"s\",\"shape\":\"square\",\"src\":\"icon3\"}],\n    [\"Col\",\n      [\"Text\", {\"v\":\"heading\"}, \"功能三\"],\n      [\"Text\", {\"v\":\"body\"}, \"描述三\"]\n    ]\n  ]\n]"
+}

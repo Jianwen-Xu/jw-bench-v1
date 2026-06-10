@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995395247-1eset",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-048-user-menu",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 619,
+  "outputTokens": 125,
+  "latencyMs": 1868,
+  "costUsd": 0.00030463,
+  "errors": [],
+  "rawOutput": "<Card>\n  <Column>\n    <Row>\n      <Avatar size=\"medium\" shape=\"circle\" />\n      <Column>\n        <Text variant=\"heading\">用户名</Text>\n        <Text variant=\"caption\">角色</Text>\n      </Column>\n    </Row>\n    <Link onTap=\"goProfile\">个人资料</Link>\n    <Link onTap=\"goAccountSettings\">账户设置</Link>\n    <Link onTap=\"goMessages\">消息中心</Link>\n    <Link onTap=\"logout\" variant=\"subtle\">退出登录</Link>\n  </Column>\n</Card>"
+}

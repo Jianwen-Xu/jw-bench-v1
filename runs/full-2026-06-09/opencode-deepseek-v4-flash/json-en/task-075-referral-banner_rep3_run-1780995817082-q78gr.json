@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995817082-q78gr",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-075-referral-banner",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 536,
+  "outputTokens": 86,
+  "latencyMs": 2081,
+  "costUsd": 0.00023932000000000003,
+  "errors": [],
+  "rawOutput": "[\"Card\",[\"Row\",[\"Img\",{\"size\":\"m\",\"src\":\"gift\"}],[\"Col\",[\"Text\",{\"v\":\"heading\"},\"邀请有礼\"],[\"Text\",{\"v\":\"caption\"},\"邀请好友，双方得奖励\"],[\"Badge\",{\"v\":\"success\"},\"邀请码：ABC\"],[\"Btn\",{\"v\":\"p\",\"t\":\"referNow\"},\"立即邀请\"]]]]"
+}

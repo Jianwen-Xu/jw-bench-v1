@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995686306-4ts81",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-041-task-item",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 541,
+  "outputTokens": 88,
+  "latencyMs": 1775,
+  "costUsd": 0.00024287000000000004,
+  "errors": [],
+  "rawOutput": "[\"Card\", [\"Row\",\n  [\"Checkbox\", {\"bind\": \"taskDone\"}],\n  [\"Col\",\n    [\"Text\", {\"v\": \"heading\"}, \"完成报告\"],\n    [\"Text\", {\"v\": \"caption\"}, \"截止日期\"]\n  ],\n  [\"Badge\", {\"v\": \"danger\"}, \"高\"],\n  [\"Btn\", {\"v\": \"g\", \"t\": \"deleteTask\"}, \"删除\"]\n]]"
+}

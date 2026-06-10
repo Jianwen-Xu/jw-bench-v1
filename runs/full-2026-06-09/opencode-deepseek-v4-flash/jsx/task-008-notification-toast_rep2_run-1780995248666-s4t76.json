@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995248666-s4t76",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-008-notification-toast",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 713,
+  "outputTokens": 145,
+  "latencyMs": 2238,
+  "costUsd": 0.00035201000000000004,
+  "errors": [],
+  "rawOutput": "<Column>\n  <Text variant=\"title\">通知中心</Text>\n  <Toast variant=\"success\" bind=\"toastSuccess\">操作成功</Toast>\n  <Button variant=\"primary\" onTap=\"toastSuccess\">成功提示</Button>\n  <Toast variant=\"error\" bind=\"toastError\">操作失败</Toast>\n  <Button variant=\"primary\" onTap=\"toastError\">错误提示</Button>\n  <Toast variant=\"warning\" bind=\"toastWarning\">请确认信息</Toast>\n  <Button variant=\"primary\" onTap=\"toastWarning\">警告提示</Button>\n  <Text variant=\"caption\">点击按钮查看对应提示</Text>\n</Column>"
+}

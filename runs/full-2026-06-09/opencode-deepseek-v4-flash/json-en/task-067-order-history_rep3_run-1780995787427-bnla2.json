@@ -1,0 +1,23 @@
+{
+  "runId": "run-1780995787427-bnla2",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-067-order-history",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 546,
+  "outputTokens": 301,
+  "latencyMs": 3454,
+  "costUsd": 0.00047852,
+  "errors": [
+    "missing: [Row] inside each [Card] > [Column]"
+  ],
+  "rawOutput": "[\"Col\",\n  [\"Text\", {\"v\":\"heading\"}, \"订单记录\"],\n  [\"Card\", [\"Col\",\n    [\"Text\", {\"v\":\"caption\"}, \"订单号: #001  2024-01-15\"],\n    [\"Text\", {\"v\":\"body\"}, \"商品: 无线耳机\"],\n    [\"Text\", {\"v\":\"price\"}, \"¥299\"],\n    [\"Badge\", {\"v\":\"success\"}, \"已完成\"],\n    [\"Link\", {\"v\":\"default\", \"t\":\"view1\"}, \"查看详情\"]\n  ]],\n  [\"Card\", [\"Col\",\n    [\"Text\", {\"v\":\"caption\"}, \"订单号: #002  2024-01-16\"],\n    [\"Text\", {\"v\":\"body\"}, \"商品: 智能手表\"],\n    [\"Text\", {\"v\":\"price\"}, \"¥899\"],\n    [\"Badge\", {\"v\":\"warning\"}, \"待发货\"],\n    [\"Link\", {\"v\":\"default\", \"t\":\"view2\"}, \"查看详情\"]\n  ]],\n  [\"Card\", [\"Col\",\n    [\"Text\", {\"v\":\"caption\"}, \"订单号: #003  2024-01-17\"],\n    [\"Text\", {\"v\":\"body\"}, \"商品: 蓝牙音箱\"],\n    [\"Text\", {\"v\":\"price\"}, \"¥459\"],\n    [\"Badge\", {\"v\":\"info\"}, \"已发货\"],\n    [\"Link\", {\"v\":\"default\", \"t\":\"view3\"}, \"查看详情\"]\n  ]]\n]"
+}

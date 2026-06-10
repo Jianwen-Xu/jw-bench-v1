@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995479872-5s1mr",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-071-feature-list",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 583,
+  "outputTokens": 174,
+  "latencyMs": 2232,
+  "costUsd": 0.00034881,
+  "errors": [],
+  "rawOutput": "<Column>\n  <Text variant=\"heading\">核心功能</Text>\n  <Row>\n    <Image size=\"small\" shape=\"square\" />\n    <Column>\n      <Text variant=\"heading\">功能一</Text>\n      <Text variant=\"body\">描述一</Text>\n    </Column>\n  </Row>\n  <Row>\n    <Image size=\"small\" shape=\"square\" />\n    <Column>\n      <Text variant=\"heading\">功能二</Text>\n      <Text variant=\"body\">描述二</Text>\n    </Column>\n  </Row>\n  <Row>\n    <Image size=\"small\" shape=\"square\" />\n    <Column>\n      <Text variant=\"heading\">功能三</Text>\n      <Text variant=\"body\">描述三</Text>\n    </Column>\n  </Row>\n</Column>"
+}

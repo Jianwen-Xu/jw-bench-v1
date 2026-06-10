@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996264890-3c7t5",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-034-event-card",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1093,
+  "outputTokens": 84,
+  "latencyMs": 1783,
+  "costUsd": 0.00038751000000000004,
+  "errors": [],
+  "rawOutput": "卡\n　列\n　　文 标题 2026技术创新大会\n　　排\n　　　文 正文 日期\n　　　文 正文 2026-03-15\n　　排\n　　　文 正文 地点\n　　　文 正文 北京国际会议中心\n　　标 信息 科技\n　　文 价格 ¥299\n　　按 主 registerEvent 立即报名"
+}

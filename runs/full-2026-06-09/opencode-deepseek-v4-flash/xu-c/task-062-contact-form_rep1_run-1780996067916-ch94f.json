@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996067916-ch94f",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-062-contact-form",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 883,
+  "outputTokens": 110,
+  "latencyMs": 2036,
+  "costUsd": 0.00035941,
+  "errors": [],
+  "rawOutput": "[\"域\",{\"触\":\"sendMessage\"},[\"列\",\n  [\"文\",{\"式\":\"标题\"},\"联系我们\"],\n  [\"入\",{\"值\":\"contactName\",\"空\":\"姓名\"}],\n  [\"入\",{\"类\":\"邮箱\",\"值\":\"contactEmail\",\"空\":\"邮箱\"}],\n  [\"入\",{\"类\":\"数字\",\"值\":\"contactPhone\",\"空\":\"电话\"}],\n  [\"入\",{\"值\":\"contactMessage\",\"空\":\"留言\"}],\n  [\"按\",{\"式\":\"主\",\"触\":\"sendMessage\"},\"发送\"]\n]]"
+}

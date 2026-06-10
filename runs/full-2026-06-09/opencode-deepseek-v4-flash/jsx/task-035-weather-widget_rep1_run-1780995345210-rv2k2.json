@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995345210-rv2k2",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-035-weather-widget",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 600,
+  "outputTokens": 86,
+  "latencyMs": 1855,
+  "costUsd": 0.0002566,
+  "errors": [],
+  "rawOutput": "<Card>\n  <Row>\n    <Image size=\"medium\" shape=\"square\" />\n    <Column>\n      <Text variant=\"heading\">26°C</Text>\n      <Text variant=\"body\">北京</Text>\n      <Text variant=\"caption\">湿度：45%</Text>\n      <Text variant=\"caption\">风速：3级</Text>\n    </Column>\n  </Row>\n</Card>"
+}

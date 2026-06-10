@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995701427-3ahzg",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-046-tab-bar",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 551,
+  "outputTokens": 74,
+  "latencyMs": 1844,
+  "costUsd": 0.00023017,
+  "errors": [],
+  "rawOutput": "[\"Row\",\n  [\"Btn\",{\"v\":\"p\",\"t\":\"tabAll\"},\"全部\"],\n  [\"Btn\",{\"v\":\"g\",\"t\":\"tabPending\"},\"待处理\"],\n  [\"Btn\",{\"v\":\"g\",\"t\":\"tabDone\"},\"已完成\"],\n  [\"Card\",[\"Text\",{\"v\":\"body\"},\"当前标签内容\"]]\n]"
+}

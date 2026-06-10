@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996217894-x2cup",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-021-address-form",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1132,
+  "outputTokens": 77,
+  "latencyMs": 2050,
+  "costUsd": 0.00039034000000000003,
+  "errors": [],
+  "rawOutput": "列\n　文 标题 添加新地址\n　域 触saveAddress\n　　入 文 空收件人 値recipient\n　　入 数字 空手机号 値phone\n　　选 値province 选项provinces\n　　入 文 空详细地址 値address\n　　按 主 saveAddress 保存地址"
+}

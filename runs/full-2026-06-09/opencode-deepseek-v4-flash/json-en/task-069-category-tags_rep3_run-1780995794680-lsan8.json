@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995794680-lsan8",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-069-category-tags",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 507,
+  "outputTokens": 82,
+  "latencyMs": 1795,
+  "costUsd": 0.00022709000000000002,
+  "errors": [],
+  "rawOutput": "[\"Row\",\n  [\"Badge\", {\"v\":\"info\"}, \"全部\"],\n  [\"Badge\", {\"v\":\"info\"}, \"科技\"],\n  [\"Badge\", {\"v\":\"info\"}, \"生活\"],\n  [\"Badge\", {\"v\":\"info\"}, \"教育\"],\n  [\"Badge\", {\"v\":\"info\"}, \"娱乐\"],\n  [\"Badge\", {\"v\":\"info\"}, \"体育\"]\n]"
+}

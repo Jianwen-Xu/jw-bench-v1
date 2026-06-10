@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996269706-2aecl",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-036-movie-card",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1071,
+  "outputTokens": 63,
+  "latencyMs": 1711,
+  "costUsd": 0.00035846999999999995,
+  "errors": [],
+  "rawOutput": "卡\n　列\n　　图 大 方 源poster\n　　文 标题 星际穿越\n　　排\n　　　标 成功 9.3\n　　　文 正文 2014\n　　　标 信息 科幻\n　　按 主 buyTicket 购票"
+}

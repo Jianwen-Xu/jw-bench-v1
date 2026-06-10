@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995870838-1m97f",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-010-search-filter",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 888,
+  "outputTokens": 70,
+  "latencyMs": 1744,
+  "costUsd": 0.00031675999999999997,
+  "errors": [],
+  "rawOutput": "[\"排\",\n  [\"入\", {\"空\":\"搜索关键词...\", \"值\":\"query\"}],\n  [\"选\", {\"值\":\"category\", \"选项\":\"categories\"}],\n  [\"按\", {\"式\":\"主\", \"触\":\"search\"}, \"搜索\"],\n  [\"按\", {\"式\":\"次\", \"触\":\"reset\"}, \"重置\"]\n]"
+}

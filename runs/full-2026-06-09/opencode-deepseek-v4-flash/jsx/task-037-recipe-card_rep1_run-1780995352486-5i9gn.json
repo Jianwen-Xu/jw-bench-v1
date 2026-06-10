@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995352486-5i9gn",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-037-recipe-card",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 601,
+  "outputTokens": 108,
+  "latencyMs": 2069,
+  "costUsd": 0.00028106999999999996,
+  "errors": [],
+  "rawOutput": "<Card>\n  <Column>\n    <Image size=\"large\" shape=\"square\" />\n    <Text variant=\"heading\">番茄炒蛋</Text>\n    <Row>\n      <Badge variant=\"info\">简单</Badge>\n      <Text variant=\"body\">15分钟</Text>\n    </Row>\n    <Text variant=\"body\">食材：番茄、鸡蛋、葱、盐、糖</Text>\n    <Link onTap=\"viewRecipe\">查看完整做法</Link>\n  </Column>\n</Card>"
+}

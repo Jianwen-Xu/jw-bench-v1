@@ -1,0 +1,23 @@
+{
+  "runId": "run-1780995464881-ceb43",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-067-order-history",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 610,
+  "outputTokens": 402,
+  "latencyMs": 3488,
+  "costUsd": 0.0006069,
+  "errors": [
+    "missing: [Text] (the fourth child in each Card's Column, before Badge)"
+  ],
+  "rawOutput": "<Column>\n  <Text variant=\"heading\">订单记录</Text>\n  <Card>\n    <Column>\n      <Row>\n        <Text variant=\"caption\">订单号: #2024001</Text>\n        <Text variant=\"caption\">2024-01-15</Text>\n      </Row>\n      <Text variant=\"body\">商品: 无线蓝牙耳机</Text>\n      <Row>\n        <Text variant=\"price\">¥299.00</Text>\n        <Badge variant=\"success\">已完成</Badge>\n      </Row>\n      <Link onTap=\"viewDetail1\" variant=\"subtle\">查看详情</Link>\n    </Column>\n  </Card>\n  <Card>\n    <Column>\n      <Row>\n        <Text variant=\"caption\">订单号: #2024002</Text>\n        <Text variant=\"caption\">2024-01-18</Text>\n      </Row>\n      <Text variant=\"body\">商品: 智能手表</Text>\n      <Row>\n        <Text variant=\"price\">¥899.00</Text>\n        <Badge variant=\"warning\">待发货</Badge>\n      </Row>\n      <Link onTap=\"viewDetail2\" variant=\"subtle\">查看详情</Link>\n    </Column>\n  </Card>\n  <Card>\n    <Column>\n      <Row>\n        <Text variant=\"caption\">订单号: #2024003</Text>\n        <Text variant=\"caption\">2024-01-20</Text>\n      </Row>\n      <Text variant=\"body\">商品: 运动鞋</Text>\n      <Row>\n        <Text variant=\"price\">¥459.00</Text>\n        <Badge variant=\"info\">已发货</Badge>\n      </Row>\n      <Link onTap=\"viewDetail3\" variant=\"subtle\">查看详情</Link>\n    </Column>\n  </Card>\n</Column>"
+}

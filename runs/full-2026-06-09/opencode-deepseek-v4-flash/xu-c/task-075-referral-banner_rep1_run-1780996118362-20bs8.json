@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996118362-20bs8",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-075-referral-banner",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 861,
+  "outputTokens": 86,
+  "latencyMs": 1909,
+  "costUsd": 0.00032707000000000005,
+  "errors": [],
+  "rawOutput": "[\"卡\",[\"排\",\n  [\"图\",{\"大\":\"中\",\"源\":\"icon\"}],\n  [\"列\",\n    [\"文\",{\"式\":\"标题\"},\"邀请有礼\"],\n    [\"文\",{\"式\":\"说明\"},\"描述\"],\n    [\"标\",{\"式\":\"成功\"},\"邀请码：ABC\"],\n    [\"按\",{\"式\":\"主\",\"触\":\"referNow\"},\"立即邀请\"]\n  ]\n]]"
+}

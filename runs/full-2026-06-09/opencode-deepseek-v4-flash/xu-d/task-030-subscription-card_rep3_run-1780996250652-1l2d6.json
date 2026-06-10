@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996250652-1l2d6",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-030-subscription-card",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1076,
+  "outputTokens": 63,
+  "latencyMs": 2684,
+  "costUsd": 0.00035982,
+  "errors": [],
+  "rawOutput": "卡\n　列\n　　文 标题 年度会员\n　　文 价格 ¥199/年\n　　文 正文 权益1\n　　文 正文 权益2\n　　文 正文 权益3\n　　按 主 subscribeNow 立即订阅\n　　链 learnMore 了解详情"
+}

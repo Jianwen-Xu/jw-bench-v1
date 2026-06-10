@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995512903-wtl19",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-080-dashboard-overview",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 644,
+  "outputTokens": 264,
+  "latencyMs": 2628,
+  "costUsd": 0.00046428,
+  "errors": [],
+  "rawOutput": "<Column>\n  <Text variant=\"heading\">控制台</Text>\n  <Row>\n    <Card>\n      <Column>\n        <Text variant=\"heading\">1,234</Text>\n        <Text variant=\"body\">今日访问</Text>\n      </Column>\n    </Card>\n    <Card>\n      <Column>\n        <Text variant=\"heading\">856</Text>\n        <Text variant=\"body\">活跃用户</Text>\n      </Column>\n    </Card>\n    <Card>\n      <Column>\n        <Text variant=\"heading\">¥12.5万</Text>\n        <Text variant=\"body\">总收入</Text>\n      </Column>\n    </Card>\n  </Row>\n  <Row>\n    <Card>\n      <Column>\n        <Image size=\"small\" />\n        <Text variant=\"body\">用户管理</Text>\n      </Column>\n    </Card>\n    <Card>\n      <Column>\n        <Image size=\"small\" />\n        <Text variant=\"body\">订单管理</Text>\n      </Column>\n    </Card>\n    <Card>\n      <Column>\n        <Image size=\"small\" />\n        <Text variant=\"body\">内容管理</Text>\n      </Column>\n    </Card>\n  </Row>\n</Column>"
+}

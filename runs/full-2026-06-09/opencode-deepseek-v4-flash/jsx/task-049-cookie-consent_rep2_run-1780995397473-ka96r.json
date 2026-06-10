@@ -1,0 +1,23 @@
+{
+  "runId": "run-1780995397473-ka96r",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-049-cookie-consent",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 613,
+  "outputTokens": 133,
+  "latencyMs": 2238,
+  "costUsd": 0.00031181000000000004,
+  "errors": [
+    "missing: [Button] onTap=acceptNecessary"
+  ],
+  "rawOutput": "<Card>\n  <Column>\n    <Row>\n      <Image size=\"medium\" shape=\"square\" />\n      <Text variant=\"heading\">Cookie 声明</Text>\n    </Row>\n    <Text variant=\"body\">本网站使用 Cookie 来提升您的浏览体验、分析网站流量并为您提供个性化内容。请选择您的偏好设置。</Text>\n    <Row>\n      <Button variant=\"primary\" onTap=\"acceptAll\">接受所有</Button>\n      <Button variant=\"secondary\">仅必要</Button>\n      <Link onTap=\"cookieSettings\">设置</Link>\n    </Row>\n  </Column>\n</Card>"
+}

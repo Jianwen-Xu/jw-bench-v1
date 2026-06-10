@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995364972-kpw6y",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-040-coupon-card",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 620,
+  "outputTokens": 122,
+  "latencyMs": 1912,
+  "costUsd": 0.00030159999999999996,
+  "errors": [],
+  "rawOutput": "<Card>\n  <Column>\n    <Badge variant=\"success\">满减券</Badge>\n    <Text variant=\"price\">满100减20</Text>\n    <Text variant=\"caption\">有效期至2026年12月31日</Text>\n    <Text variant=\"body\">CODE2026</Text>\n    <Row>\n      <Button variant=\"secondary\" onTap=\"copyCoupon\">复制优惠码</Button>\n      <Button variant=\"primary\" onTap=\"useCoupon\">立即使用</Button>\n    </Row>\n  </Column>\n</Card>"
+}

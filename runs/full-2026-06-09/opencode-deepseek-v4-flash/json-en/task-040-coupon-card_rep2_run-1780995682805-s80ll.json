@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995682805-s80ll",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-040-coupon-card",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 556,
+  "outputTokens": 104,
+  "latencyMs": 2066,
+  "costUsd": 0.00026451999999999997,
+  "errors": [],
+  "rawOutput": "[\"Card\",[\"Col\",\n  [\"Badge\",{\"v\":\"success\"},\"满减券\"],\n  [\"Text\",{\"v\":\"price\"},\"满100减20\"],\n  [\"Text\",{\"v\":\"caption\"},\"有效期\"],\n  [\"Text\",{},\"CODE2026\"],\n  [\"Row\",\n    [\"Btn\",{\"v\":\"s\",\"t\":\"copyCoupon\"},\"复制优惠码\"],\n    [\"Btn\",{\"v\":\"p\",\"t\":\"useCoupon\"},\"立即使用\"]\n  ]\n]]"
+}

@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995240369-ni08c",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-006-registration-form",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 670,
+  "outputTokens": 113,
+  "latencyMs": 1858,
+  "costUsd": 0.00030520000000000005,
+  "errors": [],
+  "rawOutput": "<Form>\n  <Column>\n    <Input type=\"text\" bind=\"username\" required placeholder=\"请输入用户名\" />\n    <Input type=\"email\" bind=\"email\" required placeholder=\"请输入邮箱\" />\n    <Input type=\"password\" bind=\"password\" required placeholder=\"请设置密码\" />\n    <Select bind=\"country\" />\n    <Button variant=\"primary\" onTap=\"register\">注册</Button>\n    <Link onTap=\"login\" variant=\"subtle\">已有账号？登录</Link>\n  </Column>\n</Form>"
+}

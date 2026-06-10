@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995264693-hdkof",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-013-contact-card",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 645,
+  "outputTokens": 101,
+  "latencyMs": 1871,
+  "costUsd": 0.00028525,
+  "errors": [],
+  "rawOutput": "<Card>\n  <Column>\n    <Avatar size=\"large\" shape=\"circle\" />\n    <Text variant=\"heading\">张三</Text>\n    <Text variant=\"body\">高级工程师</Text>\n    <Row>\n      <Button variant=\"secondary\" onTap=\"call\">电话</Button>\n      <Button variant=\"secondary\" onTap=\"message\">消息</Button>\n      <Link onTap=\"email\">邮件</Link>\n    </Row>\n  </Column>\n</Card>"
+}

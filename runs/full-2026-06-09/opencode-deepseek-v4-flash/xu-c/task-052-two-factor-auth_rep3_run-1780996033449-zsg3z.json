@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996033449-zsg3z",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-052-two-factor-auth",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 897,
+  "outputTokens": 122,
+  "latencyMs": 2224,
+  "costUsd": 0.00037639,
+  "errors": [],
+  "rawOutput": "[\"域\", {\"触\":\"verifyCode\"},\n  [\"列\",\n    [\"文\", {\"式\":\"标题\"}, \"二次验证\"],\n    [\"文\", {\"式\":\"说明\"}, \"请输入发送到您手机的验证码\"],\n    [\"入\", {\"类\":\"数字\", \"空\":\"6位验证码\", \"值\":\"verificationCode\"}],\n    [\"按\", {\"式\":\"主\", \"触\":\"verifyCode\"}, \"验证\"],\n    [\"链\", {\"触\":\"resendCode\"}, \"重新发送\"],\n    [\"文\", {\"式\":\"节标题\"}, \"60秒后可重新发送\"]\n  ]\n]"
+}

@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996178064-1oizn",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-011-feedback-form",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1140,
+  "outputTokens": 81,
+  "latencyMs": 2053,
+  "costUsd": 0.00039690000000000005,
+  "errors": [],
+  "rawOutput": "域\n　列\n　　文 标题 意见反馈\n　　选 値type 选项feedbackTypes\n　　入 文 空请详细描述您的问题或建议... 値content\n　　入 文 空手机号或邮箱（选填） 値contact\n　　排\n　　　按 次 cancel 取消\n　　　按 主 submitFeedback 提交反馈"
+}

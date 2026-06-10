@@ -1,0 +1,23 @@
+{
+  "runId": "run-1780995273610-aq2b5",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-015-step-progress",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 0,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 695,
+  "outputTokens": 200,
+  "latencyMs": 2386,
+  "costUsd": 0.00040765,
+  "errors": [
+    "M4: Invalid enum value 'default' for <Badge variant>"
+  ],
+  "rawOutput": "<Column>\n  <Text variant=\"title\">注册进度</Text>\n  <Row>\n    <Column>\n      <Badge variant=\"success\">1</Badge>\n      <Text variant=\"caption\">填写信息</Text>\n    </Column>\n    <Column>\n      <Badge variant=\"success\">2</Badge>\n      <Text variant=\"caption\">验证邮箱</Text>\n    </Column>\n    <Column>\n      <Badge variant=\"info\">3</Badge>\n      <Text variant=\"caption\">设置密码</Text>\n    </Column>\n    <Column>\n      <Badge variant=\"default\">4</Badge>\n      <Text variant=\"caption\">完成</Text>\n    </Column>\n  </Row>\n  <Row>\n    <Button variant=\"secondary\" onTap=\"prevStep\">上一步</Button>\n    <Button variant=\"primary\" onTap=\"nextStep\">下一步</Button>\n  </Row>\n</Column>"
+}

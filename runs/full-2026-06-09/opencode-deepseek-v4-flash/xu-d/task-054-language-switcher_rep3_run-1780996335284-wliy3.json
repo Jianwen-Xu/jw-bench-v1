@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996335284-wliy3",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-054-language-switcher",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1061,
+  "outputTokens": 45,
+  "latencyMs": 1500,
+  "costUsd": 0.00033597,
+  "errors": [],
+  "rawOutput": "列\n　文 标题 切换语言\n　排\n　　按 主 switchCN 中文\n　　按 轻 switchEN English\n　　按 轻 switchJP 日本語\n　标 成功 当前"
+}

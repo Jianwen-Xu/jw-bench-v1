@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996220132-sjjmc",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-022-faq-card",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1092,
+  "outputTokens": 71,
+  "latencyMs": 1853,
+  "costUsd": 0.00037294,
+  "errors": [],
+  "rawOutput": "卡\n　列\n　　文 标题 如何重置密码？\n　　文 正文 请前往设置页面，点击\"重置密码\"并按照邮件指引操作。\n　　排\n　　　按 主 helpfulYes 有帮助\n　　　按 轻 helpfulNo 没有帮助\n　　文 说明 共 128 人认为有帮助"
+}

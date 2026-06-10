@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995382469-nr0yp",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-045-breadcrumb",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 597,
+  "outputTokens": 66,
+  "latencyMs": 1725,
+  "costUsd": 0.00023379,
+  "errors": [],
+  "rawOutput": "<Row>\n  <Link onTap=\"navHome\">首页</Link>\n  <Text variant=\"body\">&gt;</Text>\n  <Link onTap=\"navCategory\">分类</Link>\n  <Text variant=\"body\">&gt;</Text>\n  <Text variant=\"body\">当前页面</Text>\n</Row>"
+}

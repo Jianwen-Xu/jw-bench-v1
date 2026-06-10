@@ -1,0 +1,26 @@
+{
+  "runId": "run-1780996166167-fno24",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-008-notification-toast",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 1177,
+  "outputTokens": 90,
+  "latencyMs": 1674,
+  "costUsd": 0.00041679,
+  "errors": [
+    "missing: [Text] (first child of Column)",
+    "missing: [Toast] bind=toastSuccess",
+    "missing: [Toast] bind=toastError",
+    "missing: [Toast] bind=toastWarning"
+  ],
+  "rawOutput": "列\n　栏 题 通知中心\n　提 成功 操作成功 値toastSuccess\n　按 轻 toastSuccess 成功提示\n　提 错误 操作失败 値toastError\n　按 轻 toastError 错误提示\n　提 警告 请确认信息 値toastWarning\n　按 轻 toastWarning 警告提示\n　文 说明 点击按钮查看对应提示"
+}

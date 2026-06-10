@@ -1,0 +1,23 @@
+{
+  "runId": "run-1780995675665-fcxw9",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-038-testimonial",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 524,
+  "outputTokens": 78,
+  "latencyMs": 1975,
+  "costUsd": 0.00022727999999999998,
+  "errors": [
+    "missing: [Avt]"
+  ],
+  "rawOutput": "[\"Card\", [\"Col\",\n  [\"Avatar\", {\"size\":\"m\",\"shape\":\"circle\"}],\n  [\"Text\", {\"v\":\"body\"}, \"引用文字\"],\n  [\"Row\",\n    [\"Text\", {\"v\":\"heading\"}, \"用户名\"],\n    [\"Text\", {\"v\":\"caption\"}, \"角色\"]\n  ],\n  [\"Badge\", {\"v\":\"success\"}, \"★★★★★\"]\n]]"
+}

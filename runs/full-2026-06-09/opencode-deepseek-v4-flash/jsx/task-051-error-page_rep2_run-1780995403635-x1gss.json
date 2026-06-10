@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995403635-x1gss",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-051-error-page",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 600,
+  "outputTokens": 83,
+  "latencyMs": 1704,
+  "costUsd": 0.00025330000000000003,
+  "errors": [],
+  "rawOutput": "<Card>\n  <Column>\n    <Text variant=\"heading\">404</Text>\n    <Text variant=\"body\">页面未找到</Text>\n    <Text variant=\"body\">描述</Text>\n    <Button variant=\"primary\" onTap=\"reloadPage\">重新加载</Button>\n    <Link onTap=\"backToHome\">返回首页</Link>\n  </Column>\n</Card>"
+}

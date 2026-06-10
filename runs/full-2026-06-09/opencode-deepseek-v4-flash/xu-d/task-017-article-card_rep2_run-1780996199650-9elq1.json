@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996199650-9elq1",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-017-article-card",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1078,
+  "outputTokens": 44,
+  "latencyMs": 1683,
+  "costUsd": 0.00033946,
+  "errors": [],
+  "rawOutput": "卡\n　图 大 源封面图片\n　文 标题 探索未来科技\n　文 正文 摘要文字\n　标 信息 科技\n　链 触readMore 阅读更多"
+}

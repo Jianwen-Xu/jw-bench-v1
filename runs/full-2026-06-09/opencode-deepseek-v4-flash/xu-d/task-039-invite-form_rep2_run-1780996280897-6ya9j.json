@@ -1,0 +1,23 @@
+{
+  "runId": "run-1780996280897-6ya9j",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-039-invite-form",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 1105,
+  "outputTokens": 79,
+  "latencyMs": 1827,
+  "costUsd": 0.00038524999999999996,
+  "errors": [
+    "missing: [Button] onTap=cancelInvite"
+  ],
+  "rawOutput": "域 触sendInvite\n　列\n　　文 标题 邀请成员\n　　入 邮箱 必 空请输入对方邮箱 値inviteEmail\n　　选 値inviteRole 选项roles\n　　入 文 値inviteMessage\n　　排\n　　　按 主 sendInvite 发送邀请\n　　　按 次 cancel 取消"
+}

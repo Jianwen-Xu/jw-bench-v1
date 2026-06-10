@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995532859-dfx5h",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-005-settings-page",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 622,
+  "outputTokens": 198,
+  "latencyMs": 2580,
+  "costUsd": 0.00038574000000000003,
+  "errors": [],
+  "rawOutput": "[\"Col\",\n  [\"Card\",\n    [\"Col\",\n      [\"Text\", {\"v\":\"title\"}, \"个人资料\"],\n      [\"Avatar\", {\"size\":\"m\",\"shape\":\"circle\",\"src\":\"/avatar.png\"}],\n      [\"Input\", {\"type\":\"text\",\"bind\":\"name\",\"ph\":\"请输入姓名\"}],\n      [\"Btn\", {\"v\":\"p\",\"t\":\"save_profile\"}, \"保存\"]\n    ]\n  ],\n  [\"Card\",\n    [\"Col\",\n      [\"Text\", {\"v\":\"title\"}, \"通知偏好\"],\n      [\"Toggle\", {\"bind\":\"email_notif\"}, \"邮件通知\"],\n      [\"Toggle\", {\"bind\":\"sms_notif\"}, \"短信通知\"],\n      [\"Toggle\", {\"bind\":\"push_notif\"}, \"推送通知\"]\n    ]\n  ],\n  [\"Card\",\n    [\"Col\",\n      [\"Text\", {\"v\":\"title\"}, \"账户操作\"],\n      [\"Btn\", {\"v\":\"s\",\"t\":\"deactivate\"}, \"注销账户\"]\n    ]\n  ]\n]"
+}

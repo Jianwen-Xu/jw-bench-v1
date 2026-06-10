@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995844422-hg2vk",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-003-login-form",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 890,
+  "outputTokens": 102,
+  "latencyMs": 1991,
+  "costUsd": 0.00035250000000000006,
+  "errors": [],
+  "rawOutput": "[\"域\",{\"触\":\"submit\"},[\"列\",[\"入\",{\"类\":\"邮箱\",\"必\":true,\"空\":\"请输入邮箱\",\"值\":\"email\"}],[\"入\",{\"类\":\"密码\",\"必\":true,\"空\":\"请输入密码\",\"值\":\"password\"}],[\"选框\",{\"值\":\"remember\"},\"记住我\"],[\"按\",{\"式\":\"主\",\"触\":\"submit\"},\"登录\"],[\"链\",{\"触\":\"forgot\",\"式\":\"淡\"},\"忘记密码？\"]]]"
+}

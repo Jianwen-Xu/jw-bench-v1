@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996256509-iay49",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-032-social-post",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 1088,
+  "outputTokens": 73,
+  "latencyMs": 1813,
+  "costUsd": 0.00037406000000000006,
+  "errors": [],
+  "rawOutput": "卡\n　列\n　　排\n　　　头像 中 圆\n　　　列\n　　　文 标题 値username\n　　　文 说明 値time\n　　文 正文 値content\n　　排\n　　　按 轻 like 点赞\n　　　按 轻 comment 评论\n　　　链 share 分享"
+}

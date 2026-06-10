@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995642102-lrh9m",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-029-toolbar",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 548,
+  "outputTokens": 74,
+  "latencyMs": 1646,
+  "costUsd": 0.00022936,
+  "errors": [],
+  "rawOutput": "[\"Row\",\n  [\"Input\", {\"type\":\"text\",\"ph\":\"搜索...\",\"bind\":\"searchQuery\"}],\n  [\"Select\", {\"bind\":\"filter\",\"opts\":\"filterOptions\"}],\n  [\"Btn\", {\"v\":\"p\",\"t\":\"addNew\"}, \"添加\"],\n  [\"Btn\", {\"v\":\"s\",\"t\":\"exportData\"}, \"导出\"]\n]"
+}

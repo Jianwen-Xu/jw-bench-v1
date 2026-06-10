@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995780378-dqhdz",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-066-saved-address",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 520,
+  "outputTokens": 112,
+  "latencyMs": 2079,
+  "costUsd": 0.0002636,
+  "errors": [],
+  "rawOutput": "[\"Card\", [\"Col\",\n  [\"Row\",\n    [\"Badge\", {\"v\":\"success\"}, \"默认\"],\n    [\"Text\", {\"v\":\"heading\"}, \"张三\"]\n  ],\n  [\"Text\", {\"v\":\"body\"}, \"北京市朝阳区建国路88号\"],\n  [\"Text\", {\"v\":\"body\"}, \"13800138000\"],\n  [\"Row\",\n    [\"Link\", {\"t\":\"edit\", \"v\":\"default\"}, \"编辑\"],\n    [\"Link\", {\"t\":\"delete\", \"v\":\"subtle\"}, \"删除\"]\n  ]\n]]"
+}

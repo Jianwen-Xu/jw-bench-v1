@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995548799-ffgoi",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "json-en",
+  "scenario": "A",
+  "taskId": "task-009-checkout-summary",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 631,
+  "outputTokens": 151,
+  "latencyMs": 2311,
+  "costUsd": 0.00033647,
+  "errors": [],
+  "rawOutput": "[\"Card\",[\"Col\",[\"Text\",{\"v\":\"title\"},\"订单摘要\"],[\"Row\",[\"Img\",{\"size\":\"s\",\"src\":\"productA.png\",\"shape\":\"square\"}],[\"Text\",{\"v\":\"body\"},\"商品A\"]],[\"Row\",[\"Img\",{\"size\":\"s\",\"src\":\"productB.png\",\"shape\":\"square\"}],[\"Text\",{\"v\":\"body\"},\"商品B\"]],[\"Text\",{\"v\":\"body\"},\"小计：¥200\"],[\"Text\",{\"v\":\"body\"},\"运费：¥10\"],[\"Text\",{\"v\":\"sec-title\"},\"总计：¥210\"],[\"Btn\",{\"v\":\"p\",\"t\":\"checkout\"},\"去结算\"]]]"
+}

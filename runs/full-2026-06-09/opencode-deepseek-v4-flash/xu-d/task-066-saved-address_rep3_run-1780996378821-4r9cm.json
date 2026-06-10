@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996378821-4r9cm",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-066-saved-address",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 1048,
+  "outputTokens": 58,
+  "latencyMs": 1698,
+  "costUsd": 0.00034676,
+  "errors": [],
+  "rawOutput": "卡\n　排\n　　标 成功 默认\n　　列\n　　　文 标题 收件人\n　　　文 正文 地址\n　　　文 正文 电话\n　　　排\n　　　　链 edit 编辑\n　　　　链 delete 删除"
+}

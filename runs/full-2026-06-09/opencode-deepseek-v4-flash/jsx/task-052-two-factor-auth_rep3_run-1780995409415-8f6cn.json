@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780995409415-8f6cn",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "jsx",
+  "scenario": "A",
+  "taskId": "task-052-two-factor-auth",
+  "rep": 3,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 636,
+  "outputTokens": 120,
+  "latencyMs": 2049,
+  "costUsd": 0.00030372,
+  "errors": [],
+  "rawOutput": "<Form>\n  <Column>\n    <Text variant=\"heading\">二次验证</Text>\n    <Text variant=\"body\">请输入发送到您手机的验证码</Text>\n    <Input type=\"number\" placeholder=\"6位验证码\" bind=\"verificationCode\" required />\n    <Button variant=\"primary\" onTap=\"verifyCode\">验证</Button>\n    <Row>\n      <Link onTap=\"resendCode\">重新发送</Link>\n      <Text variant=\"caption\">60秒后可重新发送</Text>\n    </Row>\n  </Column>\n</Form>"
+}

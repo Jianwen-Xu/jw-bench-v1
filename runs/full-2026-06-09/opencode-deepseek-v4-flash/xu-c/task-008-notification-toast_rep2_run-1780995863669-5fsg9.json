@@ -1,0 +1,26 @@
+{
+  "runId": "run-1780995863669-5fsg9",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-c",
+  "scenario": "A",
+  "taskId": "task-008-notification-toast",
+  "rep": 2,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 0,
+  "M5": 0,
+  "UGR": 0,
+  "inputTokens": 974,
+  "outputTokens": 165,
+  "latencyMs": 2742,
+  "costUsd": 0.00044447999999999997,
+  "errors": [
+    "M4: Unknown prop '値' on '提' at root[2][1]",
+    "M4: Unknown prop '値' on '提' at root[3][1]",
+    "M4: Invalid enum value '危险' for '提.式' at root[4][1]",
+    "M4: Unknown prop '値' on '提' at root[4][1]"
+  ],
+  "rawOutput": "[\"列\",\n  [\"文\", {\"式\":\"标题\"}, \"通知中心\"],\n  [\"排\",\n    [\"提\", {\"式\":\"成功\",\"値\":\"toastSuccess\"}, \"操作成功\"],\n    [\"按\", {\"式\":\"主\",\"触\":\"toastSuccess\"}, \"触发成功提示\"]\n  ],\n  [\"排\",\n    [\"提\", {\"式\":\"警告\",\"値\":\"toastWarning\"}, \"请确认信息\"],\n    [\"按\", {\"式\":\"主\",\"触\":\"toastWarning\"}, \"触发警告提示\"]\n  ],\n  [\"排\",\n    [\"提\", {\"式\":\"危险\",\"値\":\"toastError\"}, \"操作失败\"],\n    [\"按\", {\"式\":\"主\",\"触\":\"toastError\"}, \"触发错误提示\"]\n  ],\n  [\"文\", {}, \"点击按钮查看对应提示\"]\n]"
+}

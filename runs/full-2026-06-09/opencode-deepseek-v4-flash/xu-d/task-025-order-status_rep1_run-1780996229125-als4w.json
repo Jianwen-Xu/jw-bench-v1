@@ -1,0 +1,21 @@
+{
+  "runId": "run-1780996229125-als4w",
+  "phase": "full",
+  "model": "opencode-deepseek-v4-flash",
+  "format": "xu-d",
+  "scenario": "A",
+  "taskId": "task-025-order-status",
+  "rep": 1,
+  "M1": 1,
+  "M2": 1,
+  "M3": 1,
+  "M4": 1,
+  "M5": 1,
+  "UGR": 1,
+  "inputTokens": 1093,
+  "outputTokens": 86,
+  "latencyMs": 1635,
+  "costUsd": 0.00038971,
+  "errors": [],
+  "rawOutput": "列\n　文 标题 订单状态\n　排\n　　标 成功 ✓\n　　文 正文 已下单\n　排\n　　标 成功 ✓\n　　文 正文 已确认\n　排\n　　标 警告 ●\n　　文 正文 配送中\n　排\n　　标 信息 ○\n　　文 正文 已完成\n　按 主 viewDetail 查看详情"
+}
