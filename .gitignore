@@ -8,7 +8,7 @@ dist/
 .env
 
 # Benchmark run outputs (JSON results + reports per run)
-
+runs/
 # macOS artifacts
 .DS_Store
 
